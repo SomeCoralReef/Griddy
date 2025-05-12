@@ -28,9 +28,9 @@ public class TimelineManager : MonoBehaviour
 
         Image iconImage = icon.GetComponent<Image>();
         if (unit is PlayerTimelineUnit)
-        iconImage.color = Color.blue;
+            iconImage.color = Color.blue;
         else if (unit is EnemyTimelineUnit)
-        iconImage.color = Color.red;
+            iconImage.color = Color.red;
 
         //Debug.Log($"Manually registered unit {unit.name} on timeline.");
     }
@@ -38,9 +38,21 @@ public class TimelineManager : MonoBehaviour
 
     void Update()
     {
-        foreach (TimelineUnit unit in units)
+        foreach (TimelineUnit unit in new List<TimelineUnit>(units))
         {
-            unit.UpdateTimeline();
+            if (unit != null)
+            {
+                unit.UpdateTimeline();    
+            }
+        }
+    }
+    
+    public void UnregisterUnit(TimelineUnit unit)
+    {
+        if (units.Contains(unit))
+        {
+            units.Remove(unit);
+            Debug.Log($"Unregistered {unit.name} from timeline.");
         }
     }
 }

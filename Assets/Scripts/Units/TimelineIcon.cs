@@ -32,6 +32,7 @@ public class TimelineIcon : MonoBehaviour
     {
         if(linkedUnit == null || barRect == null)
         {
+            Destroy(gameObject); // Icon auto-destroys when linked unit is dead
             return;
         }
 

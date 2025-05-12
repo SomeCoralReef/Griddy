@@ -16,26 +16,33 @@ public class PlayerTimelineUnit : TimelineUnit
 
     protected override void OnPrepare()
     {
+
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
         timelineManager.isPaused = true;
-
-        Debug.Log("Game paused for player to select ability.");
-
-        FindObjectOfType<PlayerActionUI>().BeginActionPhase(); // Show action UI
+        Debug.Log("Preparing player action...");
+        PlayerActionUI playerActionUI = FindObjectOfType<PlayerActionUI>(); // Show action UI
+        if (playerActionUI != null)
+        {
+            Debug.Log("PlayerActionUI found in the scene.");
+            playerActionUI.BeginActionPhase();
+        }
+        else
+        {
+            Debug.Log("PlayerActionUI not found in the scene.");
+        }
+        
     }
 
     protected override void OnExecute()
     {
-        Debug.Log("Player is executing an action.");
+        Debug.Log("Executing player action...");
         playerscript.ExecuteAttack();
     }
 
     void Update()
     {
-
         if (state == TimelineState.Preparing && actionUI != null && actionUI.HasSelectedAttackAndTile())
         {
-            Debug.Log("Player confirmed action. Unpausing timeline.");
             TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
             timelineManager.isPaused = false;
 

@@ -7,18 +7,23 @@ public class Player : MonoBehaviour
     private GridManager gridManager;
     public Vector2Int gridPos;
 
+    public AttackData blastAttack;
+    public PlayerActionUI actionUI;
+
     public bool IsInPreparePhase;
 
     void Start()
     {
         gridManager = FindObjectOfType<GridManager>();
+        actionUI = FindObjectOfType<PlayerActionUI>();
     }
     void Update()
     {
-        if(GetComponent<PlayerTimelineUnit>().state == TimelineState.Preparing)
+        if (GetComponent<PlayerTimelineUnit>().state == TimelineState.Preparing)
         {
             IsInPreparePhase = true;
-        }   else
+        }
+        else
         {
             IsInPreparePhase = false;
         }
@@ -26,14 +31,12 @@ public class Player : MonoBehaviour
     public void SelectAttack(AttackData attack)
     {
         selectedAttack = attack;
-        Debug.Log($"Selected attack: {selectedAttack.attackName} ({selectedAttack.elementType})");
     }
+    
 
     public void AimAtTile(Vector2Int tilePos)
     {
         aimedTile = tilePos;
-        Debug.Log($"Aiming at tile: {tilePos}");
-        // Optional: Show attack preview pattern on grid
     }
 
 
@@ -49,24 +52,23 @@ public class Player : MonoBehaviour
     {
         if (selectedAttack == null)
         {
-            //Debug.LogWarning("No attack selected.");
+            Debug.LogWarning("No attack selected on execution.");
             return;
         }
+
+        actionUI.StartCoroutine(actionUI.scaleTileSelector(0.5f));
 
         foreach (var offset in selectedAttack.patternOffsets)
         {
             Vector2Int target = aimedTile + offset;
 
             // Grid bounds check
-            if (target.x < 0 || target.x >= gridManager.columns || 
+            if (target.x < 0 || target.x >= gridManager.columns ||
                 target.y < 0 || target.y >= gridManager.rows)
             {
                 //Debug.Log($"Target {target} out of bounds.");
                 continue;
             }
-
-            //Debug.Log($"Attacking {target} with {selectedAttack.attackName}");
-
             // Hit check (placeholder logic)
             Enemy enemy = EnemyAt(target);
             if (enemy != null)
@@ -75,7 +77,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        selectedAttack = null; // Clear current attack after use
+       
     }
 
     private Enemy EnemyAt(Vector2Int pos)

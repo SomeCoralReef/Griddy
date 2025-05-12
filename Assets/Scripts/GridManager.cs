@@ -22,7 +22,6 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < rows; y++)
             {
-                Debug.Log($"Creating tile at ({x}, {y})");
                 GameObject tile = Instantiate(tilePrefab, gridParent);
                 tile.transform.localPosition = new Vector3(x*spacing, y*spacing, 0);
                 gridTiles[x, y] = tile;

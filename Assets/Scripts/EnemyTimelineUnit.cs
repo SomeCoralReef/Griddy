@@ -11,8 +11,6 @@ public class EnemyTimelineUnit : TimelineUnit
 
     protected override void OnPrepare()
     {
-        Debug.Log($"{enemyScript.data.enemyName} preparing action...");
-
         // Optionally calculate target tile or action logic here
         // No player input — it auto-prepares
 

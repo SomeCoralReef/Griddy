@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     private List<Vector2Int> occupiedPositions = new List<Vector2Int>();
 
 
+
     void Start()
     {
         SpawnEnemies(enemyCount);
@@ -38,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
             EnemyData data = enemyDatas[randomIndex];
 
             GameObject enemyGO = Instantiate(prefab);
+            
             TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
             timelineManager.RegisterUnit(enemyGO.GetComponent<TimelineUnit>());
 

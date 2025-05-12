@@ -9,5 +9,4 @@ public class EnemyData : ScriptableObject
     public int health;
     public int maxHealth;
     public ElementType[] weaknesses = new ElementType[3];
-    public GameObject prefab;
 }

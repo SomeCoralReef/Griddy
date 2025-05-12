@@ -55,6 +55,7 @@ public class TimelineUnit : MonoBehaviour
     }
     protected virtual void OnPrepare()
     {
+        Debug.Log("Virtual Prepare called");
             TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
             timelineManager.isPaused = true;
 
