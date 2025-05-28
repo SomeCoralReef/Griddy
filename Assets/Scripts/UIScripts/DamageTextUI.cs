@@ -19,9 +19,10 @@ public class DamageTextUI : MonoBehaviour
         moveDirection = new Vector3(0.0f, 1.0f, 0.0f);
     }
 
-    public void Setup(string damageText)
+    public void Setup(string damageText, bool isCrit)
     {
         text.text = damageText;
+        text.color = isCrit ? Color.red : Color.blue;
     }
 
     void Update()

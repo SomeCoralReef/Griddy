@@ -42,17 +42,27 @@ public class TimelineManager : MonoBehaviour
         {
             if (unit != null)
             {
-                unit.UpdateTimeline();    
+                unit.UpdateTimeline();
             }
         }
     }
-    
+
     public void UnregisterUnit(TimelineUnit unit)
     {
         if (units.Contains(unit))
         {
-            units.Remove(unit);
             Debug.Log($"Unregistered {unit.name} from timeline.");
+            units.Remove(unit);
         }
+    }
+    
+    public TimelineIcon GetIconForUnit(TimelineUnit unit)
+    {
+        foreach (TimelineIcon icon in FindObjectsOfType<TimelineIcon>())
+        {
+            if (icon.linkedUnit == unit)
+                return icon;
+        }
+        return null;
     }
 }

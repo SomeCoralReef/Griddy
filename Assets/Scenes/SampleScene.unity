@@ -972,6 +972,7 @@ MonoBehaviour:
   attackPanel: {fileID: 1250119199}
   attackOptionPrefab: {fileID: 2504124391405067470, guid: 98adfc419af84bc4ea8a6f46de6858e5, type: 3}
   tileSelector: {fileID: 3923758727445019719, guid: 65ec5f05cc9b25f418c82b42015a6ac2, type: 3}
+  tileSelectorSpriteRenderer: {fileID: 0}
   hasSelectedAttackAndTile: 0
   targetTile: {x: 1, y: 0}
 --- !u!1 &1324088435
@@ -1435,12 +1436,10 @@ MonoBehaviour:
   gridManager: {fileID: 336149468}
   enemyPrefabs:
   - {fileID: 2120478495260911483, guid: b674f95758ed07f4190565c954c28f6b, type: 3}
-  - {fileID: 2120478495260911483, guid: b674f95758ed07f4190565c954c28f6b, type: 3}
-  - {fileID: 2120478495260911483, guid: b674f95758ed07f4190565c954c28f6b, type: 3}
+  - {fileID: 2120478495260911483, guid: 826ccd5560c8d5848b8966285a06d9db, type: 3}
   enemyDatas:
   - {fileID: 11400000, guid: 49651053e6c4bb348b2f86c28f82f0aa, type: 2}
-  - {fileID: 11400000, guid: 49651053e6c4bb348b2f86c28f82f0aa, type: 2}
-  - {fileID: 11400000, guid: 49651053e6c4bb348b2f86c28f82f0aa, type: 2}
+  - {fileID: 11400000, guid: 5e1a000bb8bc5e742868ea35b280d6ea, type: 2}
   enemyCount: 3
 --- !u!4 &1994662828
 Transform:

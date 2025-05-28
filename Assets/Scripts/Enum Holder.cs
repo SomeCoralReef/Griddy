@@ -14,5 +14,6 @@ public enum TimelineState
 {
     Idle,
     Preparing,
+    Paused,
     Executing
 }

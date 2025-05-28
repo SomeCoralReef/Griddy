@@ -19,11 +19,9 @@ public class PlayerTimelineUnit : TimelineUnit
 
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
         timelineManager.isPaused = true;
-        Debug.Log("Preparing player action...");
         PlayerActionUI playerActionUI = FindObjectOfType<PlayerActionUI>(); // Show action UI
         if (playerActionUI != null)
         {
-            Debug.Log("PlayerActionUI found in the scene.");
             playerActionUI.BeginActionPhase();
         }
         else
@@ -35,7 +33,6 @@ public class PlayerTimelineUnit : TimelineUnit
 
     protected override void OnExecute()
     {
-        Debug.Log("Executing player action...");
         playerscript.ExecuteAttack();
     }
 

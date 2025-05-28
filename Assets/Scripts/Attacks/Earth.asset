@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbbd39dfc3ff69f40933d6d12bbd56cd, type: 3}
-  m_Name: Enemy_Straight
+  m_Script: {fileID: 11500000, guid: 4393fc657dd397f48b33290fa253fc36, type: 3}
+  m_Name: Hydro
   m_EditorClassIdentifier: 
-  enemyName: Straight
-  speed: 0.5
-  damage: 5
-  health: 3
-  maxHealth: 3
-  weaknesses: 000000000000000000000000
+  attackName: Blast
+  elementType: 3
+  power: 1
+  patternOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}

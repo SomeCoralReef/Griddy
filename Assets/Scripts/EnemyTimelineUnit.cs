@@ -11,14 +11,20 @@ public class EnemyTimelineUnit : TimelineUnit
 
     protected override void OnPrepare()
     {
-        // Optionally calculate target tile or action logic here
-        // No player input — it auto-prepares
-
         BeginExecution(); // continue to move toward end of timeline
     }
 
     protected override void OnExecute()
     {
-        enemyScript.PerformAction(); // move or attack
+        enemyScript.PerformAction();
+        if (enemyScript.isBroken)
+        {
+            enemyScript.EndBreak();
+        }     // decrement Broken duration if Brokenned
+    }
+
+    public override void UpdateTimeline()
+    {
+        base.UpdateTimeline();     
     }
 }

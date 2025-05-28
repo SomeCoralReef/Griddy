@@ -115,7 +115,15 @@ public class PlayerActionUI : MonoBehaviour
 
                 // Start aiming at tile in front of player
                 Enemy enemy = FindObjectOfType<Enemy>();
-                targetTile = new Vector2Int(enemy.gridPos.x, enemy.gridPos.y);
+                //I need to make it check if there even is an enemy in front
+                if (enemy == null)
+                {
+                    targetTile = new Vector2Int(player.gridPos.x, player.gridPos.y);
+                }
+                else
+                {
+                    targetTile = new Vector2Int(enemy.gridPos.x, enemy.gridPos.y);
+                }
                 UpdateTileSelectorPosition();
                 tileSelector.gameObject.SetActive(true);
                 tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);

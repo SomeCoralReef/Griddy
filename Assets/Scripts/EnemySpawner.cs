@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
             }
 
             // Random enemy type
-            int randomIndex = Random.Range(0, enemyPrefabs.Count);
+            int randomIndex = UnityEngine.Random.Range(0, enemyPrefabs.Count);
             GameObject prefab = enemyPrefabs[randomIndex];
             EnemyData data = enemyDatas[randomIndex];
 
@@ -66,6 +66,6 @@ public class EnemySpawner : MonoBehaviour
         if (possiblePositions.Count == 0)
             return Vector2Int.zero;
 
-        return possiblePositions[Random.Range(0, possiblePositions.Count)];
+        return possiblePositions[UnityEngine.Random.Range(0, possiblePositions.Count)];
     }
 }

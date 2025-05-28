@@ -7,7 +7,7 @@ public class EnemyRandomRow : Enemy
          if (gridPos.x < 7)
         {
             gridPos.x += 1;
-            gridPos.y = Random.Range(0, 4); // assumes 4 rows
+            gridPos.y = UnityEngine.Random.Range(0, 4); // assumes 4 rows
 
             transform.position = FindObjectOfType<GridManager>().GetWorldPosition(gridPos.x, gridPos.y);
         }
