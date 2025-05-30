@@ -398,9 +398,9 @@ MonoBehaviour:
   weaknessIconPrefab: {fileID: 7071023724176460129, guid: f099096b19729d141ba89f55a99fec28, type: 3}
   fireIcon: {fileID: 21300000, guid: 3e814d365c95cc249a5915f8ca438244, type: 3}
   waterIcon: {fileID: 21300000, guid: 6cedc68b29644774eab072131ce8c966, type: 3}
-  thunderIcon: {fileID: 21300000, guid: 831f37d39246970429155b2e6c0c0e04, type: 3}
+  thunderIcon: {fileID: 21300000, guid: 9ef3f381d015c4d0993016f7d0fe490e, type: 3}
   earthIcon: {fileID: 21300000, guid: 96593033d3a11054eb144e9df0244ec8, type: 3}
-  lightIcon: {fileID: 21300000, guid: 55abac23d7912e749a0e436f3cf329f6, type: 3}
+  lightIcon: {fileID: 21300000, guid: 6486917c289444230b914a224d5ed228, type: 3}
   spriteRenderer: {fileID: 3948534354996408526}
 --- !u!1 &2448158398007237371
 GameObject:

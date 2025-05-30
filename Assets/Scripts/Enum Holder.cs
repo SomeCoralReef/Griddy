@@ -3,7 +3,8 @@ using UnityEngine;
 public enum ElementType
 {
     Fire,
-    Water,Thunder,
+    Water,
+    Thunder,
     Earth,
     Light,
     None

@@ -17,6 +17,8 @@ public class PlayerActionUI : MonoBehaviour
     public GameObject tileSelector;
     public SpriteRenderer tileSelectorSpriteRenderer;
 
+    [Header("Element Icon Library")]
+    public ElementIconLibrary elementIconLibrary;
 
 
     private int currentAttackIndex = 0;
@@ -36,6 +38,9 @@ public class PlayerActionUI : MonoBehaviour
 
     [SerializeField] private Vector2Int targetTile;
     private GridManager gridManager;
+
+    [Header("UX Clarity")]
+    [SerializeField]private Enemy currentlyHoveredEnemy = null;
 
     void Start()
     {
@@ -124,10 +129,11 @@ public class PlayerActionUI : MonoBehaviour
                 {
                     targetTile = new Vector2Int(enemy.gridPos.x, enemy.gridPos.y);
                 }
-                UpdateTileSelectorPosition();
+
                 tileSelector.gameObject.SetActive(true);
                 tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
                 tileSelector.transform.localScale = Vector3.one;
+                UpdateTileSelectorPosition();
                 foreach (Transform child in attackPanel)
                 {
                     Destroy(child.gameObject);
@@ -251,8 +257,9 @@ public class PlayerActionUI : MonoBehaviour
         {
             GameObject option = Instantiate(attackOptionPrefab, attackPanel);
             option.GetComponentInChildren<TextMeshProUGUI>().text = availableAttacks[i].attackName;
-        }
+            option.GetComponentInChildren<Image>().sprite = elementIconLibrary.GetIcon(availableAttacks[i].elementType);
 
+        }
         HighlightAttack(currentAttackIndex);
     }
 
@@ -268,6 +275,46 @@ public class PlayerActionUI : MonoBehaviour
     void UpdateTileSelectorPosition()
     {
         desiredSelectorWorldPos = gridManager.GetWorldPosition(targetTile.x, targetTile.y);
-        //Debug.Log("Moved tile selector to " + tileSelector.transform.position);
+
+        Enemy hoveredEnemy = null;
+        foreach (Enemy enemy in FindObjectsOfType<Enemy>())
+        {
+            if (enemy.gridPos == targetTile)
+            {
+                hoveredEnemy = enemy;
+                break;
+            }
+        }
+
+        if (hoveredEnemy != currentlyHoveredEnemy)
+        {
+            if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
+            {
+                Debug.Log($"Unhighlighting enemy: {currentlyHoveredEnemy.name}");
+                currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
+            }
+
+            if (hoveredEnemy != null)
+            {
+                Debug.Log($"Found hoveredEnemy: {hoveredEnemy.name}, timelineIcon is {(hoveredEnemy.timelineIcon == null ? "null" : "assigned")}");
+
+                if (hoveredEnemy.timelineIcon != null)
+                {
+                    Debug.Log($"Hovering over enemy: {hoveredEnemy.name} at tile {targetTile}");
+                    hoveredEnemy.timelineIcon.SetHighlight(true);
+                }
+            }
+
+            currentlyHoveredEnemy = hoveredEnemy;
+        }
+
+        if (hoveredEnemy == null && currentlyHoveredEnemy != null)
+        {
+            if (currentlyHoveredEnemy.timelineIcon != null)
+            {
+                currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
+            }
+            currentlyHoveredEnemy = null;
+        }
     }
 }

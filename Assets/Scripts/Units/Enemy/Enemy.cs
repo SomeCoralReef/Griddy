@@ -47,9 +47,13 @@ public class Enemy : MonoBehaviour
     private List<Image> weaknessIcons = new List<Image>();
     private ElementType[] runtimeWeaknesses;
 
+    public TimelineIcon timelineIcon;
+
 
 
     [SerializeField] private SpriteRenderer spriteRenderer;
+
+
 
     public virtual void Initialize(EnemyData newData, Vector2Int spawnPos)
     {

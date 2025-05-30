@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494b56c8777c64f9fbc4f72797788404, type: 3}
+  m_Name: ElementIconLibrary
+  m_EditorClassIdentifier: 
+  fireIcon: {fileID: 21300000, guid: 3e814d365c95cc249a5915f8ca438244, type: 3}
+  waterIcon: {fileID: 21300000, guid: 6cedc68b29644774eab072131ce8c966, type: 3}
+  earthIcon: {fileID: 21300000, guid: 96593033d3a11054eb144e9df0244ec8, type: 3}
+  thunderIcon: {fileID: 21300000, guid: 9ef3f381d015c4d0993016f7d0fe490e, type: 3}
+  lightIcon: {fileID: 21300000, guid: 6486917c289444230b914a224d5ed228, type: 3}

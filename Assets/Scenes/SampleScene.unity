@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 1250119199}
   - component: {fileID: 1250119200}
   m_Layer: 5
-  m_Name: AttackPanel
+  m_Name: AttackPanelContrainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,6 +973,7 @@ MonoBehaviour:
   attackOptionPrefab: {fileID: 2504124391405067470, guid: 98adfc419af84bc4ea8a6f46de6858e5, type: 3}
   tileSelector: {fileID: 3923758727445019719, guid: 65ec5f05cc9b25f418c82b42015a6ac2, type: 3}
   tileSelectorSpriteRenderer: {fileID: 0}
+  elementIconLibrary: {fileID: 11400000, guid: 9d2ce23c2ef554871ac23f5e8cdc8adc, type: 2}
   hasSelectedAttackAndTile: 0
   targetTile: {x: 1, y: 0}
 --- !u!1 &1324088435

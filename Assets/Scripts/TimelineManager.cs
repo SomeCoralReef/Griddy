@@ -11,7 +11,7 @@ public class TimelineManager : MonoBehaviour
 
     private List<TimelineUnit> units = new List<TimelineUnit>();
 
-    public void RegisterUnit(TimelineUnit unit)
+    public void RegisterEnemyUnit(Enemy enemy, TimelineUnit unit)
     {
         if (unit == null)
         {
@@ -20,9 +20,10 @@ public class TimelineManager : MonoBehaviour
         }
 
         units.Add(unit);
-
+        
         GameObject icon = Instantiate(timelineIconPrefab, timelineBar);
         TimelineIcon iconScript = icon.GetComponent<TimelineIcon>();
+        enemy.timelineIcon = iconScript; // Link the icon to the enemy
         iconScript.linkedUnit = unit;
         iconScript.barRect = timelineBar;
 
@@ -33,6 +34,27 @@ public class TimelineManager : MonoBehaviour
             iconImage.color = Color.red;
 
         //Debug.Log($"Manually registered unit {unit.name} on timeline.");
+    }
+
+    public void RegisterPlayerUnit(TimelineUnit unit)
+    {
+        if (unit == null)
+        {
+            Debug.LogWarning("Tried to register a null TimelineUnit!");
+            return;
+        }
+
+        units.Add(unit);
+        
+        GameObject icon = Instantiate(timelineIconPrefab, timelineBar);
+        TimelineIcon iconScript = icon.GetComponent<TimelineIcon>();
+        iconScript.linkedUnit = unit;
+        iconScript.barRect = timelineBar;
+
+        Image iconImage = icon.GetComponent<Image>();
+        iconImage.color = Color.blue; // Player icons are blue
+
+        //Debug.Log($"Manually registered player unit {unit.name} on timeline.");
     }
 
 

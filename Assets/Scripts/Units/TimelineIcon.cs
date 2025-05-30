@@ -18,6 +18,8 @@ public class TimelineIcon : MonoBehaviour
     public float pulseScale = 1.3f;
     public float pulseSpeed = 5f;
 
+    private Vector3 defaultScale = Vector3.one;
+    [SerializeField] private Vector3 highlightScale = new Vector3(1.5f,1.5f,1.5f);
 
     void Start()
     {
@@ -105,4 +107,26 @@ public class TimelineIcon : MonoBehaviour
         //unit.timelineProgress = targetProgress;
     }
 
+    public void SetHighlight(bool isHighlighted)
+    {
+        Debug.Log($"Setting highlight for {linkedUnit.name} to {isHighlighted}");
+        StopAllCoroutines();
+        Vector3 targetScale = isHighlighted ? highlightScale : defaultScale;
+        StartCoroutine(LerpScale(targetScale, 0.2f));
+    }
+
+    private IEnumerator LerpScale(Vector3 target, float duration)
+    {
+        Vector3 initial = transform.localScale;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(initial, target, elapsed / duration);
+            yield return null;
+        }
+
+        transform.localScale = target;
+    }
 }
