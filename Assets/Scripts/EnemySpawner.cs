@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
             GameObject enemyGO = Instantiate(prefab);
             
             TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
-            timelineManager.RegisterUnit(enemyGO.GetComponent<Enemy>(), enemyGO.GetComponent<TimelineUnit>());
+            timelineManager.RegisterEnemyUnit(enemyGO.GetComponent<Enemy>(), enemyGO.GetComponent<TimelineUnit>());
 
             Enemy enemyScript = enemyGO.GetComponent<Enemy>();
             enemyScript.Initialize(data, spawnPos);

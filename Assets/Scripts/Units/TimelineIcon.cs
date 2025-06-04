@@ -21,6 +21,8 @@ public class TimelineIcon : MonoBehaviour
     private Vector3 defaultScale = Vector3.one;
     [SerializeField] private Vector3 highlightScale = new Vector3(1.5f,1.5f,1.5f);
 
+    private bool isHighlighted = false;
+
     void Start()
     {
         iconRect = GetComponent<RectTransform>();
@@ -55,21 +57,24 @@ public class TimelineIcon : MonoBehaviour
         {
             hasEnteredPrepareZone = false;
         }
+
         // Animate scaling
-        Vector3 targetScale = hasEnteredPrepareZone ? baseScale * pulseScale : baseScale;
-        iconRect.localScale = Vector3.Lerp(iconRect.localScale, targetScale, Time.deltaTime * pulseSpeed);
+        
 
         if (iconImage != null)
         {
             iconImage.color = hasEnteredPrepareZone ? Color.yellow : originalColor;
         }
     }
+    
+    
 
     public IEnumerator PlayBreakEffect(float targetProgress, float duration = 0.8f)
     {
-        
+
         Debug.Log($"Playing break effect for {linkedUnit.name}. In PlayBreakEffect()");
         RectTransform rt = GetComponent<RectTransform>();
+        rt.localScale = defaultScale; // Reset to default scale before starting the effect
         Vector3 originalScale = rt.localScale;
         Vector3 enlargedScale = originalScale * 1.5f;
 
@@ -92,7 +97,7 @@ public class TimelineIcon : MonoBehaviour
             if (t >= moveStartTime && t <= moveEndTime)
             {
                 float moveT = Mathf.InverseLerp(moveStartTime, moveEndTime, t);
-                unit.timelineProgress = Mathf.Lerp( startProgress, targetProgress,moveT);
+                unit.timelineProgress = Mathf.Lerp(startProgress, targetProgress, moveT);
             }
 
             // Smoothly scale back to normal
@@ -107,26 +112,64 @@ public class TimelineIcon : MonoBehaviour
         //unit.timelineProgress = targetProgress;
     }
 
-    public void SetHighlight(bool isHighlighted)
+    public IEnumerator resetScale( float duration = 0.3f)
     {
-        Debug.Log($"Setting highlight for {linkedUnit.name} to {isHighlighted}");
-        StopAllCoroutines();
-        Vector3 targetScale = isHighlighted ? highlightScale : defaultScale;
-        StartCoroutine(LerpScale(targetScale, 0.2f));
-    }
-
-    private IEnumerator LerpScale(Vector3 target, float duration)
-    {
-        Vector3 initial = transform.localScale;
+        Debug.Log($"Resetting scale for {linkedUnit.name}. In resetScale()");
+        RectTransform rt = GetComponent<RectTransform>();
+        Vector3 initialScale = rt.localScale;
         float elapsed = 0f;
 
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(initial, target, elapsed / duration);
+            rt.localScale = Vector3.Lerp(initialScale, defaultScale, elapsed / duration);
             yield return null;
         }
 
-        transform.localScale = target;
+        // Ensure the final scale is set correctly
+        rt.localScale = defaultScale;
+    }
+
+    public void SetHighlight(bool highlight)
+    {
+        if (highlight == isHighlighted)
+        {
+            Debug.LogWarning("TimelineIcon is already in the requested highlight state.");
+            return; // Skip if already in that state
+        }
+        isHighlighted = highlight;
+        StopAllCoroutines();
+        Vector3 target = defaultScale; // Default scale is the normal size
+        if (highlight)
+        {
+            target = highlightScale;
+        }
+        else
+        {
+            target = defaultScale; // Reset to default scale
+        }
+
+        RectTransform rt = GetComponent<RectTransform>();
+        //rt.localScale = target; // Immediately set the scale to the target
+        StartCoroutine(LerpScale(target));
+    }
+
+
+
+    private IEnumerator LerpScale(Vector3 target, float duration = 0.3f)
+    {
+        RectTransform rt = GetComponent<RectTransform>();
+        Vector3 initial = rt.localScale;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            rt.localScale = Vector3.Lerp(initial, target, elapsed / duration);
+            yield return null;
+        }
+
+        // After the loop finishes, set the final target scale ONCE
+        rt.localScale = target;
     }
 }

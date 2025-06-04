@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        actionUI.StartCoroutine(actionUI.scaleTileSelector(0.5f));
+        actionUI.StartCoroutine(actionUI.scaleTileSelector(0.2f));
 
         foreach (var offset in selectedAttack.patternOffsets)
         {

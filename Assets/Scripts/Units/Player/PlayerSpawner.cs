@@ -29,7 +29,7 @@ public class PlayerSpawner : MonoBehaviour
             playerGO.transform.position = gridManager.GetWorldPosition(spawnPos.x, spawnPos.y);
 
             // Register to timeline
-            timelineManager.RegisterUnit(playerGO.GetComponent<TimelineUnit>());
+            timelineManager.RegisterPlayerUnit(playerGO.GetComponent<TimelineUnit>());
 
             //Debug.Log($"Spawned player {i + 1} at grid {spawnPos}");
         }

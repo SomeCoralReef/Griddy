@@ -10,7 +10,7 @@ public class PlayerActionUI : MonoBehaviour
     public AttackData[] availableAttacks;
 
 
-    
+
     [Header("UI References")]
     public RectTransform attackPanel;
     public GameObject attackOptionPrefab;
@@ -25,7 +25,7 @@ public class PlayerActionUI : MonoBehaviour
     private bool isSelectingAttack = false;
     private bool isSelectingTile = false;
     public bool hasSelectedAttackAndTile = false;
-    
+
     [Header("UI Juice")]
     private Vector3 desiredSelectorWorldPos;
 
@@ -40,7 +40,7 @@ public class PlayerActionUI : MonoBehaviour
     private GridManager gridManager;
 
     [Header("UX Clarity")]
-    [SerializeField]private Enemy currentlyHoveredEnemy = null;
+    [SerializeField] private Enemy currentlyHoveredEnemy = null;
 
     void Start()
     {
@@ -53,7 +53,7 @@ public class PlayerActionUI : MonoBehaviour
         float playerX = player.transform.position.x;
         float playerY = player.transform.position.y;
         Vector3 playerWorldPosXY = new Vector3(playerX, playerY, -0.13f);
-        
+
         tileSelector = Instantiate(tileSelector, playerWorldPosXY, Quaternion.identity);
         tileSelectorSpriteRenderer = tileSelector.GetComponent<SpriteRenderer>();
         targetTile = new Vector2Int(player.gridPos.x, player.gridPos.y);
@@ -70,15 +70,15 @@ public class PlayerActionUI : MonoBehaviour
     {
         if (tileSelector.activeSelf)
         {
-             Vector3 targetPosition = new Vector3(desiredSelectorWorldPos.x, desiredSelectorWorldPos.y, tileSelector.transform.position.z);
+            Vector3 targetPosition = new Vector3(desiredSelectorWorldPos.x, desiredSelectorWorldPos.y, tileSelector.transform.position.z);
 
             tileSelector.transform.position = Vector3.Lerp(
                 tileSelector.transform.position,
                 targetPosition,
                 Time.deltaTime * selectorLerpSpeed
             );
-            
-            float distance = Vector3.Distance(new Vector2(tileSelector.transform.position.x, tileSelector.transform.position.y), 
+
+            float distance = Vector3.Distance(new Vector2(tileSelector.transform.position.x, tileSelector.transform.position.y),
                             new Vector2(desiredSelectorWorldPos.x, desiredSelectorWorldPos.y));
 
             if (distance < 0.5f) // Close enough
@@ -138,12 +138,11 @@ public class PlayerActionUI : MonoBehaviour
                 {
                     Destroy(child.gameObject);
                 }
-                
+
             }
         }
         else if (isSelectingTile)
         {
-
             if (Input.GetKeyDown(KeyCode.W)) { targetTile.y = Mathf.Min(gridManager.rows - 1, targetTile.y + 1); }
             if (Input.GetKeyDown(KeyCode.S)) { targetTile.y = Mathf.Max(0, targetTile.y - 1); }
             if (Input.GetKeyDown(KeyCode.A)) { targetTile.x = Mathf.Max(0, targetTile.x - 1); }
@@ -154,8 +153,18 @@ public class PlayerActionUI : MonoBehaviour
                 player.AimAtTile(targetTile);
                 player.OnConfirmAction();
                 tileSelectorSpriteRenderer.color = new Color(1, 0, 0, 1);
-                isSelectingTile = false;
                 hasSelectedAttackAndTile = true;
+                Debug.Log("YAH");
+                if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
+                {
+                    currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
+                }
+                else
+                {
+                    Debug.Log("No currently hovered enemy to remove highlight from.");
+                }
+                currentlyHoveredEnemy = null;
+                isSelectingTile = false;
             }
             UpdateTileSelectorPosition();
         }
@@ -199,7 +208,7 @@ public class PlayerActionUI : MonoBehaviour
     }
     public IEnumerator ScaleUI(Transform target, Vector3 fromScale, Vector3 toScale, float duration)
     {
-        
+
         float elapsed = 0f;
         target.localScale = fromScale;
 
@@ -207,7 +216,7 @@ public class PlayerActionUI : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
-            target.localScale = Vector3.Lerp(fromScale, toScale, EaseOutBack(t));        
+            target.localScale = Vector3.Lerp(fromScale, toScale, EaseOutBack(t));
             yield return null;
         }
         target.localScale = toScale;
@@ -241,19 +250,19 @@ public class PlayerActionUI : MonoBehaviour
     }
 
     void ChangeAttack(int direction)
-    {   
+    {
         currentAttackIndex = (currentAttackIndex + direction + availableAttacks.Length) % availableAttacks.Length;
         HighlightAttack(currentAttackIndex);
     }
 
     void PopulateAttackList()
     {
-        foreach(Transform child in attackPanel)
+        foreach (Transform child in attackPanel)
         {
             Destroy(child.gameObject);
         }
 
-        for(int i = 0; i < availableAttacks.Length; i++)
+        for (int i = 0; i < availableAttacks.Length; i++)
         {
             GameObject option = Instantiate(attackOptionPrefab, attackPanel);
             option.GetComponentInChildren<TextMeshProUGUI>().text = availableAttacks[i].attackName;
@@ -265,7 +274,7 @@ public class PlayerActionUI : MonoBehaviour
 
     void HighlightAttack(int index)
     {
-        for(int i = 0; i< attackPanel.childCount; i++)
+        for (int i = 0; i < attackPanel.childCount; i++)
         {
             var text = attackPanel.GetChild(i).GetComponentInChildren<TextMeshProUGUI>();
             text.color = (i == index) ? Color.yellow : Color.white;
@@ -286,35 +295,24 @@ public class PlayerActionUI : MonoBehaviour
             }
         }
 
-        if (hoveredEnemy != currentlyHoveredEnemy)
+        if (ReferenceEquals(hoveredEnemy, currentlyHoveredEnemy))
         {
-            if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
-            {
-                Debug.Log($"Unhighlighting enemy: {currentlyHoveredEnemy.name}");
-                currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
-            }
-
-            if (hoveredEnemy != null)
-            {
-                Debug.Log($"Found hoveredEnemy: {hoveredEnemy.name}, timelineIcon is {(hoveredEnemy.timelineIcon == null ? "null" : "assigned")}");
-
-                if (hoveredEnemy.timelineIcon != null)
-                {
-                    Debug.Log($"Hovering over enemy: {hoveredEnemy.name} at tile {targetTile}");
-                    hoveredEnemy.timelineIcon.SetHighlight(true);
-                }
-            }
-
-            currentlyHoveredEnemy = hoveredEnemy;
+            // Still hovering same enemy, do nothing
+            return;
         }
 
-        if (hoveredEnemy == null && currentlyHoveredEnemy != null)
+        if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
         {
-            if (currentlyHoveredEnemy.timelineIcon != null)
-            {
-                currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
-            }
-            currentlyHoveredEnemy = null;
+            currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
         }
+
+        if (hoveredEnemy != null && hoveredEnemy.timelineIcon != null)
+        {
+            hoveredEnemy.timelineIcon.SetHighlight(true);
+        }
+
+        currentlyHoveredEnemy = hoveredEnemy;
     }
+
+
 }

@@ -16,7 +16,6 @@ public class PlayerTimelineUnit : TimelineUnit
 
     protected override void OnPrepare()
     {
-
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
         timelineManager.isPaused = true;
         PlayerActionUI playerActionUI = FindObjectOfType<PlayerActionUI>(); // Show action UI
