@@ -10,6 +10,7 @@ public class TimelineManager : MonoBehaviour
     public bool isPaused = false;
 
     private List<TimelineUnit> units = new List<TimelineUnit>();
+    public List<TimelineIcon> timelineIcons = new List<TimelineIcon>();
 
     public void RegisterEnemyUnit(Enemy enemy, TimelineUnit unit)
     {
@@ -20,7 +21,7 @@ public class TimelineManager : MonoBehaviour
         }
 
         units.Add(unit);
-        
+
         GameObject icon = Instantiate(timelineIconPrefab, timelineBar);
         TimelineIcon iconScript = icon.GetComponent<TimelineIcon>();
         enemy.timelineIcon = iconScript; // Link the icon to the enemy
@@ -32,6 +33,8 @@ public class TimelineManager : MonoBehaviour
             iconImage.color = Color.blue;
         else if (unit is EnemyTimelineUnit)
             iconImage.color = Color.red;
+
+        timelineIcons.Add(iconScript);    
 
         //Debug.Log($"Manually registered unit {unit.name} on timeline.");
     }
@@ -45,7 +48,7 @@ public class TimelineManager : MonoBehaviour
         }
 
         units.Add(unit);
-        
+
         GameObject icon = Instantiate(timelineIconPrefab, timelineBar);
         TimelineIcon iconScript = icon.GetComponent<TimelineIcon>();
         iconScript.linkedUnit = unit;
@@ -53,8 +56,8 @@ public class TimelineManager : MonoBehaviour
 
         Image iconImage = icon.GetComponent<Image>();
         iconImage.color = Color.blue; // Player icons are blue
-
-        //Debug.Log($"Manually registered player unit {unit.name} on timeline.");
+        
+        timelineIcons.Add(iconScript);
     }
 
 
@@ -65,6 +68,40 @@ public class TimelineManager : MonoBehaviour
             if (unit != null)
             {
                 unit.UpdateTimeline();
+                UpdateTimelineIconPositions();
+            }
+        }
+    }
+
+    public void UpdateTimelineIconPositions()
+    {
+        Dictionary<float, List<TimelineIcon>> iconsByProgress = new Dictionary<float, List<TimelineIcon>>();
+
+        foreach (TimelineIcon icon in timelineIcons)
+        {
+            if (icon == null || icon.linkedUnit == null)
+            {
+                continue;
+            }
+
+            float roundedProgress = Mathf.Round(icon.linkedUnit.timelineProgress * 100f) / 100f;
+
+            if (!iconsByProgress.ContainsKey(roundedProgress))
+            {
+                iconsByProgress[roundedProgress] = new List<TimelineIcon>();
+            }
+            iconsByProgress[roundedProgress].Add(icon);
+        }
+
+        foreach (var kvp in iconsByProgress)
+        {
+            List<TimelineIcon> group = kvp.Value;
+            int count = group.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                float offset = (i - (count - 1) / 2.0f) * 50f;
+                group[i].SetHorizontalOffset(offset);
             }
         }
     }

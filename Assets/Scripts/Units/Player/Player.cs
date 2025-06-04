@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -73,12 +74,29 @@ public class Player : MonoBehaviour
             Enemy enemy = EnemyAt(target);
             if (enemy != null)
             {
-                enemy.TakeDamage(selectedAttack.elementType, selectedAttack.power);
+                bool wasBroken = enemy.TakeDamage(selectedAttack.elementType, selectedAttack.power);
+                enemy.timelineIcon.SetHighlight(false);
+                if (enemy.timelineIcon != null)
+                {
+                    enemy.timelineIcon.isPulsing = false; // Start pulsing effect
+                    Debug.Log("hi");
+                    if (wasBroken)
+                    {
+                        // The enemy was broken → play break effect
+                        StartCoroutine(enemy.timelineIcon.PlayBreakEffect(0.0f)); // or targetProgress = 0.0f
+                    }
+                    else
+                    {
+                        // Not broken → reset the scale visually
+                        StartCoroutine(enemy.timelineIcon.resetScale());
+                    }
+                }
             }
         }
+    }
 
        
-    }
+
 
     private Enemy EnemyAt(Vector2Int pos)
     {

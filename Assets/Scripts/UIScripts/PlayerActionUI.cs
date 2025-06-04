@@ -42,6 +42,9 @@ public class PlayerActionUI : MonoBehaviour
     [Header("UX Clarity")]
     [SerializeField] private Enemy currentlyHoveredEnemy = null;
 
+
+    private bool searchingForEnemyToHighlight = false;
+
     void Start()
     {
         if (player == null)
@@ -117,7 +120,7 @@ public class PlayerActionUI : MonoBehaviour
                 player.SelectAttack(availableAttacks[currentAttackIndex]);
                 isSelectingAttack = false;
                 isSelectingTile = true;
-
+                searchingForEnemyToHighlight = true;
                 // Start aiming at tile in front of player
                 Enemy enemy = FindObjectOfType<Enemy>();
                 //I need to make it check if there even is an enemy in front
@@ -154,10 +157,10 @@ public class PlayerActionUI : MonoBehaviour
                 player.OnConfirmAction();
                 tileSelectorSpriteRenderer.color = new Color(1, 0, 0, 1);
                 hasSelectedAttackAndTile = true;
-                Debug.Log("YAH");
                 if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
                 {
-                    currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
+                    searchingForEnemyToHighlight = false;
+                    //currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
                 }
                 else
                 {
@@ -308,7 +311,10 @@ public class PlayerActionUI : MonoBehaviour
 
         if (hoveredEnemy != null && hoveredEnemy.timelineIcon != null)
         {
-            hoveredEnemy.timelineIcon.SetHighlight(true);
+            if (searchingForEnemyToHighlight)
+            {
+                hoveredEnemy.timelineIcon.SetHighlight(true);
+            }   
         }
 
         currentlyHoveredEnemy = hoveredEnemy;

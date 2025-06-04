@@ -15,13 +15,35 @@ public class TimelineIcon : MonoBehaviour
     private bool hasEnteredPrepareZone = false;
     private Vector3 baseScale;
     private Color originalColor;
+
+    [Header("Pulse Effect Settings")]
+    public bool isPulsing = false;
+    private float pulseTimer = 0f;
+    [SerializeField] private float pulseDuration = 1f; // Duration of one pulse cycle
+    [SerializeField] private float pulseMagnitude = 0.1f; // Magnitude of the pulse effect
+
     public float pulseScale = 1.3f;
     public float pulseSpeed = 5f;
+
+    [SerializeField] private Image glowImage; // Assign in Inspector
+    private Color originalGlowColor;
 
     private Vector3 defaultScale = Vector3.one;
     [SerializeField] private Vector3 highlightScale = new Vector3(1.5f,1.5f,1.5f);
 
     private bool isHighlighted = false;
+
+    private float horizontalOffset = 0f;
+    public bool snapToTargetPosition = false;
+
+    void Awake()
+    {
+        if (glowImage != null)
+        {
+            originalGlowColor = glowImage.color;
+            glowImage.enabled = false;
+        }
+    }
 
     void Start()
     {
@@ -40,12 +62,21 @@ public class TimelineIcon : MonoBehaviour
             Destroy(gameObject); // Icon auto-destroys when linked unit is dead
             return;
         }
-
-
         float t = Mathf.Clamp01(linkedUnit.timelineProgress); // Normalize to 0-1 range for the bar
         float barWidth = barRect.rect.width; // Get the width of the bar
 
-        iconRect.anchoredPosition = new Vector2(t * barWidth, iconRect.anchoredPosition.y); // Set the icon's position based on the timeline progress
+        Vector2 targetPos = new Vector2(t * barWidth + horizontalOffset, iconRect.anchoredPosition.y);
+        if (snapToTargetPosition)
+        {
+            // Instantly move to the target position
+            iconRect.anchoredPosition = targetPos;
+            snapToTargetPosition = false; // Reset for future updates
+        }
+        else
+        {
+            // Smoothly animate to the target position
+            iconRect.anchoredPosition = Vector2.Lerp(iconRect.anchoredPosition, targetPos, Time.deltaTime * 10f);
+        }
 
         bool isInPrepareZone = linkedUnit != null && t >= linkedUnit.PrepareThreshold && t < 1.0f;
 
@@ -59,15 +90,38 @@ public class TimelineIcon : MonoBehaviour
         }
 
         // Animate scaling
-        
+
 
         if (iconImage != null)
         {
             iconImage.color = hasEnteredPrepareZone ? Color.yellow : originalColor;
         }
+
+        if (isPulsing)
+        {
+            pulseTimer += Time.deltaTime * pulseSpeed;
+            float scaleOffset = Mathf.Sin(pulseTimer) * pulseMagnitude;
+            iconRect.localScale = baseScale * (1.0f + scaleOffset);
+        }
+
+        if (isPulsing)
+        {
+            pulseTimer += Time.deltaTime * pulseDuration;
+            float scaleOffset = Mathf.Sin(pulseTimer) * pulseMagnitude;
+            iconRect.localScale = baseScale * (1.0f + scaleOffset);
+        }
+    }
+
+    public void SnapToTarget()
+    {
+        snapToTargetPosition = true;
     }
     
-    
+    public void SetHorizontalOffset(float offset)
+    {
+        horizontalOffset = offset;
+    }
+
 
     public IEnumerator PlayBreakEffect(float targetProgress, float duration = 0.8f)
     {
@@ -132,6 +186,26 @@ public class TimelineIcon : MonoBehaviour
 
     public void SetHighlight(bool highlight)
     {
+        
+        if (highlight == isPulsing)
+            return;
+
+        isPulsing = highlight;
+        if (!highlight)
+        {
+            iconRect.localScale = baseScale; // Reset to normal size
+        }
+
+        if (glowImage != null)
+        {
+            Debug.Log($"Setting highlight for {linkedUnit.name} to {highlight}");
+            glowImage.enabled = highlight;
+        }
+    }
+
+    /*
+    public void SetHighlight(bool highlight)
+    {
         if (highlight == isHighlighted)
         {
             Debug.LogWarning("TimelineIcon is already in the requested highlight state.");
@@ -153,7 +227,7 @@ public class TimelineIcon : MonoBehaviour
         //rt.localScale = target; // Immediately set the scale to the target
         StartCoroutine(LerpScale(target));
     }
-
+    */
 
 
     private IEnumerator LerpScale(Vector3 target, float duration = 0.3f)

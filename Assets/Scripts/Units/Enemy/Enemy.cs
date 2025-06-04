@@ -215,9 +215,10 @@ public class Enemy : MonoBehaviour
         blinkCoroutine = null;
     }
 
-    public void TakeDamage(ElementType type, float amount)
+    public bool TakeDamage(ElementType type, float amount)
     {
         bool isCrit = isBroken;
+        bool isBrokenNow = false;
 
         if (isCrit)
         {
@@ -245,6 +246,7 @@ public class Enemy : MonoBehaviour
                 if (AllWeaknessesBroken())
                 {
                     BreakGuard(); // ✅ Broken enemy
+                    isBrokenNow = true;
                     StartCoroutine(PlayBrokenEffect()); // ✅ visual Broken feedback
                 }
 
@@ -256,6 +258,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
+        return isBrokenNow;
     }
 
     private IEnumerator PlayBrokenEffect()

@@ -13,6 +13,9 @@ public class TimelineUnit : MonoBehaviour
     public float PrepareThreshold => prepareThreshold;
 
     public bool isBeingBroken = false;
+
+
+
     public virtual void UpdateTimeline()
     {
         if (TimelineManagerIsPaused() || isBeingBroken) return;
@@ -48,6 +51,7 @@ public class TimelineUnit : MonoBehaviour
         }
     }
 
+
     private bool TimelineManagerIsPaused()
     {
         return FindObjectOfType<TimelineManager>().isPaused;
@@ -67,7 +71,10 @@ public class TimelineUnit : MonoBehaviour
     {
         timelineProgress = 0f;
         state = TimelineState.Idle;
-            hasTriggeredPrepare = false;
+        hasTriggeredPrepare = false;
+
+        TimelineIcon icon = FindObjectOfType<TimelineManager>().GetIconForUnit(this);
+        icon.SnapToTarget();
     }
 
     public void BeginExecution()
