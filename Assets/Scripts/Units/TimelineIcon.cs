@@ -125,9 +125,18 @@ public class TimelineIcon : MonoBehaviour
 
     public IEnumerator PlayBreakEffect(float targetProgress, float duration = 0.8f)
     {
-
+        if (this == null || linkedUnit == null)
+        {
+            Debug.LogWarning("TimelineIcon or linkedUnit is null in PlayBreakEffect().");
+            yield break; // Exit if the icon or linked unit is not set
+        }
         Debug.Log($"Playing break effect for {linkedUnit.name}. In PlayBreakEffect()");
         RectTransform rt = GetComponent<RectTransform>();
+        if(rt == null || linkedUnit == null)
+        {
+            Debug.LogWarning("RectTransform or linkedUnit is null in PlayBreakEffect().");
+            yield break; // Bail if already destroyed
+        }
         rt.localScale = defaultScale; // Reset to default scale before starting the effect
         Vector3 originalScale = rt.localScale;
         Vector3 enlargedScale = originalScale * 1.5f;
@@ -145,8 +154,12 @@ public class TimelineIcon : MonoBehaviour
 
         while (t < duration)
         {
-            t += Time.deltaTime
-;
+            if(this == null || linkedUnit == null || rt == null)
+            {
+                Debug.LogWarning("TimelineIcon, linkedUnit, or RectTransform is null in PlayBreakEffect().");
+                yield break; // Exit if the icon or linked unit is not set
+            }
+            t += Time.deltaTime;
             // Timeline movement back starts at moveStartTime
             if (t >= moveStartTime && t <= moveEndTime)
             {
@@ -159,29 +172,50 @@ public class TimelineIcon : MonoBehaviour
 
             yield return null;
         }
-        //unit.timelineProgress = targetProgress; // Set the final progress
-        rt.localScale = originalScale;
-        unit.isBeingBroken = false; // Reset the unit's state
-        unit.state = TimelineState.Idle; // Reset state to Idle after the effect
-        //unit.timelineProgress = targetProgress;
+
+        if (rt != null)
+        {
+            rt.localScale = originalScale;
+        }
+
+        if (linkedUnit != null)
+        {
+            linkedUnit.isBeingBroken = false; // Reset the unit's state
+            linkedUnit.state = TimelineState.Idle; // Reset state to Idle after the effect
+        }
+
     }
 
     public IEnumerator resetScale( float duration = 0.3f)
     {
+        if(this == null || linkedUnit == null)
+        {
+            Debug.LogWarning("TimelineIcon or linkedUnit is null in resetScale().");
+            yield break; // Exit if the icon or linked unit is not set
+        }
+
         Debug.Log($"Resetting scale for {linkedUnit.name}. In resetScale()");
         RectTransform rt = GetComponent<RectTransform>();
+        if (rt == null) yield break; // Bail if already destroyed
+
         Vector3 initialScale = rt.localScale;
         float elapsed = 0f;
 
+        
         while (elapsed < duration)
         {
+             if (this == null || rt == null) yield break;
             elapsed += Time.deltaTime;
             rt.localScale = Vector3.Lerp(initialScale, defaultScale, elapsed / duration);
             yield return null;
         }
-
+        
+        if( rt!= null)
+        {
+            rt.localScale = defaultScale;
+        }
         // Ensure the final scale is set correctly
-        rt.localScale = defaultScale;
+
     }
 
     public void SetHighlight(bool highlight)

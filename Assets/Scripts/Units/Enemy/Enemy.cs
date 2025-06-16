@@ -108,7 +108,32 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            //Debug.Log($"{data.enemyName} hit the player! Dealing {data.damage} damage.");
+            Debug.Log($"{data.enemyName} hit the player! Dealing {data.damage} damage.");
+            GameManager.Instance.LoseLife();
+
+            ResetPositionAndTimeline();
+        }
+    }
+
+    private void ResetPositionAndTimeline()
+    {
+        gridPos.x = 0;
+
+        transform.position = FindObjectOfType<GridManager>().GetWorldPosition(gridPos.x, gridPos.y);
+
+        TimelineUnit timeline = GetComponent<TimelineUnit>();
+        if (timeline != null)
+        {
+            timeline.timelineProgress = 0f;
+            timeline.state = TimelineState.Idle;
+            timeline.hasTriggeredPrepare = false;
+        }
+
+        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+        TimelineIcon icon = timelineManager?.GetIconForUnit(timeline);
+        if (icon != null)
+        {
+            icon.SnapToTarget();
         }
     }
 

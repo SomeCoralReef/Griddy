@@ -88,7 +88,8 @@ public class Player : MonoBehaviour
                     else
                     {
                         // Not broken → reset the scale visually
-                        StartCoroutine(enemy.timelineIcon.resetScale());
+                        if (enemy.timelineIcon != null)
+                            StartCoroutine(enemy.timelineIcon.resetScale());
                     }
                 }
             }

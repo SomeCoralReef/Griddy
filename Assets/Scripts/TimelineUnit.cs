@@ -7,7 +7,7 @@ public class TimelineUnit : MonoBehaviour
     public TimelineState state = TimelineState.Idle;
     protected bool isPlayerControlled = false;
     public bool DebugMode = false; // Set to true for debugging purposes
-    private bool hasTriggeredPrepare = false;
+    public bool hasTriggeredPrepare = false;
 
     [SerializeField] protected float prepareThreshold = 0.65f;
     public float PrepareThreshold => prepareThreshold;
@@ -44,6 +44,7 @@ public class TimelineUnit : MonoBehaviour
                 timelineProgress += speed * Time.deltaTime;
                 if (timelineProgress >= 1.0f)
                 {
+
                     OnExecute();
                     ResetTimeline();
                 }

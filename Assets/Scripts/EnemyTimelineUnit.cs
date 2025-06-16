@@ -25,6 +25,6 @@ public class EnemyTimelineUnit : TimelineUnit
 
     public override void UpdateTimeline()
     {
-        base.UpdateTimeline();     
+        base.UpdateTimeline();
     }
 }
