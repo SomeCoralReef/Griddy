@@ -85,34 +85,6 @@ public class Enemy : MonoBehaviour
         if (isBroken) return;
 
         timerProgress += Time.deltaTime;
-
-        /*if(timerProgress >= moveCooldown)
-        {
-            Move();
-            timerProgress = 0f;
-        }*/
-
-    }
-
-    protected virtual void Move()
-    {
-        TryMoveRight();
-    }
-
-    protected void TryMoveRight()
-    {
-        if (gridPos.x < 7)
-        {
-            gridPos.x += 1;
-            transform.position = FindObjectOfType<GridManager>().GetWorldPosition(gridPos.x, gridPos.y);
-        }
-        else
-        {
-            Debug.Log($"{data.enemyName} hit the player! Dealing {data.damage} damage.");
-            GameManager.Instance.LoseLife();
-
-            ResetPositionAndTimeline();
-        }
     }
 
     private void ResetPositionAndTimeline()
