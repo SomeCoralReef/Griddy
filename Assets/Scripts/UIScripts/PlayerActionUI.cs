@@ -36,7 +36,9 @@ public class PlayerActionUI : MonoBehaviour
     private float selectorPopSpeed = 9f;   // How fast it pops
 
 
-    [SerializeField] private Vector2Int targetTile;
+    [SerializeField] private int targetSlotIndex = 0;
+
+
     private GridManager gridManager;
 
     [Header("UX Clarity")]
@@ -59,7 +61,7 @@ public class PlayerActionUI : MonoBehaviour
 
         tileSelector = Instantiate(tileSelector, playerWorldPosXY, Quaternion.identity);
         tileSelectorSpriteRenderer = tileSelector.GetComponent<SpriteRenderer>();
-        targetTile = new Vector2Int(player.gridPos.x, player.gridPos.y);
+        targetSlotIndex = player.slotIndex; // Assuming player.slotIndex is an int representing the slot
         gridManager = FindObjectOfType<GridManager>();
         tileSelector.gameObject.SetActive(false);
     }
@@ -126,11 +128,11 @@ public class PlayerActionUI : MonoBehaviour
                 //I need to make it check if there even is an enemy in front
                 if (enemy == null)
                 {
-                    targetTile = new Vector2Int(player.gridPos.x, player.gridPos.y);
+                    targetSlotIndex = player.slotIndex + 1; // Default to the next slot
                 }
                 else
                 {
-                    targetTile = new Vector2Int(enemy.gridPos.x, enemy.gridPos.y);
+                    targetSlotIndex = enemy.slotIndex;
                 }
 
                 tileSelector.gameObject.SetActive(true);
@@ -146,14 +148,12 @@ public class PlayerActionUI : MonoBehaviour
         }
         else if (isSelectingTile)
         {
-            if (Input.GetKeyDown(KeyCode.W)) { targetTile.y = Mathf.Min(gridManager.rows - 1, targetTile.y + 1); }
-            if (Input.GetKeyDown(KeyCode.S)) { targetTile.y = Mathf.Max(0, targetTile.y - 1); }
-            if (Input.GetKeyDown(KeyCode.A)) { targetTile.x = Mathf.Max(0, targetTile.x - 1); }
-            if (Input.GetKeyDown(KeyCode.D)) { targetTile.x = Mathf.Min(gridManager.columns - 1, targetTile.x + 1); }
+            if (Input.GetKeyDown(KeyCode.S)) { targetSlotIndex = Mathf.Max(0, targetSlotIndex - 1); }
+            if (Input.GetKeyDown(KeyCode.W)) { targetSlotIndex = Mathf.Min(gridManager.slots - 1, targetSlotIndex + 1); }
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                player.AimAtTile(targetTile);
+                player.AimAtSlot(targetSlotIndex);
                 player.OnConfirmAction();
                 tileSelectorSpriteRenderer.color = new Color(1, 0, 0, 1);
                 hasSelectedAttackAndTile = true;
@@ -286,12 +286,12 @@ public class PlayerActionUI : MonoBehaviour
 
     void UpdateTileSelectorPosition()
     {
-        desiredSelectorWorldPos = gridManager.GetWorldPosition(targetTile.x, targetTile.y);
+        desiredSelectorWorldPos = gridManager.GetWorldPositionForSlot(targetSlotIndex);
 
         Enemy hoveredEnemy = null;
         foreach (Enemy enemy in FindObjectsOfType<Enemy>())
         {
-            if (enemy.gridPos == targetTile)
+            if (enemy.slotIndex == targetSlotIndex)
             {
                 hoveredEnemy = enemy;
                 break;
@@ -300,24 +300,21 @@ public class PlayerActionUI : MonoBehaviour
 
         if (ReferenceEquals(hoveredEnemy, currentlyHoveredEnemy))
         {
-            // Still hovering same enemy, do nothing
+            // If we already have the hovered enemy, no need to continue searching
             return;
         }
-
+            
         if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
-        {
             currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
-        }
 
-        if (hoveredEnemy != null && hoveredEnemy.timelineIcon != null)
+        if (hoveredEnemy != null && hoveredEnemy.timelineIcon != null && searchingForEnemyToHighlight)
         {
-            if (searchingForEnemyToHighlight)
-            {
-                hoveredEnemy.timelineIcon.SetHighlight(true);
-            }   
+            hoveredEnemy.timelineIcon.SetHighlight(true);
+            Debug.Log("Highlighting enemy: " + hoveredEnemy.data.enemyName);
         }
 
         currentlyHoveredEnemy = hoveredEnemy;
+        
     }
 
 

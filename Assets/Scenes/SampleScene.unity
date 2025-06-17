@@ -360,12 +360,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b667fa85540b6c4fa38d6d8543afbc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columns: 9
-  rows: 4
-  tileSize: {x: 1, y: 1}
-  tilePrefab: {fileID: 52857290419518990, guid: c7044f1ff582421469075a8283c85261, type: 3}
-  spacing: 1
-  gridParent: {fileID: 336149469}
+  slots: 4
+  slotSpacing: 1
+  slotX: 5
+  slotPrefab: {fileID: 0}
+  slotsParent: {fileID: 0}
+  slotPositions: []
 --- !u!4 &336149469
 Transform:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 336149467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 65.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -895,7 +895,7 @@ Transform:
   m_GameObject: {fileID: 1253190030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.56984, y: 4.262137, z: -6.116536}
+  m_LocalPosition: {x: -0.05, y: 1.49, z: -6.116536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -975,7 +975,7 @@ MonoBehaviour:
   tileSelectorSpriteRenderer: {fileID: 0}
   elementIconLibrary: {fileID: 11400000, guid: 9d2ce23c2ef554871ac23f5e8cdc8adc, type: 2}
   hasSelectedAttackAndTile: 0
-  targetTile: {x: 1, y: 0}
+  targetSlotIndex: 0
   currentlyHoveredEnemy: {fileID: 0}
 --- !u!1 &1324088435
 GameObject:
@@ -1453,7 +1453,7 @@ Transform:
   m_GameObject: {fileID: 1994662826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.72, y: -0.63, z: 0}
+  m_LocalPosition: {x: 47.55, y: -0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1468,7 +1468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077532869}
-  - component: {fileID: 2077532868}
+  - component: {fileID: 2077532870}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1476,18 +1476,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2077532868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077532867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc004d96ffbedf479ab8673419ee32f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2077532869
 Transform:
   m_ObjectHideFlags: 0
@@ -1503,6 +1491,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077532870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077532867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4104a5cb5b05260419f7ae6acb83078d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLives: 88
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

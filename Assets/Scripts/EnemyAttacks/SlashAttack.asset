@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4393fc657dd397f48b33290fa253fc36, type: 3}
-  m_Name: BlastData
+  m_Script: {fileID: 11500000, guid: 332ea798b7a5749409e1bddc258d2dcd, type: 3}
+  m_Name: SlashAttack
   m_EditorClassIdentifier: 
-  attackName: Blast
-  elementType: 2
-  power: 60
-  patternOffsets: 0000000000000000000000000000000000000000
+  attackName: Slash
+  power: 15
+  elementType: 0
+  effect: 

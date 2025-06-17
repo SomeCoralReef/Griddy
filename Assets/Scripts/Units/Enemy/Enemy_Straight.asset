@@ -15,6 +15,6 @@ MonoBehaviour:
   enemyName: Straight
   speed: 0.5
   damage: 5
-  health: 3
-  maxHealth: 3
+  health: 100
+  maxHealth: 100
   weaknesses: 000000000000000000000000

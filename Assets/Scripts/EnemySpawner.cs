@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public List<EnemyData> enemyDatas;
     public int enemyCount = 3;
 
-    private List<Vector2Int> occupiedPositions = new List<Vector2Int>();
+    private List<int> occupiedSlots = new List<int>();
 
 
 
@@ -26,8 +26,8 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            Vector2Int spawnPos = GetRandomEmptySpawnPosition();
-            if (spawnPos == Vector2Int.zero && occupiedPositions.Count >= 4)
+            int spawnSlot = GetRandomEmptySpawnPosition();
+            if (spawnSlot == -1 && occupiedSlots.Count >= 4)
             {
                 Debug.LogWarning("No more spawn positions available.");
                 return;
@@ -44,27 +44,26 @@ public class EnemySpawner : MonoBehaviour
             timelineManager.RegisterEnemyUnit(enemyGO.GetComponent<Enemy>(), enemyGO.GetComponent<TimelineUnit>());
 
             Enemy enemyScript = enemyGO.GetComponent<Enemy>();
-            enemyScript.Initialize(data, spawnPos);
+            enemyScript.Initialize(data, spawnSlot);
             //Debug.Log($"Spawned {data.enemyName} at {spawnPos}");
 
-            occupiedPositions.Add(spawnPos);
+            occupiedSlots.Add(spawnSlot);
         }
     }
 
-    private Vector2Int GetRandomEmptySpawnPosition()
+    private int GetRandomEmptySpawnPosition()
     {
-        List<Vector2Int> possiblePositions = new List<Vector2Int>();
+        List<int> possiblePositions = new List<int>();
 
         // All positions on the leftmost column (x = 0)
-        for (int y = 0; y < gridManager.rows; y++)
+        for (int slot = 0; slot < gridManager.slots; slot++)
         {
-            Vector2Int pos = new Vector2Int(0, y);
-            if (!occupiedPositions.Contains(pos))
-                possiblePositions.Add(pos);
+            if (!occupiedSlots.Contains(slot))
+                possiblePositions.Add(slot);
         }
 
         if (possiblePositions.Count == 0)
-            return Vector2Int.zero;
+            return -1;
 
         return possiblePositions[UnityEngine.Random.Range(0, possiblePositions.Count)];
     }

@@ -16,7 +16,6 @@ public class EnemyTimelineUnit : TimelineUnit
 
     protected override void OnExecute()
     {
-        enemyScript.PerformAction();
         if (enemyScript.isBroken)
         {
             enemyScript.EndBreak();

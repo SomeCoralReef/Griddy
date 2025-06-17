@@ -6,5 +6,5 @@ public class AttackData : ScriptableObject
     public string attackName;
     public ElementType elementType;
     public float power;
-    public Vector2Int[] patternOffsets;
+    public int[] patternOffsets;
 }

@@ -3,35 +3,54 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public int columns = 8;
-    public int rows = 4;
-    public Vector2 tileSize = new Vector2(1f,1f);
-    public GameObject tilePrefab;
-    public float spacing = 1f;
 
-    public Transform gridParent;
-    private GameObject[,] gridTiles;
+    [Header("New RPG Slot Grid")]
+    public int slots = 4;
+    public float slotSpacing = 2f;
+
+    public float slotX = 5f;
+
+    public GameObject slotPrefab;
+
+    public Transform slotsParent;
+
+    [HideInInspector] public Vector3[] slotPositions;
+
+
     private void Awake()
     {
-        gridTiles = new GameObject[columns, rows];
-        CreateGrid();
+        CreateSlots();
     }
-    private void CreateGrid()
+
+    private void CreateSlots()
     {
-        for (int x = 0; x < columns; x++)
+        slotPositions = new Vector3[slots];
+        for (int i = 0; i < slots; i++)
         {
-            for (int y = 0; y < rows; y++)
+            Vector3 pos = new Vector3(i * slotSpacing, 0, 0);
+            slotPositions[i] = pos;
+
+            if (slotPrefab != null)
             {
-                GameObject tile = Instantiate(tilePrefab, gridParent);
-                tile.transform.localPosition = new Vector3(x*spacing, y*spacing, 0);
-                gridTiles[x, y] = tile;
+                Instantiate(slotPrefab, pos, Quaternion.identity, slotsParent);
             }
         }
     }
-
-    public Vector3 GetWorldPosition(int x, int y, float z = -0.1f)
+    public Vector3 GetWorldPositionForSlot(int slotIndex)
     {
-        return new Vector3(x * tileSize.x, y * tileSize.y, z);
+        float enemySideX = 8f; // right side
+        float baseY = 0f;
+        float verticalSpacing = 1f;
+        float y = baseY + slotIndex * verticalSpacing;
+        return new Vector3(enemySideX, y, 0);
     }
-    
+
+    public Vector3 GetPlayerSpawnPosition(int playerIndex)
+    {
+        float playerSideX = -3f; // left side of screen
+        float baseY = -8f;
+        float verticalSpacing = 2f;
+        float y = baseY + playerIndex * verticalSpacing;
+        return new Vector3(playerSideX, y, 0);
+    }
 }

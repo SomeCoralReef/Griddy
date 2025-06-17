@@ -44,7 +44,6 @@ public class TimelineUnit : MonoBehaviour
                 timelineProgress += speed * Time.deltaTime;
                 if (timelineProgress >= 1.0f)
                 {
-
                     OnExecute();
                     ResetTimeline();
                 }

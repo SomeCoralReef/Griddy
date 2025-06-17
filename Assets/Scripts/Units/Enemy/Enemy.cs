@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
 
     [Header("General Enemy Data")]
     public EnemyData data;
-    public Vector2Int gridPos;
     protected float moveCooldown;
     protected float timerProgress = 0f;
     
@@ -49,17 +48,21 @@ public class Enemy : MonoBehaviour
 
     public TimelineIcon timelineIcon;
 
-
+    [Header("RPG Slot System")]
+    public int slotIndex;
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [Header("Enemy Attacks")]
+    [SerializeField] private EnemyAttackData[] attacks;
 
 
-    public virtual void Initialize(EnemyData newData, Vector2Int spawnPos)
+    public virtual void Initialize(EnemyData newData, int spawnPos)
     {
         data = newData;
-        gridPos = spawnPos;
-        transform.position = FindObjectOfType<GridManager>().GetWorldPosition(gridPos.x, gridPos.y);
+        slotIndex = spawnPos;
+
+        transform.position = FindAnyObjectByType<GridManager>().GetWorldPositionForSlot(slotIndex);
 
         health = data.health;
         damage = data.damage;
@@ -87,27 +90,30 @@ public class Enemy : MonoBehaviour
         timerProgress += Time.deltaTime;
     }
 
-    private void ResetPositionAndTimeline()
+
+    protected virtual void OnExecute()
     {
-        gridPos.x = 0;
-
-        transform.position = FindObjectOfType<GridManager>().GetWorldPosition(gridPos.x, gridPos.y);
-
-        TimelineUnit timeline = GetComponent<TimelineUnit>();
-        if (timeline != null)
+        Debug.Log($"{data.enemyName} executed action with {health} HP remaining.");
+        if (attacks.Length > 0)
         {
-            timeline.timelineProgress = 0f;
-            timeline.state = TimelineState.Idle;
-            timeline.hasTriggeredPrepare = false;
+            EnemyAttackData chosenAttack = attacks[Random.Range(0, attacks.Length)];
+            PerformAttack(chosenAttack);
+        }
+        else
+        {
+            Debug.LogWarning($"{data.enemyName} has no attacks defined!");
         }
 
-        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
-        TimelineIcon icon = timelineManager?.GetIconForUnit(timeline);
-        if (icon != null)
-        {
-            icon.SnapToTarget();
-        }
+        
     }
+
+    protected virtual void PerformAttack(EnemyAttackData Enemyattack)
+    {
+        Debug.Log("Performing attack: " + Enemyattack.attackName);
+        GameManager.Instance.LoseLife();
+        //TO DO: Add additional attack logic here like animations, and vfx and all that bullshit please. (Prefable make a pause to do these animations that will run about the length of the animation time);
+    }
+
 
     private Sprite GetElementSprite(ElementType type)
     {
@@ -141,7 +147,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            targetProgress = timeline.timelineProgress - 0.4f;
+            targetProgress = timeline.timelineProgress - 0.3f;
             //timeline.timelineProgress = Mathf.Max(0f, timeline.timelineProgress - 0.4f);
             Debug.Log($"{data.enemyName} was Brokenned. Timeline moved back 40%.");
         }
@@ -322,12 +328,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public virtual void PerformAction()
-    {
-        //Debug.Log($"{data.enemyName} is performing their action (default: Move).");
-        Move();
-    }
-    
+
     private bool AllWeaknessesBroken()
     {
         foreach (ElementType type in runtimeWeaknesses)

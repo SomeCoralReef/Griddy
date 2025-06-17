@@ -4,9 +4,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public AttackData selectedAttack;
-    private Vector2Int aimedTile;
+    private int aimedSlotIndex;
     private GridManager gridManager;
-    public Vector2Int gridPos;
+    public int slotIndex;
 
     public AttackData blastAttack;
     public PlayerActionUI actionUI;
@@ -35,9 +35,9 @@ public class Player : MonoBehaviour
     }
     
 
-    public void AimAtTile(Vector2Int tilePos)
+    public void AimAtSlot(int slotIndex)
     {
-        aimedTile = tilePos;
+        aimedSlotIndex = slotIndex;
     }
 
 
@@ -61,17 +61,16 @@ public class Player : MonoBehaviour
 
         foreach (var offset in selectedAttack.patternOffsets)
         {
-            Vector2Int target = aimedTile + offset;
+            int targetSlot = aimedSlotIndex + offset;
 
             // Grid bounds check
-            if (target.x < 0 || target.x >= gridManager.columns ||
-                target.y < 0 || target.y >= gridManager.rows)
+            if (targetSlot < 0 || targetSlot >= gridManager.slots)
             {
                 //Debug.Log($"Target {target} out of bounds.");
                 continue;
             }
             // Hit check (placeholder logic)
-            Enemy enemy = EnemyAt(target);
+            Enemy enemy = EnemyAt(targetSlot);
             if (enemy != null)
             {
                 bool wasBroken = enemy.TakeDamage(selectedAttack.elementType, selectedAttack.power);
@@ -99,13 +98,13 @@ public class Player : MonoBehaviour
        
 
 
-    private Enemy EnemyAt(Vector2Int pos)
+    private Enemy EnemyAt(int slotIndex)
     {
         // Replace with proper tracking system (e.g. EnemyManager or 2D array map)
         Enemy[] allEnemies = FindObjectsOfType<Enemy>();
         foreach (Enemy e in allEnemies)
         {
-            if (e.gridPos == pos)
+            if (e.slotIndex == slotIndex)
                 return e;
         }
         return null;

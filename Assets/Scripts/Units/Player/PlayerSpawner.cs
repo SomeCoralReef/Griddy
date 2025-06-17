@@ -19,19 +19,18 @@ public class PlayerSpawner : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            // Right now, spawn just off-grid (x = 8), place on row i
-            Vector2Int spawnPos = new Vector2Int(8, i);
+            int spawnSlot = gridManager.slots;
+
             GameObject playerGO = Instantiate(playerPrefab);
 
             Player playerScript = playerGO.GetComponent<Player>();
-            playerScript.gridPos = spawnPos;
+            playerScript.slotIndex = spawnSlot;
 
-            playerGO.transform.position = gridManager.GetWorldPosition(spawnPos.x, spawnPos.y);
+            playerGO.transform.position = gridManager.GetPlayerSpawnPosition(spawnSlot);
 
-            // Register to timeline
             timelineManager.RegisterPlayerUnit(playerGO.GetComponent<TimelineUnit>());
 
-            //Debug.Log($"Spawned player {i + 1} at grid {spawnPos}");
+            Debug.Log($"Spawned player at slot {spawnSlot} at position {playerGO.transform.position}");
         }
     }
 }
