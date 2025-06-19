@@ -232,9 +232,7 @@ MonoBehaviour:
   timelineIcon: {fileID: 0}
   slotIndex: 0
   spriteRenderer: {fileID: 3948534354996408526}
-  attacks:
-  - {fileID: 0}
-  - {fileID: 0}
+  attacks: []
 --- !u!114 &3237311076170742084
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -52,7 +52,6 @@ public class PlayerActionUI : MonoBehaviour
         if (player == null)
         {
             player = FindObjectOfType<Player>();
-            Debug.Log($"Player reference assigned to: {player.name}");
         }
         attackPanel = attackPanel.GetComponent<RectTransform>();
         float playerX = player.transform.position.x;
@@ -310,7 +309,6 @@ public class PlayerActionUI : MonoBehaviour
         if (hoveredEnemy != null && hoveredEnemy.timelineIcon != null && searchingForEnemyToHighlight)
         {
             hoveredEnemy.timelineIcon.SetHighlight(true);
-            Debug.Log("Highlighting enemy: " + hoveredEnemy.data.enemyName);
         }
 
         currentlyHoveredEnemy = hoveredEnemy;

@@ -20,6 +20,8 @@ public class EnemyTimelineUnit : TimelineUnit
         {
             enemyScript.EndBreak();
         }     // decrement Broken duration if Brokenned
+
+        enemyScript.OnExecute();
     }
 
     public override void UpdateTimeline()

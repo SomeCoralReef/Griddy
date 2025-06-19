@@ -5,7 +5,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Player Stats")]
-    public int playerLives = 3;
+    public int playerLives = 88;
+    public int maxHealth = 88;
 
     void Awake()
     {
@@ -18,19 +19,19 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void LoseLife()
+    public void LoseLife(int amount)
     {
-        playerLives--;
-        Debug.Log($"Player lost a life. Lives Left: {playerLives}");
+        playerLives -= amount;
+        Debug.Log($"Player lost {amount} lives. Lives Left: {playerLives}");
         if (playerLives <= 0)
         {
-            // HWandle game over logic here
+            // Handle game over logic here
         }
     }
 
     public void ResetGame()
     {
-        playerLives = 3;
+        playerLives = 88;
         Debug.Log("Game reset. Player lives restored.");
     }
 }

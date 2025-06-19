@@ -34,6 +34,10 @@ public class GridManager : MonoBehaviour
             {
                 Instantiate(slotPrefab, pos, Quaternion.identity, slotsParent);
             }
+            else
+            {
+                Debug.LogWarning("Slot prefab is not assigned in GridManager.");
+            }
         }
     }
     public Vector3 GetWorldPositionForSlot(int slotIndex)

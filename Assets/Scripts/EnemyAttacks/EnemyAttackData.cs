@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyAttackData : ScriptableObject
 {
     public string attackName;
-    public float power;
+    public int power;
     public ElementType elementType;
     public string effect;   
 }

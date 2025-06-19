@@ -64,6 +64,7 @@ public class TimelineUnit : MonoBehaviour
 
     protected virtual void OnExecute()
     {
+        Debug.Log("Virtual Execute called");
         // Final action when timeline completes
     }
 

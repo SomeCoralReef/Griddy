@@ -127,14 +127,11 @@ public class TimelineIcon : MonoBehaviour
     {
         if (this == null || linkedUnit == null)
         {
-            Debug.LogWarning("TimelineIcon or linkedUnit is null in PlayBreakEffect().");
             yield break; // Exit if the icon or linked unit is not set
         }
-        Debug.Log($"Playing break effect for {linkedUnit.name}. In PlayBreakEffect()");
         RectTransform rt = GetComponent<RectTransform>();
         if(rt == null || linkedUnit == null)
         {
-            Debug.LogWarning("RectTransform or linkedUnit is null in PlayBreakEffect().");
             yield break; // Bail if already destroyed
         }
         rt.localScale = defaultScale; // Reset to default scale before starting the effect
@@ -156,7 +153,6 @@ public class TimelineIcon : MonoBehaviour
         {
             if(this == null || linkedUnit == null || rt == null)
             {
-                Debug.LogWarning("TimelineIcon, linkedUnit, or RectTransform is null in PlayBreakEffect().");
                 yield break; // Exit if the icon or linked unit is not set
             }
             t += Time.deltaTime;
@@ -190,11 +186,8 @@ public class TimelineIcon : MonoBehaviour
     {
         if(this == null || linkedUnit == null)
         {
-            Debug.LogWarning("TimelineIcon or linkedUnit is null in resetScale().");
             yield break; // Exit if the icon or linked unit is not set
         }
-
-        Debug.Log($"Resetting scale for {linkedUnit.name}. In resetScale()");
         RectTransform rt = GetComponent<RectTransform>();
         if (rt == null) yield break; // Bail if already destroyed
 
@@ -232,36 +225,10 @@ public class TimelineIcon : MonoBehaviour
 
         if (glowImage != null)
         {
-            Debug.Log($"Setting highlight for {linkedUnit.name} to {highlight}");
             glowImage.enabled = highlight;
         }
     }
 
-    /*
-    public void SetHighlight(bool highlight)
-    {
-        if (highlight == isHighlighted)
-        {
-            Debug.LogWarning("TimelineIcon is already in the requested highlight state.");
-            return; // Skip if already in that state
-        }
-        isHighlighted = highlight;
-        StopAllCoroutines();
-        Vector3 target = defaultScale; // Default scale is the normal size
-        if (highlight)
-        {
-            target = highlightScale;
-        }
-        else
-        {
-            target = defaultScale; // Reset to default scale
-        }
-
-        RectTransform rt = GetComponent<RectTransform>();
-        //rt.localScale = target; // Immediately set the scale to the target
-        StartCoroutine(LerpScale(target));
-    }
-    */
 
 
     private IEnumerator LerpScale(Vector3 target, float duration = 0.3f)

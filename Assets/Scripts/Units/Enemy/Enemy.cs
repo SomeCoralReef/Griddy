@@ -91,33 +91,57 @@ public class Enemy : MonoBehaviour
     }
 
 
-    protected virtual void OnExecute()
+    public virtual void OnExecute()
     {
         Debug.Log($"{data.enemyName} executed action with {health} HP remaining.");
+        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+        timelineManager.isPaused = true;
         if (attacks.Length > 0)
         {
             EnemyAttackData chosenAttack = attacks[Random.Range(0, attacks.Length)];
-            PerformAttack(chosenAttack);
+            StartCoroutine(ExecuteAttackRoutine(chosenAttack));
+
         }
         else
         {
             Debug.LogWarning($"{data.enemyName} has no attacks defined!");
         }
-
-        
     }
+
+
 
     protected virtual void PerformAttack(EnemyAttackData Enemyattack)
     {
         Debug.Log("Performing attack: " + Enemyattack.attackName);
-        GameManager.Instance.LoseLife();
+        GameManager.Instance.LoseLife(Enemyattack.power);
         //TO DO: Add additional attack logic here like animations, and vfx and all that bullshit please. (Prefable make a pause to do these animations that will run about the length of the animation time);
+    }
+
+    private IEnumerator ExecuteAttackRoutine(EnemyAttackData chosenAttack)
+    {
+        Debug.Log($"{data.enemyName} is preparing to attack with {chosenAttack.attackName} ({chosenAttack.elementType})");
+        Animator animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetTrigger("Attack");
+        }
+
+        yield return new WaitForSeconds(1.4f); // Simulate preparation time
+        PerformAttack(chosenAttack);
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            player.ShowHitEffect(chosenAttack.elementType);
+        }
+        CameraShake.Instance.Shake(0.2f, 0.2f);
+        yield return new WaitForSeconds(0.5f);
+        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+        timelineManager.isPaused = false;
     }
 
 
     private Sprite GetElementSprite(ElementType type)
     {
-        Debug.Log($"Getting sprite for element type: {type}");
         switch (type)
         {
             case ElementType.Fire: return fireIcon;
@@ -143,13 +167,11 @@ public class Enemy : MonoBehaviour
         {
             targetProgress = 0.0f;
             //timeline.timelineProgress = 0f;
-            Debug.Log($"{data.enemyName} was Brokenned during prepare. Reset to 0.");
         }
         else
         {
             targetProgress = timeline.timelineProgress - 0.3f;
             //timeline.timelineProgress = Mathf.Max(0f, timeline.timelineProgress - 0.4f);
-            Debug.Log($"{data.enemyName} was Brokenned. Timeline moved back 40%.");
         }
 
         if (icon != null)
@@ -230,7 +252,6 @@ public class Enemy : MonoBehaviour
         health -= Mathf.RoundToInt(amount);
         healthBar.value = health;
 
-        Debug.Log($"{data.enemyName} took {amount} damage. Remaining HP: {health}");
 
         ShowFloatingDamage(amount);
 
@@ -253,7 +274,6 @@ public class Enemy : MonoBehaviour
                     StartCoroutine(PlayBrokenEffect()); // ✅ visual Broken feedback
                 }
 
-                Debug.Log($"{data.enemyName}'s weakness broken: {type}");
             }
         }
 

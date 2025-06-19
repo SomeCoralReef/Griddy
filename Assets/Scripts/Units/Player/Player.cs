@@ -1,5 +1,7 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
@@ -56,20 +58,33 @@ public class Player : MonoBehaviour
             Debug.LogWarning("No attack selected on execution.");
             return;
         }
-
+        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+        timelineManager.isPaused =  true;
+        StartCoroutine(ExecuteAttackRoutine());
         actionUI.StartCoroutine(actionUI.scaleTileSelector(0.2f));
+    }
 
+    private IEnumerator ExecuteAttackRoutine()
+    {
+        Debug.Log("Executing attack: " + selectedAttack.attackName);
+        Animator animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetTrigger("Attack");
+        }
+        else
+        {
+            Debug.LogWarning("Animator not found on Player.");
+        }
+        yield return new WaitForSeconds(1.4f);
         foreach (var offset in selectedAttack.patternOffsets)
         {
             int targetSlot = aimedSlotIndex + offset;
-
-            // Grid bounds check
             if (targetSlot < 0 || targetSlot >= gridManager.slots)
             {
                 //Debug.Log($"Target {target} out of bounds.");
                 continue;
             }
-            // Hit check (placeholder logic)
             Enemy enemy = EnemyAt(targetSlot);
             if (enemy != null)
             {
@@ -78,7 +93,6 @@ public class Player : MonoBehaviour
                 if (enemy.timelineIcon != null)
                 {
                     enemy.timelineIcon.isPulsing = false; // Start pulsing effect
-                    Debug.Log("hi");
                     if (wasBroken)
                     {
                         // The enemy was broken → play break effect
@@ -92,11 +106,48 @@ public class Player : MonoBehaviour
                     }
                 }
             }
+            Debug.Log("Attacking enemy at slot: " + targetSlot);
         }
+        CameraShake.Instance.Shake(0.2f, 0.2f);
+        yield return new WaitForSeconds(0.5f);
+        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+        timelineManager.isPaused =  false;
     }
 
-       
+    public void ShowHitEffect(ElementType attackData)
+    {
+        StartCoroutine(HitFlashRoutine(attackData));
 
+    }
+
+    private IEnumerator HitFlashRoutine(ElementType attackData)
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (attackData.Equals(ElementType.Fire))
+        {
+            spriteRenderer.color = Color.red; // Flash red for fire attacks
+        }
+        else if (attackData.Equals(ElementType.Water))
+        {
+            spriteRenderer.color = Color.blue; // Flash blue for water attacks
+        }
+        else if (attackData.Equals(ElementType.Thunder))
+        {
+            spriteRenderer.color = Color.yellow; // Flash yellow for thunder attacks
+        }
+        else if (attackData.Equals(ElementType.Earth))
+        {
+            spriteRenderer.color = Color.green; // Flash green for earth attacks
+        }
+        else if (attackData.Equals(ElementType.Light))
+        {
+            spriteRenderer.color = Color.white; // Flash white for light attacks
+        }
+
+        yield return new WaitForSeconds(0.4f);
+        Debug.Log("Finished hit flash for " + attackData);
+        spriteRenderer.color = Color.white; // Reset to original color after flash
+    }
 
     private Enemy EnemyAt(int slotIndex)
     {
