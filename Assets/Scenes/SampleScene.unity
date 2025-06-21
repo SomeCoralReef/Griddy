@@ -822,8 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7659b3ebc33363443af42aa0b0179158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausedText: {fileID: 758468044}
-  timelineManager: {fileID: 1948441492}
 --- !u!114 &758468044
 MonoBehaviour:
   m_ObjectHideFlags: 0

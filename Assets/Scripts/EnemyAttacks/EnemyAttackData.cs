@@ -7,4 +7,9 @@ public class EnemyAttackData : ScriptableObject
     public int power;
     public ElementType elementType;
     public string effect;   
+
+    [Header("VFX")]
+    public GameObject hitVFXPrefab; // generic prefab with SpriteVFX
+    public Sprite[] hitVFXFrames;
+    public float hitVFXFrameRate = 12f;
 }

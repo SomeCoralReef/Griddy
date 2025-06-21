@@ -7,4 +7,8 @@ public class AttackData : ScriptableObject
     public ElementType elementType;
     public float power;
     public int[] patternOffsets;
+
+    [Header("VFX")]
+    public GameObject hitVFXPrefab; //generic prefab with SpriteVFX component
+
 }

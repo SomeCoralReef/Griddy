@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4393fc657dd397f48b33290fa253fc36, type: 3}
-  m_Name: Hydro
+  m_Name: Holy
   m_EditorClassIdentifier: 
   attackName: Blast
   elementType: 4
   power: 1
-  patternOffsets:
-  - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 0, y: -1}
+  patternOffsets: 000000000000000000000000
+  hitVFXPrefab: {fileID: 4612426084096604598, guid: aecba69a03bc22640bad21751eced53c, type: 3}
+  hitVFXFrames: []
+  hitVFXFrameRate: 12

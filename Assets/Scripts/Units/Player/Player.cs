@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public PlayerActionUI actionUI;
 
     public bool IsInPreparePhase;
+    public GameObject hitVFXPrefab;
 
     void Start()
     {
@@ -89,6 +90,23 @@ public class Player : MonoBehaviour
             if (enemy != null)
             {
                 bool wasBroken = enemy.TakeDamage(selectedAttack.elementType, selectedAttack.power);
+                Vector3 hitposition = enemy.transform.position;
+
+                GameObject vfxInstance = Instantiate(selectedAttack.hitVFXPrefab, new Vector3 (hitposition.x,hitposition.y,-1f), Quaternion.identity);
+                
+                if (vfxInstance == null)
+                {
+                    Debug.LogError("VFX prefab not found for attack: " + selectedAttack.attackName);
+                    continue;
+                }
+                else
+                {
+                    Debug.Log("Instance name for VFX: " + vfxInstance.name);
+
+                }
+                SpriteVFX vfx = vfxInstance.GetComponent<SpriteVFX>();
+
+
                 enemy.timelineIcon.SetHighlight(false);
                 if (enemy.timelineIcon != null)
                 {

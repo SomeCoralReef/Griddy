@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Blast
   elementType: 1
   power: 1
-  patternOffsets:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
-  - {x: -1, y: 0}
+  patternOffsets: 000000000000000000000000
+  hitVFXPrefab: {fileID: 4612426084096604598, guid: aecba69a03bc22640bad21751eced53c, type: 3}
+  hitVFXFrames: []
+  hitVFXFrameRate: 12

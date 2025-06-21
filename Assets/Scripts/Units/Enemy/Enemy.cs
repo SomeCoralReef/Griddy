@@ -110,12 +110,6 @@ public class Enemy : MonoBehaviour
 
 
 
-    protected virtual void PerformAttack(EnemyAttackData Enemyattack)
-    {
-        Debug.Log("Performing attack: " + Enemyattack.attackName);
-        GameManager.Instance.LoseLife(Enemyattack.power);
-        //TO DO: Add additional attack logic here like animations, and vfx and all that bullshit please. (Prefable make a pause to do these animations that will run about the length of the animation time);
-    }
 
     private IEnumerator ExecuteAttackRoutine(EnemyAttackData chosenAttack)
     {
@@ -138,6 +132,15 @@ public class Enemy : MonoBehaviour
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
         timelineManager.isPaused = false;
     }
+
+
+    protected virtual void PerformAttack(EnemyAttackData Enemyattack)
+    {
+        Debug.Log("Performing attack: " + Enemyattack.attackName);
+        GameManager.Instance.LoseLife(Enemyattack.power);
+        //TO DO: Add additional attack logic here like animations, and vfx and all that bullshit please. (Prefable make a pause to do these animations that will run about the length of the animation time);
+    }
+
 
 
     private Sprite GetElementSprite(ElementType type)

@@ -16,3 +16,6 @@ MonoBehaviour:
   elementType: 2
   power: 60
   patternOffsets: 0000000000000000000000000000000000000000
+  hitVFXPrefab: {fileID: 4612426084096604598, guid: aecba69a03bc22640bad21751eced53c, type: 3}
+  hitVFXFrames: []
+  hitVFXFrameRate: 12
