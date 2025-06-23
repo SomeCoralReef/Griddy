@@ -9,7 +9,7 @@ public class TimelineIcon : MonoBehaviour
 
     private RectTransform iconRect;
 
-    public SpriteRenderer iconSpriteRenderer;
+    public Image iconSpriteRenderer;
 
     private bool hasEnteredPrepareZone = false;
     private Vector3 baseScale;
@@ -50,7 +50,7 @@ public class TimelineIcon : MonoBehaviour
     void Start()
     {
         iconRect = GetComponent<RectTransform>();
-        iconSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        iconSpriteRenderer = GetComponent<Image>();
         baseScale = iconRect.localScale;
 
         if (iconSpriteRenderer != null)

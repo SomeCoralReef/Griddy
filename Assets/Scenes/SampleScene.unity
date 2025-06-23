@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slots: 4
-  slotSpacing: 1
+  slotSpacing: 4
   slotX: 5
   slotPrefab: {fileID: 52857290419518990, guid: c7044f1ff582421469075a8283c85261, type: 3}
   slotsParent: {fileID: 0}
