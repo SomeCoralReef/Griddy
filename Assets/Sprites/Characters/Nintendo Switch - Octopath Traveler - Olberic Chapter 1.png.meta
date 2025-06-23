@@ -1,0 +1,5131 @@
+fileFormatVersion: 2
+guid: 081aa6ead07c74e72a7ee1d5c730c78b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 471
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00134d27f10b34467b50ca4fd66f6d65
+      internalID: 733158457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 476
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e72a2955a3546a09ec5af4e08feb9d
+      internalID: 613951603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 478
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e42ff0c05874338bc45a32a8ee2f93
+      internalID: -1481314687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 480
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a7b2a313b904517816673a0721f5fc
+      internalID: -2008790009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_4
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 481
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47250f6d067204829ac4ea16b658b42e
+      internalID: -1920388206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 481
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea453e539fdbc47c19aef15ad2a6ac90
+      internalID: -329257753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_6
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 471
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1ef41045dc442008e32a7a9e50489f
+      internalID: 596794669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_7
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 476
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f442729313064b0fba17891ac4796fe
+      internalID: -1756840776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_8
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 478
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90000db7744254e47b1c46a25e228adf
+      internalID: 1245401084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_9
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 480
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9be56212b7246328bb4e680fc4c007
+      internalID: 435685357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_10
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 481
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf73892733eb4dc89e32bac5e95f6d6
+      internalID: 1429515524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_11
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 481
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34db293c564b485097b5ee9d964d55e
+      internalID: -845991946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 435
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a185616e47444faae66524d8ca5cef
+      internalID: 871228182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 435
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179c1a62d9568426697748d4223bfdb4
+      internalID: 1654970140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_14
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 435
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad97e3cda21654c1394f19a09e25119d
+      internalID: 1826301606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 435
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3437f5a2d27964b31bdc0357ee1e4ea2
+      internalID: 492174905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebff49c060672490e9697de70cf38755
+      internalID: 1806659686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1227879f3c354cf58bfba20378852ef
+      internalID: -834159623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_18
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f437ce3d71b7743aaade902c95a5ad86
+      internalID: -600640753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_19
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c547103aa5947278b086c052beb9f0
+      internalID: 1114945151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_20
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44cb77af206744bca063a6dcd0ddf21
+      internalID: -915609588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_21
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6f02873525e4aeebbd235c882e1015
+      internalID: -355861696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_22
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21776048ff62940df9e1efa3ae1ba7e4
+      internalID: -2054485412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_23
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66decf41b24de41658e792b6972db981
+      internalID: -1367581939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_24
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 435
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400fa04ee752c430983e00b87b8220a1
+      internalID: 936435448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_25
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 437
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71326815f85c44a06b1d6109c65b7c32
+      internalID: 1857966998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 426
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea31c349f841947beba217305ed2cb5a
+      internalID: -1046709222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 439
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400c45c7fef974d8f91e429212c2a789
+      internalID: 1206503713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_28
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 440
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fed7765fb05445d9b5b5d7784b1c958
+      internalID: 954504437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_29
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 440
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f0df061e47b4e41afd71dde6246305
+      internalID: 1691045286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 394
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a11cd20c79f463381d5dbd24d2130f
+      internalID: -606330469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_31
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 392
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef35f4123d58a47d38296c4a56ca3173
+      internalID: -1002680977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_32
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 390
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fbf9370b98742c5b6a6736fd348c23
+      internalID: 1198851247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_33
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 392
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46503a68869ce4d0492b64360e606cf0
+      internalID: 459461400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_34
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 381
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adffa44e764a848f1ba080f69f297e21
+      internalID: -550526151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_35
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 394
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a6be2e3f86c42f8a91a7c778a71e9c
+      internalID: 359186601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 395
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7799f1a5ce7944aab806bd50e83399cc
+      internalID: -739670786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_37
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 395
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9863a23a8fb64ef982d2c3d530c7870
+      internalID: 1438849485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_38
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 394
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ac0f3c03a144fb8ac074f615f17fb9
+      internalID: 1904869746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_39
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 392
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c009b842b104c7d8a84b26ee1e4755
+      internalID: -1980348843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_40
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 390
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6e1e0a4517a46f5a18b9912c650baa
+      internalID: -895781444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_41
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 391
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccdf53b41cdc4c5a9d8403273e4b78d
+      internalID: -1115871010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 347
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06196f596e4c1496c957713343889d1c
+      internalID: 711901342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_43
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 347
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c1eec735fa4454b98f0a983f6deac6
+      internalID: 682934402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_44
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 346
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5655d3886154cac86c14865c28bddb
+      internalID: -1889145495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_45
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 345
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0911ccbc831744129ad6543d707f86ba
+      internalID: -661921558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_46
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 346
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabdda3b9b51c40b0a44d2ba70875921
+      internalID: -1200291596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_47
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 347
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d824fdc1740d645d2aab39762eead50e
+      internalID: 1365828806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_48
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 347
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a344f7ec2a9b43eaad9de82ac6b3947
+      internalID: -649077459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_49
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 346
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630f4e4f0e5434603ad27029f4849d93
+      internalID: -426971410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_50
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 347
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cedac41b84164eed9c6945f24fe21c2
+      internalID: 900232258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_51
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 347
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1d3391277f14e56aaedae8a9bbf453
+      internalID: -2025636660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_52
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 346
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c03f5dbc54d45bd9505fb979b08803
+      internalID: 260508834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_53
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 346
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d514eef69871462bbe86ddf78a2fc9e
+      internalID: 2041912908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897f0651d92b3440f8890eb426e50287
+      internalID: -811271052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_55
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d4d244cd68e4112855f3b3b15f079f
+      internalID: 10215600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_56
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c79971e4f674cf19b75235fc8f91df
+      internalID: 1090544833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_57
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0aa7e9c6efc4a76a8d4583c9634a86
+      internalID: 1553957156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_58
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3962f2abe40054fe182047105bf92122
+      internalID: 1916510113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_59
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d9d18041c5f4ff5a347586361fd513
+      internalID: -914863654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543300443657c4d419826b9a733e7b57
+      internalID: -812563240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_61
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367f1e98b551b45bf99495cf824f91de
+      internalID: -1807384385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_62
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d0258604a364e2aa34d172e155547a
+      internalID: -1737327219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_63
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925dc1313f6dd48bbb7520568a206408
+      internalID: 466855097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_64
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6f700802545453da81d19c3aeebf3a
+      internalID: 2005165644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_65
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bc3cd4b8cde485d898358a6161f67a
+      internalID: 2025451831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_66
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9347afb20df4dfcb4810986781d139
+      internalID: 1826261565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_67
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722b746d543c74649a4593f065116e92
+      internalID: -642130027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_68
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca65665c10fa4c62b0ceb12470b9008
+      internalID: 381601077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_69
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d072fa99d614e4b809faf555d8510f4a
+      internalID: -895089639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_70
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04808c300eb4a44419190451f9f6a8af
+      internalID: -319223582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_71
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91c809ecd8ae4e0ab214f331cadd2d4
+      internalID: 1024930179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_72
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3822590f611664ec18a89dbbb6e40cb1
+      internalID: -1390616793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_73
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62e933f826594a8cb64513ec5086525
+      internalID: -581546044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_74
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8994e3f6c322e4c568e47afd6e43db15
+      internalID: -349183636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_75
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 275
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9a4804fe310440884900618c5abc52
+      internalID: -813473143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_76
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 275
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4da22cc44a16434282368237fc5cf12
+      internalID: 1209878968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_77
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 275
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16f8e9bbff1a449d8c8b17385239d4f
+      internalID: 1125974877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_78
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 274
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bd161a6fcc24e30818b3133ef583fd
+      internalID: -334506162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_79
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 274
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531f4ec41b9584c1eafed65738a964e1
+      internalID: -844985131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_80
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 274
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72695ab95d8564a30ad5cc181163136d
+      internalID: -1704960273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_81
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 274
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4968d78b8d6dc48c6b807cbd6c6520fc
+      internalID: 1457780116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_82
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 297
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad198ebb538644ed804386f7099c4f7
+      internalID: 1197849554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_83
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 297
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97b4c2b3da9b4aa0ba50fe0cc3549de
+      internalID: 1281653025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_84
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 278
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99344bbe3e974555bbe47984294f3cb
+      internalID: 887160296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_85
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 278
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471b88fb514b14a7f8eec386027e386f
+      internalID: 1946357674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_86
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bbb1d77f7b0408b863975f38ed2dcb
+      internalID: -317884753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_87
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6cf9c08d0c94a5a9f8254a6639b7bb
+      internalID: 433279989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_88
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cb5ca02293343588bf3740b5d4a222
+      internalID: 380489025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_89
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720b3568a7e484696b06f81b7cf799f6
+      internalID: 707904952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_90
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd0b3223b46640068a7220505dcfafc
+      internalID: -446871149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_91
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db4f8ae27e8a4c99889dfda06096e02
+      internalID: -252860757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_92
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 274
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4ce0d6e49f54afebfebf61a88bd6a5
+      internalID: 218075205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_93
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 238
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c1e25f53702437980535aa6bfa2ab8
+      internalID: -1474106868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_94
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12ce56ea6bfe48c2afe5ecb47f8987a
+      internalID: 1745878787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_95
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e3ea24fca364b90afdfc7c44db13eb
+      internalID: -408463288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_96
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b4df010521a42f592daf981b43aa6b
+      internalID: 1753758447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_97
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af49dd0457ae4ed0a2ee99e074d6b73
+      internalID: -421071495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_98
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b51cd5daaf5d4474a494c87c8231d41
+      internalID: -1184442225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_99
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaf1034ca2c04c87b5db0fb8e8dd68f
+      internalID: -1903106920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_100
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 238
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab02b8aad77574ac3908cf26ba87474e
+      internalID: -808033221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_101
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 238
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56e832f541714886a49e9140ac617b3
+      internalID: 1763883330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_102
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 238
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97dd1b754891a4ede8f2c5124f66ca49
+      internalID: 140055859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_103
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 238
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071d1e9aa67c74aa589f5fb2bf2fb440
+      internalID: 338917072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_104
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 238
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2175f752d5f134202bf2cb246a0fdfde
+      internalID: 206327299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_105
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 238
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b4d0dd530a84b23a48b3cdc5994219
+      internalID: -1206985434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_106
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 238
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e117264f5bb3485699c4e61a8ffca49
+      internalID: -193234020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_107
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 238
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f2c02f89ba04e8cbbff980ea74a55d
+      internalID: 275586849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_108
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c59f312af264e8a9b7e387dd5ac7ea
+      internalID: 1030528006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_109
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65529a52507b4aa488703de9f61e81c
+      internalID: 2079598620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_110
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88b3455bfd86488c98f15753eb7ceeb
+      internalID: -657086499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_111
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab84589482d143fe963331ccb6a44bb
+      internalID: 565101874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_112
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ec25b454c0643cfb8fba40211375f8
+      internalID: 324251635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_113
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 238
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e2018c4a4d7462588cac5084064921
+      internalID: 563580644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_114
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b472f72267f834b948295df2131e46d5
+      internalID: -90693668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_115
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7279a54444044f6a86c7e1f0bfa17c
+      internalID: 809200863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_116
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 202
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42007ce947b3a41d9987ecbd44f4dfc8
+      internalID: 1604867489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_117
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c5f41b134344d7db0cfc289335efde
+      internalID: 1324444767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_118
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 202
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6462f3d40a3d44d618b6a7e726ef6dc1
+      internalID: -264485367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_119
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 202
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4aa5459f4644ed49931f33fa219688
+      internalID: 1674009362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_120
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 202
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da98262d2b35d4a2c99f815d063eebd4
+      internalID: 1406089639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_121
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 202
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d955177f225cc4675b130384d2306a61
+      internalID: 1074050447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_122
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 202
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ae5d0e839794ff59f718e9015ee645
+      internalID: -949705137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_123
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 202
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b757da81b3e4af480a20e1f03d46f6
+      internalID: -974808192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_124
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 202
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bcb3794f28f4e5eb5b5e2186f66b6e
+      internalID: 817877912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_125
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 203
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7feabd3cb664a17a3925b98854e6e5
+      internalID: 821750107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_126
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 203
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b19c889188414d15b9d4f5415a85269
+      internalID: -1126816235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_127
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 203
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2153485eb44e642b59a176954642fa33
+      internalID: 1493537212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_128
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 203
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02403a2504f0a40349a6e642b9f9d897
+      internalID: 376011519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_129
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 202
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bd0c2520e634034842bf06124cb9a5
+      internalID: -1122391893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_130
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 202
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71fc429f4a1743f9ad55c5fb834a20f
+      internalID: -1587709305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_131
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 202
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbac1d202758d4d7f863da4565d3d732
+      internalID: 1340694028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_132
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 202
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787d84dccfd7641cdb8690282ed34050
+      internalID: -609527188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_133
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bea85d35f614cdd94a48f6ec9bb4a1
+      internalID: 497531105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_134
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 166
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25be5de9f5a6a4d6ba0310b8da816d03
+      internalID: 1640386495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_135
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 166
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91ec10b5ad674e6591d51ef1ab83e16
+      internalID: 1788709444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_136
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 166
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f492116eecdb743c38f57b58528da708
+      internalID: -1655936825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_137
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 185
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bda527ae81e47c399a2e2cd7021d90
+      internalID: 621692712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_138
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 185
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2827d821583d247c0b5afc49a91f266a
+      internalID: 351124573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_139
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d4b0f61ea584cedac78725325ea24a
+      internalID: -2091384238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_140
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 166
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a312b6fef1b14050bb1bd8cc4fec698
+      internalID: 461768599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_141
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 165
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133ebb91668784674baf58247bb05071
+      internalID: -2035007528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_142
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 166
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8cb2ad86bae4b599b5fe3607fc0eba
+      internalID: -2064590497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_143
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 166
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cc471af159e430a8457c40070c153f
+      internalID: 1064025191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_144
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 156
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8ef3eac2d924029bfab3750d2eb3d6
+      internalID: 848760851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_145
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04163560d9c1a400fbcc88c2fd641320
+      internalID: 622995857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_146
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 169
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3178ffd283d487a9ab7fa43aafec11
+      internalID: -82503267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_147
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 167
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255afd5be515e4d6bb9a592c872ecef3
+      internalID: -1126450645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_148
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6ab87e8fbe2493abd56cca3ec56306
+      internalID: -1736303176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_149
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 169
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5808df457fb842c9b72919ee96d3ecf
+      internalID: 241380725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_150
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 168
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4370377c2f024c84b12f1bfd7fe7d7b
+      internalID: -124132246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_151
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a959c267caf84dcab802d8ce94993b7
+      internalID: 1899036652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_152
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 169
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf67e8c9ec4c4ea08d95bc80b81a2b4
+      internalID: -568349144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_153
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 168
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27497d4c796f48d6a414cb8dad29525
+      internalID: -2019000720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_154
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 167
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd1eeceb8fdb4635b02dfe6e13111df
+      internalID: -1593786069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_155
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 123
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c77fd3ece4f44e7384266b5677217f3
+      internalID: 1273847924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_156
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 122
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b8c1d14cdf34c2a8e0bc287ec88fe8
+      internalID: 1342438832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_157
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 121
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b87dcd65985b4e8293b84787c2d1bc3
+      internalID: 1248401993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_158
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 121
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06100235e22e343899886839fe049bf5
+      internalID: 1789102156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_159
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccdd8f05e96549b5a4a818cc2236a5c
+      internalID: 1112074143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_160
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 119
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9812878919184deabf48f5d1853fb67
+      internalID: 41090510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_161
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 122
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac94f0fc66b84dec8fc870bbadcb5e6
+      internalID: -348291260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_162
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 121
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5adee60df004cd18a40f2fe311a4ff
+      internalID: 340029889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_163
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03709e69eb7a04a008cd5aa1c0a0b4c4
+      internalID: 1111962738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_164
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 121
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4150e4bd114b8421abe7530a7303c300
+      internalID: 994747544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_165
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd72335d1d1e44a38a141475447f4161
+      internalID: 236690468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_166
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 119
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19ce04f83a1344b789e2c7a47ce343e
+      internalID: 272739669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_167
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 122
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf3dea49cba14a979aa607744fd6418
+      internalID: 440424665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_168
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 121
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abcbb2db87c44d7f9d2ba832673a073
+      internalID: -502446971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_169
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da91337185f54cad9098709c6ad5c40
+      internalID: 115644596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_170
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f7889f39ae04455b9e30ea1e4e0aa3
+      internalID: -991527733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_171
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d235747a546f74bd69c50093a1c4f4c8
+      internalID: 123272472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_172
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 119
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716b4a27134fd40ad99071c361eb32cd
+      internalID: 364988053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_173
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39031d3f7b38414d966c31c18f31c60
+      internalID: -473160155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_174
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8765438fde7fc4ba59a829e45adae93a
+      internalID: -1245138255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_175
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 119
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae5fd3b219784595a7f9065f5236c73
+      internalID: 891961072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_176
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520de8cfbbd744278ab4846749d2e4ff
+      internalID: -912943898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_177
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588ec1c058dee4db194e3b9575abdbce
+      internalID: 1970775286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_178
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2980cffbeac604bb7b8c95af5ae675b9
+      internalID: 840291906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_179
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 85
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5300b91151ba34ef9b9e039280a67350
+      internalID: 1047015425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_180
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a161b67a6ec43a096454edb2c31f75
+      internalID: -386640663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_181
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df81e7f100d8041d880b1f022ef1c6cd
+      internalID: 1548672587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_182
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 84
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e53f90ccfdb426cb5ed60116da42a6
+      internalID: -1513027346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_183
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b258db0cae10a4f43aa8055468b76e43
+      internalID: 2116273596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_184
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 82
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1ab7402499e4a00914fb7c1c04eebf
+      internalID: -220943226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_185
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 85
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc583e81c2034f5482c436841d83757
+      internalID: -1541856177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_186
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57994cbff9754e6bbe4a529a84b46f2
+      internalID: -899790021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_187
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317700b35394f4b5fa8342856bb24df9
+      internalID: -1923661497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_188
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 84
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f23e77ec2ad42ff892e995a721da24
+      internalID: 1626787485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_189
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6a424bbeb8f4dfe916472e3a743768
+      internalID: -531712426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_190
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 82
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8712e1baae95d4a5daee1446c8a8a43b
+      internalID: 2049554359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_191
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 85
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b675b3d32a88474ba05536d6830e127
+      internalID: 1316452933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_192
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9fa9815f4c64eed9580555785c402e
+      internalID: -905621305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_193
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c47d3ce30464d08a2201f74dc9548a
+      internalID: 549161005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_194
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 83
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1e16e5cfbb240d18279e33a1c03848
+      internalID: -837757361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_195
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd1bc45e33694364a805be0fc75d516
+      internalID: -1561285096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_196
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb233587f2754fde89870eae82e0f80
+      internalID: 1416853027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_197
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 83
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165807483c36148b79914fa39b6cfae3
+      internalID: 1767811700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_198
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33da48c672a4e4964b2ab70638ad7748
+      internalID: 2112968567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_199
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9746fbe445d847868e85196505fd62f
+      internalID: 2029289984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_200
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974d54e2a1b94fa19a7ebf08a060019
+      internalID: 497274856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_201
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c490bd3a526c413c94eee7ccaba50bd
+      internalID: -1335803026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_202
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6db62ac4ab4641118f833eeee708c81
+      internalID: 948143329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_203
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 46
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2329aac7715413c899525f8cd4e7a8
+      internalID: -2122332380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_204
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9618c93855644548d96db4e81d4918
+      internalID: -2065777453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_205
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef8c6a2e35734158b51f4269fc7e15d
+      internalID: 1353316248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_206
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 47
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84298aacc39d432e96bccee0b68d234
+      internalID: 619845260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_207
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba46ef6bcadd49f1bb660f6d4b81946
+      internalID: -2109714030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_208
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b803bde0bd24948a48c53bc6dbbdebff
+      internalID: -1094457475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_209
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb0ac92a3deb43619e979a3848f26bf
+      internalID: -717507227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_210
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d4cbcac250149f68e7cc28358abffb
+      internalID: 2091346553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_211
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50385d01fa65b4f9fb952a16b31e8e2e
+      internalID: 2133032878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_212
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 47
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62df111a1bc5c47afbd3d0bcba37f88a
+      internalID: -744034473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_213
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c8805ce580b47ae8afdd6fa1535ba4
+      internalID: -246996378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_214
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40c814f2904d4c86ae15bbab5906b00
+      internalID: 1252567582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_215
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e102994e8de4a79997d0053e0d1720
+      internalID: -780615699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_216
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb4177209fc048158025262f29d5214
+      internalID: 247702864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Chapter 1_217
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d041e78df9784f91972084915ac16a6
+      internalID: 817894948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 75b32dff7f97147a391d001bb69c16cf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_0: 733158457
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_1: 613951603
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_10: 1429515524
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_100: -808033221
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_101: 1763883330
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_102: 140055859
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_103: 338917072
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_104: 206327299
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_105: -1206985434
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_106: -193234020
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_107: 275586849
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_108: 1030528006
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_109: 2079598620
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_11: -845991946
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_110: -657086499
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_111: 565101874
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_112: 324251635
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_113: 563580644
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_114: -90693668
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_115: 809200863
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_116: 1604867489
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_117: 1324444767
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_118: -264485367
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_119: 1674009362
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_12: 871228182
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_120: 1406089639
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_121: 1074050447
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_122: -949705137
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_123: -974808192
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_124: 817877912
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_125: 821750107
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_126: -1126816235
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_127: 1493537212
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_128: 376011519
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_129: -1122391893
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_13: 1654970140
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_130: -1587709305
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_131: 1340694028
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_132: -609527188
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_133: 497531105
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_134: 1640386495
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_135: 1788709444
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_136: -1655936825
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_137: 621692712
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_138: 351124573
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_139: -2091384238
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_14: 1826301606
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_140: 461768599
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_141: -2035007528
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_142: -2064590497
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_143: 1064025191
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_144: 848760851
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_145: 622995857
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_146: -82503267
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_147: -1126450645
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_148: -1736303176
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_149: 241380725
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_15: 492174905
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_150: -124132246
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_151: 1899036652
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_152: -568349144
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_153: -2019000720
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_154: -1593786069
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_155: 1273847924
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_156: 1342438832
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_157: 1248401993
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_158: 1789102156
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_159: 1112074143
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_16: 1806659686
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_160: 41090510
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_161: -348291260
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_162: 340029889
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_163: 1111962738
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_164: 994747544
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_165: 236690468
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_166: 272739669
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_167: 440424665
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_168: -502446971
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_169: 115644596
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_17: -834159623
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_170: -991527733
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_171: 123272472
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_172: 364988053
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_173: -473160155
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_174: -1245138255
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_175: 891961072
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_176: -912943898
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_177: 1970775286
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_178: 840291906
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_179: 1047015425
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_18: -600640753
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_180: -386640663
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_181: 1548672587
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_182: -1513027346
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_183: 2116273596
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_184: -220943226
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_185: -1541856177
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_186: -899790021
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_187: -1923661497
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_188: 1626787485
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_189: -531712426
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_19: 1114945151
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_190: 2049554359
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_191: 1316452933
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_192: -905621305
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_193: 549161005
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_194: -837757361
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_195: -1561285096
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_196: 1416853027
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_197: 1767811700
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_198: 2112968567
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_199: 2029289984
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_2: -1481314687
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_20: -915609588
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_200: 497274856
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_201: -1335803026
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_202: 948143329
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_203: -2122332380
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_204: -2065777453
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_205: 1353316248
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_206: 619845260
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_207: -2109714030
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_208: -1094457475
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_209: -717507227
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_21: -355861696
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_210: 2091346553
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_211: 2133032878
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_212: -744034473
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_213: -246996378
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_214: 1252567582
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_215: -780615699
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_216: 247702864
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_217: 817894948
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_22: -2054485412
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_23: -1367581939
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_24: 936435448
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_25: 1857966998
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_26: -1046709222
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_27: 1206503713
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_28: 954504437
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_29: 1691045286
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_3: -2008790009
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_30: -606330469
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_31: -1002680977
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_32: 1198851247
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_33: 459461400
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_34: -550526151
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_35: 359186601
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_36: -739670786
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_37: 1438849485
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_38: 1904869746
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_39: -1980348843
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_4: -1920388206
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_40: -895781444
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_41: -1115871010
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_42: 711901342
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_43: 682934402
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_44: -1889145495
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_45: -661921558
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_46: -1200291596
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_47: 1365828806
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_48: -649077459
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_49: -426971410
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_5: -329257753
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_50: 900232258
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_51: -2025636660
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_52: 260508834
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_53: 2041912908
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_54: -811271052
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_55: 10215600
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_56: 1090544833
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_57: 1553957156
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_58: 1916510113
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_59: -914863654
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_6: 596794669
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_60: -812563240
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_61: -1807384385
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_62: -1737327219
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_63: 466855097
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_64: 2005165644
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_65: 2025451831
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_66: 1826261565
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_67: -642130027
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_68: 381601077
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_69: -895089639
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_7: -1756840776
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_70: -319223582
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_71: 1024930179
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_72: -1390616793
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_73: -581546044
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_74: -349183636
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_75: -813473143
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_76: 1209878968
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_77: 1125974877
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_78: -334506162
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_79: -844985131
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_8: 1245401084
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_80: -1704960273
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_81: 1457780116
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_82: 1197849554
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_83: 1281653025
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_84: 887160296
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_85: 1946357674
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_86: -317884753
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_87: 433279989
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_88: 380489025
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_89: 707904952
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_9: 435685357
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_90: -446871149
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_91: -252860757
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_92: 218075205
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_93: -1474106868
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_94: 1745878787
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_95: -408463288
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_96: 1753758447
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_97: -421071495
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_98: -1184442225
+      Nintendo Switch - Octopath Traveler - Olberic Chapter 1_99: -1903106920
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

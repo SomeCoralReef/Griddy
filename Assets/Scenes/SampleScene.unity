@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7698085b22312394e9dff2d2ffece971, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1bce7ae9889945c890a653e3177f4d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -376,7 +376,7 @@ MonoBehaviour:
   slots: 4
   slotSpacing: 1
   slotX: 5
-  slotPrefab: {fileID: 0}
+  slotPrefab: {fileID: 52857290419518990, guid: c7044f1ff582421469075a8283c85261, type: 3}
   slotsParent: {fileID: 0}
   slotPositions: []
 --- !u!4 &336149469

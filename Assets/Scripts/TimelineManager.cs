@@ -28,11 +28,11 @@ public class TimelineManager : MonoBehaviour
         iconScript.linkedUnit = unit;
         iconScript.barRect = timelineBar;
 
-        Image iconImage = icon.GetComponent<Image>();
+        SpriteRenderer iconSpriteRenderer = icon.GetComponentInChildren<SpriteRenderer>();
         if (unit is PlayerTimelineUnit)
-            iconImage.color = Color.blue;
+            iconSpriteRenderer.color = Color.blue;
         else if (unit is EnemyTimelineUnit)
-            iconImage.color = Color.red;
+            iconSpriteRenderer.color = Color.red;
 
         timelineIcons.Add(iconScript);    
 
@@ -54,9 +54,9 @@ public class TimelineManager : MonoBehaviour
         iconScript.linkedUnit = unit;
         iconScript.barRect = timelineBar;
 
-        Image iconImage = icon.GetComponent<Image>();
-        iconImage.color = Color.blue; // Player icons are blue
-        
+        SpriteRenderer iconSpriteRenderer = icon.GetComponentInChildren<SpriteRenderer>();
+        iconSpriteRenderer.color = Color.blue; // Player icons are blue
+
         timelineIcons.Add(iconScript);
     }
 

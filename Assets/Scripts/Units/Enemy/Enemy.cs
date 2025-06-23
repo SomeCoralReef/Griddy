@@ -123,10 +123,13 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1.4f); // Simulate preparation time
         PerformAttack(chosenAttack);
         Player player = FindObjectOfType<Player>();
+        
         if (player != null)
         {
+
             player.ShowHitEffect(chosenAttack.elementType);
         }
+        GameObject vfxInstance = Instantiate(chosenAttack.vfxPrefab, new Vector3 (player.transform.position.x, player.transform.position.y, -1f), Quaternion.identity);
         CameraShake.Instance.Shake(0.2f, 0.2f);
         yield return new WaitForSeconds(0.5f);
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
@@ -138,6 +141,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Performing attack: " + Enemyattack.attackName);
         GameManager.Instance.LoseLife(Enemyattack.power);
+
         //TO DO: Add additional attack logic here like animations, and vfx and all that bullshit please. (Prefable make a pause to do these animations that will run about the length of the animation time);
     }
 
@@ -238,7 +242,6 @@ public class Enemy : MonoBehaviour
             spriteRenderer.color = normalColor;
             yield return new WaitForSeconds(0.1f);
         }
-
         spriteRenderer.color = normalColor;
         blinkCoroutine = null;
     }

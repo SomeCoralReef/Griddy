@@ -16,6 +16,6 @@ MonoBehaviour:
   power: 15
   elementType: 0
   effect: 
-  hitVFXPrefab: {fileID: 4612426084096604598, guid: 41724ab5e5e408541a5e2e47f104a034, type: 3}
+  vfxPrefab: {fileID: 8523388823611714564, guid: d5f5a7247791e4476825a1f8ed125416, type: 3}
   hitVFXFrames: []
   hitVFXFrameRate: 12

@@ -16,13 +16,17 @@ public class Player : MonoBehaviour
     public bool IsInPreparePhase;
     public GameObject hitVFXPrefab;
 
+    public PlayerAnimationControllerScript playerAnimationController;
+
     void Start()
     {
         gridManager = FindObjectOfType<GridManager>();
         actionUI = FindObjectOfType<PlayerActionUI>();
+        playerAnimationController = GetComponent<PlayerAnimationControllerScript>();
     }
     void Update()
     {
+        playerAnimationController.PlayerPrepare(IsInPreparePhase);
         if (GetComponent<PlayerTimelineUnit>().state == TimelineState.Preparing)
         {
             IsInPreparePhase = true;
@@ -35,6 +39,7 @@ public class Player : MonoBehaviour
     public void SelectAttack(AttackData attack)
     {
         selectedAttack = attack;
+        
     }
     
 
@@ -61,6 +66,7 @@ public class Player : MonoBehaviour
         }
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
         timelineManager.isPaused =  true;
+        
         StartCoroutine(ExecuteAttackRoutine());
         actionUI.StartCoroutine(actionUI.scaleTileSelector(0.2f));
     }
@@ -68,16 +74,9 @@ public class Player : MonoBehaviour
     private IEnumerator ExecuteAttackRoutine()
     {
         Debug.Log("Executing attack: " + selectedAttack.attackName);
-        Animator animator = GetComponent<Animator>();
-        if (animator != null)
-        {
-            animator.SetTrigger("Attack");
-        }
-        else
-        {
-            Debug.LogWarning("Animator not found on Player.");
-        }
+        playerAnimationController.PlayAttack();
         yield return new WaitForSeconds(1.4f);
+        
         foreach (var offset in selectedAttack.patternOffsets)
         {
             int targetSlot = aimedSlotIndex + offset;
@@ -101,7 +100,6 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Instance name for VFX: " + vfxInstance.name);
 
                 }
                 SpriteVFX vfx = vfxInstance.GetComponent<SpriteVFX>();
@@ -127,7 +125,7 @@ public class Player : MonoBehaviour
             Debug.Log("Attacking enemy at slot: " + targetSlot);
         }
         CameraShake.Instance.Shake(0.2f, 0.2f);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
         timelineManager.isPaused =  false;
     }
@@ -177,5 +175,15 @@ public class Player : MonoBehaviour
                 return e;
         }
         return null;
+    }
+
+    private void goIntoPreparePhase()
+    {
+        playerAnimationController.PlayerPrepare(true);
+    }
+
+    private void exitPreparePhase()
+    {
+        playerAnimationController.PlayerPrepare(false);
     }
 }

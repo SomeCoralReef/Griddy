@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: 3b987dc55be94aa41a8437081a1e0a8f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - linkedUnit: {instanceID: 0}
+  - barRect: {instanceID: 0}
+  - glowImage: {instanceID: 0}
+  - iconLibrary: {fileID: 11400000, guid: c0b2b0272429e4693b69808af7c62a5d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

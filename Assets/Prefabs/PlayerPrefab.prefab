@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3948534354996408526}
   - component: {fileID: 5640887107817538522}
   - component: {fileID: 8456076260319726811}
+  - component: {fileID: 3828431254688834860}
+  - component: {fileID: 3421620599901499634}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -29,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5.6996894}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,9 +80,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2205ba3f7edc6204fbb0331a48c60f85, type: 3}
+  m_Sprite: {fileID: 2025451831, guid: 081aa6ead07c74e72a7ee1d5c730c78b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.56, y: 2.56}
@@ -126,3 +128,40 @@ MonoBehaviour:
   actionUI: {fileID: 0}
   IsInPreparePhase: 0
   hitVFXPrefab: {fileID: 4612426084096604598, guid: aecba69a03bc22640bad21751eced53c, type: 3}
+  playerAnimationController: {fileID: 3421620599901499634}
+--- !u!95 &3828431254688834860
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120478495260911483}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43212e4bd72524b01a227af19031bfee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3421620599901499634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120478495260911483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de5d7d9dd1b14e5aa70fbc6b26b36eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3828431254688834860}
+  currentAnimationState: Idle

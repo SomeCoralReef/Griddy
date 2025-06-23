@@ -9,8 +9,7 @@ public class TimelineIcon : MonoBehaviour
 
     private RectTransform iconRect;
 
-    private Image iconImage;
-
+    public SpriteRenderer iconSpriteRenderer;
 
     private bool hasEnteredPrepareZone = false;
     private Vector3 baseScale;
@@ -36,6 +35,9 @@ public class TimelineIcon : MonoBehaviour
     private float horizontalOffset = 0f;
     public bool snapToTargetPosition = false;
 
+    [SerializeField] private TimelineIconLibrary iconLibrary;
+
+
     void Awake()
     {
         if (glowImage != null)
@@ -48,11 +50,23 @@ public class TimelineIcon : MonoBehaviour
     void Start()
     {
         iconRect = GetComponent<RectTransform>();
-        iconImage = GetComponent<Image>();
+        iconSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         baseScale = iconRect.localScale;
 
-        if (iconImage != null)
-            originalColor = iconImage.color;
+        if (iconSpriteRenderer != null)
+            originalColor = iconSpriteRenderer.color;
+
+
+        if (linkedUnit != null && iconLibrary != null)
+        {
+            Debug.Log("Setting icon for linked unit: " + linkedUnit.name);
+            string key = linkedUnit.name; // OR linkedUnit.data.enemyName if more robust
+            Sprite iconSprite = iconLibrary.GetIcon(key);
+            if (iconSprite != null)
+            {
+                iconSpriteRenderer.sprite = iconSprite;
+            }
+        }
     }
 
     void Update()
@@ -92,9 +106,9 @@ public class TimelineIcon : MonoBehaviour
         // Animate scaling
 
 
-        if (iconImage != null)
+        if (iconSpriteRenderer != null)
         {
-            iconImage.color = hasEnteredPrepareZone ? Color.yellow : originalColor;
+            iconSpriteRenderer.color = hasEnteredPrepareZone ? Color.yellow : originalColor;
         }
 
         if (isPulsing)
