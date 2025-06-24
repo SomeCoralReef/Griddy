@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icons:
   - unitName: BatEnemy
-    iconSprite: {fileID: -44721857, guid: 4fb686b6ba86f4b69a652d1eef9780ba, type: 3}
+    iconSprite: {fileID: 21300000, guid: afc1afbdb5eb0de4084931ffcbfb5a91, type: 3}
   - unitName: GolemEnemy
-    iconSprite: {fileID: -690018111, guid: cc5bc50ec7bc944b783c5bd52ca3fad8, type: 3}
+    iconSprite: {fileID: 21300000, guid: 0169a4b85d1cbcd4d9e3dac4b9058b80, type: 3}
   - unitName: MushroomEnemy
     iconSprite: {fileID: 1849452925, guid: db63a4174cfd24bd89a1658e6111918f, type: 3}
+  - unitName: PlayerPrefab
+    iconSprite: {fileID: 21300000, guid: 5349ab13c7760ec4183fad0f7354a814, type: 3}

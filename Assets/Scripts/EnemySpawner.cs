@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             int spawnSlot = GetRandomEmptySpawnPosition();
-            if (spawnSlot == -1 && occupiedSlots.Count >= 4)
+            if (spawnSlot == -1 && occupiedSlots.Count >= 3)
             {
                 Debug.LogWarning("No more spawn positions available.");
                 return;

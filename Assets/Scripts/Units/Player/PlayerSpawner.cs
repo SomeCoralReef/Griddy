@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
@@ -9,6 +10,9 @@ public class PlayerSpawner : MonoBehaviour
 
     [Header("Party Setup")]
     public int playerCount = 1; // We'll support up to 3 later
+    
+
+    public int playerSlotSpacing = 10;
 
     void Start()
     {
@@ -20,8 +24,7 @@ public class PlayerSpawner : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             int spawnSlot = gridManager.slots;
-
-            GameObject playerGO = Instantiate(playerPrefab);
+            GameObject playerGO = Instantiate(playerPrefab, gridManager.GetPlayerSpawnPosition(spawnSlot), Quaternion.identity);
 
             Player playerScript = playerGO.GetComponent<Player>();
             playerScript.slotIndex = spawnSlot;

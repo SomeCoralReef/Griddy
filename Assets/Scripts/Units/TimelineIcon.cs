@@ -108,7 +108,7 @@ public class TimelineIcon : MonoBehaviour
 
         if (iconSpriteRenderer != null)
         {
-            iconSpriteRenderer.color = hasEnteredPrepareZone ? Color.yellow : originalColor;
+            //TODO: Add logic to enlarge based on prepare zone
         }
 
         if (isPulsing)

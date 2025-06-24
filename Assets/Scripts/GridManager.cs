@@ -5,7 +5,7 @@ public class GridManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [Header("New RPG Slot Grid")]
-    public int slots = 4;
+    public int slots = 3;
     public float slotSpacing = 2f;
 
     public float slotX = 5f;
@@ -43,16 +43,16 @@ public class GridManager : MonoBehaviour
     public Vector3 GetWorldPositionForSlot(int slotIndex)
     {
         float enemySideX = 8f; // right side
-        float baseY = 0f;
-        float verticalSpacing = 1f;
+        float baseY = -1f;
+        float verticalSpacing = 1.5f;
         float y = baseY + slotIndex * verticalSpacing;
         return new Vector3(enemySideX, y, 0);
     }
 
     public Vector3 GetPlayerSpawnPosition(int playerIndex)
     {
-        float playerSideX = -3f; // left side of screen
-        float baseY = -8f;
+        float playerSideX = -2f; // left side of screen
+        float baseY = -6f;
         float verticalSpacing = 2f;
         float y = baseY + playerIndex * verticalSpacing;
         return new Vector3(playerSideX, y, 0);

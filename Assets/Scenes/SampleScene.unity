@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b667fa85540b6c4fa38d6d8543afbc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: 4
+  slots: 3
   slotSpacing: 4
   slotX: 5
   slotPrefab: {fileID: 52857290419518990, guid: c7044f1ff582421469075a8283c85261, type: 3}
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7106918, g: 0.42858118, b: 0.15867642, a: 1}
+  m_Color: {r: 0.70980394, g: 0.15686275, b: 0.49195668, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1147,7 +1147,7 @@ Transform:
   m_GameObject: {fileID: 1253190030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.49, z: -6.116536}
+  m_LocalPosition: {x: -0.05, y: -1.58, z: -6.116536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1169,6 +1169,7 @@ MonoBehaviour:
   timelineManager: {fileID: 1948441492}
   gridManager: {fileID: 336149468}
   playerCount: 1
+  playerSlotSpacing: 10
 --- !u!1 &1260683828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,7 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.61635214, g: 0.3585696, b: 0.3585696, a: 0.392}
+  m_Color: {r: 0.836478, g: 0.836478, b: 0.836478, a: 0.9137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
