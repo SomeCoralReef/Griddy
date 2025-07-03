@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4393fc657dd397f48b33290fa253fc36, type: 3}
-  m_Name: Hydro
+  m_Name: ThuderPass
   m_EditorClassIdentifier: 
-  attackName: Blast
+  attackName: ThunderAttack
   elementType: 2
   power: 1
   patternOffsets: 000000000000000000000000
