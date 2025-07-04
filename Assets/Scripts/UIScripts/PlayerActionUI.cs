@@ -9,8 +9,6 @@ public class PlayerActionUI : MonoBehaviour
     public Player player;
     public AttackData[] availableAttacks;
 
-
-
     [Header("UI References")]
     public RectTransform attackPanel;
     public GameObject attackOptionPrefab;
