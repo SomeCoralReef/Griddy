@@ -4,9 +4,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public int numberOfPlayersInParty = 2;
+
     [Header("Player Stats")]
     public int playerLives = 88;
     public int maxHealth = 88;
+
 
     void Awake()
     {
