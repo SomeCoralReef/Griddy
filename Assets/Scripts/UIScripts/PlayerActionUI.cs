@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class PlayerActionUI : MonoBehaviour
 {
     public Player player;
-    public AttackData[] availableAttacks;
 
     [Header("UI References")]
     public RectTransform attackPanel;
@@ -47,6 +46,7 @@ public class PlayerActionUI : MonoBehaviour
 
     void Start()
     {
+        
         if (player == null)
         {
             player = FindObjectOfType<Player>();
@@ -116,7 +116,7 @@ public class PlayerActionUI : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                player.SelectAttack(availableAttacks[currentAttackIndex]);
+                player.SelectAttack(player.availableAttacks[currentAttackIndex]);
                 isSelectingAttack = false;
                 isSelectingTile = true;
                 searchingForEnemyToHighlight = true;
@@ -197,10 +197,11 @@ public class PlayerActionUI : MonoBehaviour
 
     public void BeginActionPhase()
     {
+        Debug.Log("BeginActionPhase called");
         hasSelectedAttackAndTile = false;
         isSelectingAttack = true;
         currentAttackIndex = 0;
-        PopulateAttackList();
+        PopulateAttackList(player);
 
         attackPanel.transform.position = player.transform.position + new Vector3(1.0f, 0, 0);
         attackPanel.gameObject.SetActive(true);
@@ -251,22 +252,22 @@ public class PlayerActionUI : MonoBehaviour
 
     void ChangeAttack(int direction)
     {
-        currentAttackIndex = (currentAttackIndex + direction + availableAttacks.Length) % availableAttacks.Length;
+        currentAttackIndex = (currentAttackIndex + direction + player.availableAttacks.Count) % player.availableAttacks.Count;
         HighlightAttack(currentAttackIndex);
     }
 
-    void PopulateAttackList()
+    void PopulateAttackList(Player player)
     {
         foreach (Transform child in attackPanel)
         {
             Destroy(child.gameObject);
         }
 
-        for (int i = 0; i < availableAttacks.Length; i++)
+        for (int i = 0; i < player.availableAttacks.Count; i++)
         {
             GameObject option = Instantiate(attackOptionPrefab, attackPanel);
-            option.GetComponentInChildren<TextMeshProUGUI>().text = availableAttacks[i].attackName;
-            option.GetComponentInChildren<Image>().sprite = elementIconLibrary.GetIcon(availableAttacks[i].elementType);
+            option.GetComponentInChildren<TextMeshProUGUI>().text = player.availableAttacks[i].attackName;
+            option.GetComponentInChildren<Image>().sprite = elementIconLibrary.GetIcon(player.availableAttacks[i].elementType);
 
         }
         HighlightAttack(currentAttackIndex);

@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class Player : MonoBehaviour
     public GameObject hitVFXPrefab;
 
     public PlayerAnimationControllerScript playerAnimationController;
+
+    [Header("Player Attacks")]
+    public List<AttackData> availableAttacks = new List<AttackData>();
 
     void Start()
     {

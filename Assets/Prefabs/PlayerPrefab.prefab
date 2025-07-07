@@ -129,6 +129,9 @@ MonoBehaviour:
   IsInPreparePhase: 0
   hitVFXPrefab: {fileID: 4612426084096604598, guid: aecba69a03bc22640bad21751eced53c, type: 3}
   playerAnimationController: {fileID: 3421620599901499634}
+  availableAttacks:
+  - {fileID: 11400000, guid: a26a74f6c01080a42951ecca4af20422, type: 2}
+  - {fileID: 11400000, guid: b3f6965fcbc9cd64383a64f23dc771c3, type: 2}
 --- !u!95 &3828431254688834860
 Animator:
   serializedVersion: 7

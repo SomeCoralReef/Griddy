@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: ThunderAttack
   elementType: 2
-  power: 1
+  power: 30
   patternOffsets: 000000000000000000000000
   hitVFXPrefab: {fileID: 6470360248783433056, guid: b89cad9c78ee24f44ac1ecee9126e659, type: 3}
