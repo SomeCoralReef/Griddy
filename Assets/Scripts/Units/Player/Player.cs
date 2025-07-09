@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using System.Collections.Generic;
+using UnityEngine.Rendering.Universal;
 
 public class Player : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class Player : MonoBehaviour
 
     [Header("Player Attacks")]
     public List<AttackData> availableAttacks = new List<AttackData>();
-
+    public List<AttackData> availableSpells = new List<AttackData>();
+    public List<ItemData> availableItems = new List<ItemData>();
+    
     void Start()
     {
         gridManager = FindObjectOfType<GridManager>();
@@ -40,12 +43,13 @@ public class Player : MonoBehaviour
             IsInPreparePhase = false;
         }
     }
+
     public void SelectAttack(AttackData attack)
     {
         selectedAttack = attack;
-        
     }
-    
+
+
 
     public void AimAtSlot(int slotIndex)
     {
@@ -69,8 +73,8 @@ public class Player : MonoBehaviour
             return;
         }
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
-        timelineManager.isPaused =  true;
-        
+        timelineManager.isPaused = true;
+
         StartCoroutine(ExecuteAttackRoutine());
         actionUI.StartCoroutine(actionUI.scaleTileSelector(0.2f));
     }
@@ -80,7 +84,7 @@ public class Player : MonoBehaviour
         Debug.Log("Executing attack: " + selectedAttack.attackName);
         playerAnimationController.PlayAttack();
         yield return new WaitForSeconds(1.4f);
-        
+
         foreach (var offset in selectedAttack.patternOffsets)
         {
             int targetSlot = aimedSlotIndex + offset;
@@ -95,8 +99,8 @@ public class Player : MonoBehaviour
                 bool wasBroken = enemy.TakeDamage(selectedAttack.elementType, selectedAttack.power);
                 Vector3 hitposition = enemy.transform.position;
 
-                GameObject vfxInstance = Instantiate(selectedAttack.hitVFXPrefab, new Vector3 (hitposition.x,hitposition.y,-1f), Quaternion.identity);
-                
+                GameObject vfxInstance = Instantiate(selectedAttack.hitVFXPrefab, new Vector3(hitposition.x, hitposition.y, -1f), Quaternion.identity);
+
                 if (vfxInstance == null)
                 {
                     Debug.LogError("VFX prefab not found for attack: " + selectedAttack.attackName);
@@ -131,7 +135,7 @@ public class Player : MonoBehaviour
         CameraShake.Instance.Shake(0.2f, 0.2f);
         yield return new WaitForSeconds(1.0f);
         TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
-        timelineManager.isPaused =  false;
+        timelineManager.isPaused = false;
     }
 
     public void ShowHitEffect(ElementType attackData)
@@ -190,4 +194,5 @@ public class Player : MonoBehaviour
     {
         playerAnimationController.PlayerPrepare(false);
     }
+    
 }

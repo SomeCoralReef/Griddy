@@ -132,6 +132,9 @@ MonoBehaviour:
   availableAttacks:
   - {fileID: 11400000, guid: a26a74f6c01080a42951ecca4af20422, type: 2}
   - {fileID: 11400000, guid: b3f6965fcbc9cd64383a64f23dc771c3, type: 2}
+  - {fileID: 11400000, guid: 9a0734bb373a00d40b734b799d20d47a, type: 2}
+  - {fileID: 11400000, guid: 5f98b764a20c26a4a99169ebdf50480e, type: 2}
+  - {fileID: 11400000, guid: f1a3d6ec77a6e424cadaef786a486b3a, type: 2}
 --- !u!95 &3828431254688834860
 Animator:
   serializedVersion: 7

@@ -18,3 +18,12 @@ public enum TimelineState
     Paused,
     Executing
 }
+
+public enum CommandCategory
+{
+    None,
+    Attack,
+    Spells,
+    Items,
+    Defend
+}

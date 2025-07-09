@@ -27,7 +27,7 @@ public class TimelineIcon : MonoBehaviour
     [SerializeField] private Image glowImage; // Assign in Inspector
     private Color originalGlowColor;
 
-    private Vector3 defaultScale = Vector3.one;
+    private Vector3 defaultScale = Vector3.one * 1.8f;
     [SerializeField] private Vector3 highlightScale = new Vector3(1.5f,1.5f,1.5f);
 
     private bool isHighlighted = false;
@@ -59,7 +59,6 @@ public class TimelineIcon : MonoBehaviour
 
         if (linkedUnit != null && iconLibrary != null)
         {
-            Debug.Log("Setting icon for linked unit: " + linkedUnit.name);
             string key = linkedUnit.name; // OR linkedUnit.data.enemyName if more robust
             Sprite iconSprite = iconLibrary.GetIcon(key);
             if (iconSprite != null)

@@ -3,16 +3,26 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using System.Data;
+using UnityEditor.Build;
 
 public class PlayerActionUI : MonoBehaviour
 {
     public Player player;
 
     [Header("UI References")]
-    public RectTransform attackPanel;
     public GameObject attackOptionPrefab;
     public GameObject tileSelector;
     public SpriteRenderer tileSelectorSpriteRenderer;
+    [SerializeField] private Transform mainCommandPanel;
+    [SerializeField] private Transform subCommandPanel;
+    [SerializeField] private GameObject commandButtonPrefab;
+    [SerializeField] private GameObject backButtonPrefab;
+    private CommandCategory currentCategory = CommandCategory.None;
+
+    private AttackData currentlyHoveredAttack = null;
+
+
 
     [Header("Element Icon Library")]
     public ElementIconLibrary elementIconLibrary;
@@ -20,6 +30,7 @@ public class PlayerActionUI : MonoBehaviour
 
     private int currentAttackIndex = 0;
     private bool isSelectingAttack = false;
+    private bool isSelectingFirstMenu = true;
     private bool isSelectingTile = false;
     public bool hasSelectedAttackAndTile = false;
 
@@ -46,12 +57,12 @@ public class PlayerActionUI : MonoBehaviour
 
     void Start()
     {
-        
+
         if (player == null)
         {
             player = FindObjectOfType<Player>();
         }
-        attackPanel = attackPanel.GetComponent<RectTransform>();
+        mainCommandPanel = mainCommandPanel.GetComponent<RectTransform>();
         float playerX = player.transform.position.x;
         float playerY = player.transform.position.y;
         Vector3 playerWorldPosXY = new Vector3(playerX, playerY, -0.13f);
@@ -61,6 +72,100 @@ public class PlayerActionUI : MonoBehaviour
         targetSlotIndex = player.slotIndex; // Assuming player.slotIndex is an int representing the slot
         gridManager = FindObjectOfType<GridManager>();
         tileSelector.gameObject.SetActive(false);
+
+        ShowMainCommands(player);
+    }
+
+    void ShowMainCommands(Player p)
+    {
+        player = p;
+        currentCategory = CommandCategory.None;
+        ClearPanel(mainCommandPanel);
+        Debug.Log("Showing main commands for player: " + player.name);
+        CreateMainButton("Attack", () => ShowSubPanel(CommandCategory.Attack));
+        CreateMainButton("Spells", () => ShowSubPanel(CommandCategory.Spells));
+        CreateMainButton("Items", () => ShowSubPanel(CommandCategory.Items));
+        CreateMainButton("Defend", () =>
+        {
+            //p.Defend();
+            CloseAllPanels();
+        });
+    }
+
+    void ShowSubPanel(CommandCategory category)
+    {
+        ClearPanel(subCommandPanel);
+        currentCategory = category;
+        switch (category)
+        {
+            case CommandCategory.Attack:
+                for (int i = 0; i < player.availableAttacks.Count; i++)
+                {
+                    int index = i;
+                    CreateSubButton(player.availableAttacks[i].attackName, () => StartAttackSelection(index));
+                    Debug.Log("Creating sub button for attack: " + player.availableAttacks[i].attackName);
+                }
+                break;
+
+            case CommandCategory.Spells:
+                for (int i = 0; i < player.availableSpells.Count; i++)
+                {
+                    int index = i;
+                    CreateSubButton(player.availableSpells[i].attackName, () => Debug.Log("Spell selected: " + index));
+                }
+                break;
+
+            case CommandCategory.Items:
+                for (int i = 0; i < player.availableItems.Count; i++)
+                {
+                    int index = i;
+                    CreateSubButton(player.availableItems[i].itemName, () => Debug.Log("Item used: " + index));
+                }
+                break;
+        }
+
+        CreateSubButton("Back", () => ShowMainCommands(player));
+        subCommandPanel.gameObject.SetActive(true);
+    }
+
+    void CreateMainButton(string label, UnityEngine.Events.UnityAction action)
+    {
+        Debug.Log("Creating main button: " + label);
+        var btn = Instantiate(commandButtonPrefab, mainCommandPanel);
+        btn.GetComponentInChildren<TextMeshProUGUI>().text = label;
+        btn.GetComponent<Button>().onClick.AddListener(action);
+    }
+
+    void CreateSubButton(string label, UnityEngine.Events.UnityAction action)
+    {
+        var btn = Instantiate(commandButtonPrefab, subCommandPanel);
+        btn.GetComponentInChildren<TextMeshProUGUI>().text = label;
+        btn.GetComponent<Button>().onClick.AddListener(action);
+    }
+
+    void ClearPanel(Transform panel)
+    {
+        foreach (Transform child in panel)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+       void CloseAllPanels()
+    {
+        mainCommandPanel.gameObject.SetActive(false);
+        subCommandPanel.gameObject.SetActive(false);
+    }
+
+
+    void StartAttackSelection(int index)
+    {
+        currentAttackIndex = index;
+        isSelectingAttack = true;
+        isSelectingTile = false;
+        hasSelectedAttackAndTile = false;
+        mainCommandPanel.gameObject.SetActive(false);
+        subCommandPanel.gameObject.SetActive(false);
     }
 
     public bool HasSelectedAttackAndTile()
@@ -102,23 +207,23 @@ public class PlayerActionUI : MonoBehaviour
             }
         }
 
-        if (isSelectingAttack)
+        if (isSelectingFirstMenu)
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                ChangeAttack(-1);
+                ChangeSelection(-1);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
             {
-                ChangeAttack(1);
+                ChangeSelection(1);
             }
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                player.SelectAttack(player.availableAttacks[currentAttackIndex]);
-                isSelectingAttack = false;
-                isSelectingTile = true;
+                ShowSubPanel(currentCategory);
+                isSelectingFirstMenu = false;
+                isSelectingAttack = true;
                 searchingForEnemyToHighlight = true;
                 // Start aiming at tile in front of player
                 Enemy enemy = FindObjectOfType<Enemy>();
@@ -136,11 +241,39 @@ public class PlayerActionUI : MonoBehaviour
                 tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
                 tileSelector.transform.localScale = Vector3.one;
                 UpdateTileSelectorPosition();
-                foreach (Transform child in attackPanel)
+                foreach (Transform child in mainCommandPanel)
                 {
                     Destroy(child.gameObject);
                 }
 
+            }
+        }
+        else if (isSelectingAttack)
+        {
+            Debug.Log(currentAttackIndex);
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                currentAttackIndex = Mathf.Max(0, currentAttackIndex - 1);
+                HighlightSelection(currentAttackIndex);
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                currentAttackIndex = Mathf.Min(player.availableAttacks.Count - 1, currentAttackIndex + 1);
+                HighlightSelection(currentAttackIndex);
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                player.SelectAttack(player.availableAttacks[currentAttackIndex]);
+                isSelectingTile = true;
+                isSelectingAttack = false;
+                isSelectingFirstMenu = false;
+                hasSelectedAttackAndTile = false;
+                tileSelector.gameObject.SetActive(true);
+                tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
+                tileSelector.transform.localScale = Vector3.one;
+                UpdateTileSelectorPosition();
             }
         }
         else if (isSelectingTile)
@@ -167,11 +300,9 @@ public class PlayerActionUI : MonoBehaviour
                 isSelectingTile = false;
             }
             UpdateTileSelectorPosition();
+            CloseAllPanels();
         }
     }
-
-
-
 
     private void StartSelectorPop()
     {
@@ -197,15 +328,14 @@ public class PlayerActionUI : MonoBehaviour
 
     public void BeginActionPhase()
     {
-        Debug.Log("BeginActionPhase called");
         hasSelectedAttackAndTile = false;
         isSelectingAttack = true;
         currentAttackIndex = 0;
-        PopulateAttackList(player);
+        //PopulateAttackList(player);
 
-        attackPanel.transform.position = player.transform.position + new Vector3(1.0f, 0, 0);
-        attackPanel.gameObject.SetActive(true);
-        StartCoroutine(ScaleUI(attackPanel, Vector3.zero, new Vector3(0.1f, 0.1f, 0.1f), 2f));
+        mainCommandPanel.transform.position = player.transform.position + new Vector3(1.0f, 0, 0);
+        mainCommandPanel.gameObject.SetActive(true);
+        StartCoroutine(ScaleUI(mainCommandPanel, Vector3.zero, new Vector3(0.1f, 0.1f, 0.1f), 2f));
     }
     public IEnumerator ScaleUI(Transform target, Vector3 fromScale, Vector3 toScale, float duration)
     {
@@ -250,34 +380,34 @@ public class PlayerActionUI : MonoBehaviour
         return 1 + c3 * Mathf.Pow(t - 1, 3) + c1 * Mathf.Pow(t - 1, 2);
     }
 
-    void ChangeAttack(int direction)
+    void ChangeSelection(int direction)
     {
-        currentAttackIndex = (currentAttackIndex + direction + player.availableAttacks.Count) % player.availableAttacks.Count;
-        HighlightAttack(currentAttackIndex);
+        currentCategory = (CommandCategory) ((int) currentCategory + direction);
+        HighlightSelection(currentAttackIndex);
     }
 
     void PopulateAttackList(Player player)
     {
-        foreach (Transform child in attackPanel)
+        foreach (Transform child in mainCommandPanel)
         {
             Destroy(child.gameObject);
         }
 
         for (int i = 0; i < player.availableAttacks.Count; i++)
         {
-            GameObject option = Instantiate(attackOptionPrefab, attackPanel);
+            GameObject option = Instantiate(attackOptionPrefab, mainCommandPanel);
             option.GetComponentInChildren<TextMeshProUGUI>().text = player.availableAttacks[i].attackName;
             option.GetComponentInChildren<Image>().sprite = elementIconLibrary.GetIcon(player.availableAttacks[i].elementType);
 
         }
-        HighlightAttack(currentAttackIndex);
+        HighlightSelection(currentAttackIndex);
     }
 
-    void HighlightAttack(int index)
+    void HighlightSelection(int index)
     {
-        for (int i = 0; i < attackPanel.childCount; i++)
+        for (int i = 0; i < mainCommandPanel.childCount; i++)
         {
-            var text = attackPanel.GetChild(i).GetComponentInChildren<TextMeshProUGUI>();
+            var text = mainCommandPanel.GetChild(i).GetComponentInChildren<TextMeshProUGUI>();
             text.color = (i == index) ? Color.yellow : Color.white;
         }
     }
@@ -309,9 +439,7 @@ public class PlayerActionUI : MonoBehaviour
         {
             hoveredEnemy.timelineIcon.SetHighlight(true);
         }
-
         currentlyHoveredEnemy = hoveredEnemy;
-        
     }
 
 

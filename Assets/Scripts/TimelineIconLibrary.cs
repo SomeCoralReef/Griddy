@@ -20,7 +20,6 @@ public class TimelineIconLibrary : ScriptableObject
             string targetName = entry.unitName + "(Clone)";
             if(targetName == unitName)
             {
-                Debug.Log($"Icon found for unit: {unitName}");
                 return entry.iconSprite;
             }
         }

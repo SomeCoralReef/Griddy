@@ -1104,9 +1104,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUISmallPrefab: {fileID: 4823356306042760091, guid: 4f9852804835b5042b0351b5b4de3c77, type: 3}
-  playerUISpacingBetween: 0.5
   gameManager: {fileID: 2077532870}
   CanvasParent: {fileID: 1742098820}
+--- !u!1 &940503121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940503122}
+  - component: {fileID: 940503123}
+  m_Layer: 5
+  m_Name: SubPanelContrainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &940503122
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940503121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1324088439}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 955, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &940503123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940503121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 60
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1250119198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,7 +1179,7 @@ GameObject:
   - component: {fileID: 1250119199}
   - component: {fileID: 1250119200}
   m_Layer: 5
-  m_Name: AttackPanelContrainer
+  m_Name: MainPanelContrainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,7 +1222,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 10
+  m_Spacing: 60
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1267,13 +1328,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  availableAttacks:
-  - {fileID: 11400000, guid: f1a3d6ec77a6e424cadaef786a486b3a, type: 2}
-  - {fileID: 11400000, guid: a26a74f6c01080a42951ecca4af20422, type: 2}
-  attackPanel: {fileID: 1250119199}
   attackOptionPrefab: {fileID: 2504124391405067470, guid: 98adfc419af84bc4ea8a6f46de6858e5, type: 3}
   tileSelector: {fileID: 3923758727445019719, guid: 65ec5f05cc9b25f418c82b42015a6ac2, type: 3}
   tileSelectorSpriteRenderer: {fileID: 0}
+  mainCommandPanel: {fileID: 1250119199}
+  subCommandPanel: {fileID: 940503122}
+  commandButtonPrefab: {fileID: 8843105902575254172, guid: 6d3d0ba26339a6342a19057844b4c3da, type: 3}
+  backButtonPrefab: {fileID: 8843105902575254172, guid: 6d3d0ba26339a6342a19057844b4c3da, type: 3}
   elementIconLibrary: {fileID: 11400000, guid: 9d2ce23c2ef554871ac23f5e8cdc8adc, type: 2}
   hasSelectedAttackAndTile: 0
   targetSlotIndex: 0
@@ -1410,6 +1471,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1250119199}
+  - {fileID: 940503122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
