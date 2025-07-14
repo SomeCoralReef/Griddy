@@ -16,8 +16,8 @@ public class PlayerAnimationControllerScript : MonoBehaviour
         animator.SetBool("isPreparing", isPreparing);
     }
 
-    public void PlayAttack() {
-        Debug.Log("PlayAttack called");
+    public void PlayAttack() 
+    {
         animator.SetTrigger("isAttacking");
     }
 }

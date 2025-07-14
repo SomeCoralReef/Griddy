@@ -21,7 +21,6 @@ public enum TimelineState
 
 public enum CommandCategory
 {
-    None,
     Attack,
     Spells,
     Items,

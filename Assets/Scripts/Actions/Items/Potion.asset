@@ -21,4 +21,5 @@ MonoBehaviour:
   powerAmount: 0
   isConsumable: 1
   targetsAllies: 1
+  needsTarget: 1
   useVFX: {fileID: 0}

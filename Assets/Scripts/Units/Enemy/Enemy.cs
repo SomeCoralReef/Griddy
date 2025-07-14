@@ -99,7 +99,7 @@ public class Enemy : MonoBehaviour
         if (attacks.Length > 0)
         {
             EnemyAttackData chosenAttack = attacks[Random.Range(0, attacks.Length)];
-            StartCoroutine(ExecuteAttackRoutine(chosenAttack));
+            StartCoroutine(ExecuteActionRoutine(chosenAttack));
 
         }
         else
@@ -108,10 +108,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
-
-
-    private IEnumerator ExecuteAttackRoutine(EnemyAttackData chosenAttack)
+    private IEnumerator ExecuteActionRoutine(EnemyAttackData chosenAttack)
     {
         Debug.Log($"{data.enemyName} is preparing to attack with {chosenAttack.attackName} ({chosenAttack.elementType})");
         Animator animator = GetComponent<Animator>();

@@ -23,7 +23,6 @@ public class TimelineUnit : MonoBehaviour
         {
             case TimelineState.Idle:
                 timelineProgress += speed * Time.deltaTime;
-
                 if (timelineProgress >= PrepareThreshold)
                 {
                     timelineProgress = PrepareThreshold;

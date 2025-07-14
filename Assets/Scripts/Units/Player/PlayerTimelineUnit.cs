@@ -32,7 +32,7 @@ public class PlayerTimelineUnit : TimelineUnit
 
     protected override void OnExecute()
     {
-        playerscript.ExecuteAttack();
+        playerscript.ExecuteAction();
     }
 
     void Update()

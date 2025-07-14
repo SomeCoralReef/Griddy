@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Data;
 using UnityEditor.Build;
+using System.Collections.Generic;
 
 public class PlayerActionUI : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerActionUI : MonoBehaviour
     [SerializeField] private Transform subCommandPanel;
     [SerializeField] private GameObject commandButtonPrefab;
     [SerializeField] private GameObject backButtonPrefab;
-    private CommandCategory currentCategory = CommandCategory.None;
+    public CommandCategory currentCategory = CommandCategory.Attack;
 
     private AttackData currentlyHoveredAttack = null;
 
@@ -28,8 +29,8 @@ public class PlayerActionUI : MonoBehaviour
     public ElementIconLibrary elementIconLibrary;
 
 
-    private int currentAttackIndex = 0;
-    private bool isSelectingAttack = false;
+    private int currentSecondMenuIndex = 0;
+    private bool isSelectingSecondMenu = false;
     private bool isSelectingFirstMenu = true;
     private bool isSelectingTile = false;
     public bool hasSelectedAttackAndTile = false;
@@ -51,6 +52,11 @@ public class PlayerActionUI : MonoBehaviour
 
     [Header("UX Clarity")]
     [SerializeField] private Enemy currentlyHoveredEnemy = null;
+
+    [Header("List Of Menu Buttons and Sub Menu Buttons")]
+    private List<TextMeshProUGUI> mainCommandTexts = new();
+    private List<TextMeshProUGUI> subCommandTexts = new();
+
 
 
     private bool searchingForEnemyToHighlight = false;
@@ -79,7 +85,7 @@ public class PlayerActionUI : MonoBehaviour
     void ShowMainCommands(Player p)
     {
         player = p;
-        currentCategory = CommandCategory.None;
+        currentCategory = CommandCategory.Attack; // Default to Attack category
         ClearPanel(mainCommandPanel);
         Debug.Log("Showing main commands for player: " + player.name);
         CreateMainButton("Attack", () => ShowSubPanel(CommandCategory.Attack));
@@ -87,13 +93,13 @@ public class PlayerActionUI : MonoBehaviour
         CreateMainButton("Items", () => ShowSubPanel(CommandCategory.Items));
         CreateMainButton("Defend", () =>
         {
-            //p.Defend();
             CloseAllPanels();
         });
     }
 
     void ShowSubPanel(CommandCategory category)
     {
+        Debug.Log("Showing sub panel for category: " + category);
         ClearPanel(subCommandPanel);
         currentCategory = category;
         switch (category)
@@ -101,17 +107,18 @@ public class PlayerActionUI : MonoBehaviour
             case CommandCategory.Attack:
                 for (int i = 0; i < player.availableAttacks.Count; i++)
                 {
+                    Debug.Log("Creating sub button for attack: " + player.availableAttacks[i].actionName);
                     int index = i;
-                    CreateSubButton(player.availableAttacks[i].attackName, () => StartAttackSelection(index));
-                    Debug.Log("Creating sub button for attack: " + player.availableAttacks[i].attackName);
+                    CreateSubButton(player.availableAttacks[i].actionName, () => StartAttackSelection(index));
                 }
                 break;
 
             case CommandCategory.Spells:
                 for (int i = 0; i < player.availableSpells.Count; i++)
                 {
+                    Debug.Log("Creating sub button for spell: " + player.availableSpells[i].actionName);
                     int index = i;
-                    CreateSubButton(player.availableSpells[i].attackName, () => Debug.Log("Spell selected: " + index));
+                    CreateSubButton(player.availableSpells[i].actionName, () => Debug.Log("Spell selected: " + index));
                 }
                 break;
 
@@ -119,7 +126,7 @@ public class PlayerActionUI : MonoBehaviour
                 for (int i = 0; i < player.availableItems.Count; i++)
                 {
                     int index = i;
-                    CreateSubButton(player.availableItems[i].itemName, () => Debug.Log("Item used: " + index));
+                    CreateSubButton(player.availableItems[i].actionName, () => Debug.Log("Item used: " + index));
                 }
                 break;
         }
@@ -129,18 +136,22 @@ public class PlayerActionUI : MonoBehaviour
     }
 
     void CreateMainButton(string label, UnityEngine.Events.UnityAction action)
-    {
-        Debug.Log("Creating main button: " + label);
+    {   
         var btn = Instantiate(commandButtonPrefab, mainCommandPanel);
+        var text = btn.GetComponentInChildren<TextMeshProUGUI>();
+        text.text = label;
         btn.GetComponentInChildren<TextMeshProUGUI>().text = label;
         btn.GetComponent<Button>().onClick.AddListener(action);
+        mainCommandTexts.Add(text);
     }
 
     void CreateSubButton(string label, UnityEngine.Events.UnityAction action)
     {
         var btn = Instantiate(commandButtonPrefab, subCommandPanel);
-        btn.GetComponentInChildren<TextMeshProUGUI>().text = label;
+        var text = btn.GetComponentInChildren<TextMeshProUGUI>();
+        text.text = label;
         btn.GetComponent<Button>().onClick.AddListener(action);
+        subCommandTexts.Add(text);
     }
 
     void ClearPanel(Transform panel)
@@ -160,8 +171,8 @@ public class PlayerActionUI : MonoBehaviour
 
     void StartAttackSelection(int index)
     {
-        currentAttackIndex = index;
-        isSelectingAttack = true;
+        currentSecondMenuIndex = index;
+        isSelectingSecondMenu = true;
         isSelectingTile = false;
         hasSelectedAttackAndTile = false;
         mainCommandPanel.gameObject.SetActive(false);
@@ -218,12 +229,13 @@ public class PlayerActionUI : MonoBehaviour
             {
                 ChangeSelection(1);
             }
+            HighlightSelection(mainCommandTexts, (int)currentCategory);
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 ShowSubPanel(currentCategory);
                 isSelectingFirstMenu = false;
-                isSelectingAttack = true;
+                isSelectingSecondMenu = true;
                 searchingForEnemyToHighlight = true;
                 // Start aiming at tile in front of player
                 Enemy enemy = FindObjectOfType<Enemy>();
@@ -248,59 +260,138 @@ public class PlayerActionUI : MonoBehaviour
 
             }
         }
-        else if (isSelectingAttack)
+        else if (isSelectingSecondMenu)
         {
-            Debug.Log(currentAttackIndex);
-            if (Input.GetKeyDown(KeyCode.W))
+            switch (currentCategory)
             {
-                currentAttackIndex = Mathf.Max(0, currentAttackIndex - 1);
-                HighlightSelection(currentAttackIndex);
-            }
+                case CommandCategory.Attack:
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        currentSecondMenuIndex = Mathf.Max(0, currentSecondMenuIndex - 1);
+                    }
 
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                currentAttackIndex = Mathf.Min(player.availableAttacks.Count - 1, currentAttackIndex + 1);
-                HighlightSelection(currentAttackIndex);
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                player.SelectAttack(player.availableAttacks[currentAttackIndex]);
-                isSelectingTile = true;
-                isSelectingAttack = false;
-                isSelectingFirstMenu = false;
-                hasSelectedAttackAndTile = false;
-                tileSelector.gameObject.SetActive(true);
-                tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
-                tileSelector.transform.localScale = Vector3.one;
-                UpdateTileSelectorPosition();
+                    if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        currentSecondMenuIndex = Mathf.Min(player.availableAttacks.Count - 1, currentSecondMenuIndex + 1);
+                    }
+                    HighlightSelection(subCommandTexts, currentSecondMenuIndex);
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        player.SelectAction(player.availableAttacks[currentSecondMenuIndex]);
+                        Debug.Log("Selected attack: " + player.availableAttacks[currentSecondMenuIndex].actionName);
+                        isSelectingTile = true;
+                        isSelectingSecondMenu = false;
+                        isSelectingFirstMenu = false;
+                        hasSelectedAttackAndTile = false;
+                        tileSelector.gameObject.SetActive(true);
+                        tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
+                        tileSelector.transform.localScale = Vector3.one;
+                        UpdateTileSelectorPosition();
+                    }
+                    break;
+                case CommandCategory.Spells:
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        currentSecondMenuIndex = Mathf.Max(0, currentSecondMenuIndex - 1);
+                    }
+                    if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        currentSecondMenuIndex = Mathf.Min(player.availableSpells.Count - 1, currentSecondMenuIndex + 1);
+                    }
+                    HighlightSelection(subCommandTexts, currentSecondMenuIndex);
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        player.SelectAction(player.availableSpells[currentSecondMenuIndex]);
+                        Debug.Log("Selected spell: " + player.availableSpells[currentSecondMenuIndex].actionName);
+                        isSelectingTile = true;
+                        isSelectingSecondMenu = false;
+                        isSelectingFirstMenu = false;
+                        hasSelectedAttackAndTile = false;
+                        tileSelector.gameObject.SetActive(true);
+                        tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
+                        tileSelector.transform.localScale = Vector3.one;
+                        UpdateTileSelectorPosition();
+                    }
+                    
+                    break;
+                case CommandCategory.Items:
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        currentSecondMenuIndex = Mathf.Max(0, currentSecondMenuIndex - 1);
+                    }
+                    if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        currentSecondMenuIndex = Mathf.Min(player.availableItems.Count - 1, currentSecondMenuIndex + 1);
+                    }
+                    HighlightSelection(subCommandTexts, currentSecondMenuIndex);
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        player.SelectAction(player.availableItems[currentSecondMenuIndex]);
+                        Debug.Log("Selected item: " + player.availableItems[currentSecondMenuIndex].actionName);
+                        if(player.availableItems[currentSecondMenuIndex].needsTarget)
+                        {
+                            player.SelectAction(player.availableItems[currentSecondMenuIndex]);
+                            isSelectingTile = true;
+                            isSelectingSecondMenu = false;
+                            isSelectingFirstMenu = false;
+                            hasSelectedAttackAndTile = false;
+                            tileSelector.gameObject.SetActive(true);
+                            tileSelectorSpriteRenderer.color = new Color(0, 0, 0, 1);
+                            tileSelector.transform.localScale = Vector3.one;
+                            UpdateTileSelectorPosition();
+                        }
+                        else
+                        {
+                            player.OnConfirmAction();
+                            StartCoroutine(scaleTileSelector(0.5f));
+                        }
+                    }
+                    break;
             }
         }
         else if (isSelectingTile)
         {
-            if (Input.GetKeyDown(KeyCode.S)) { targetSlotIndex = Mathf.Max(0, targetSlotIndex - 1); }
-            if (Input.GetKeyDown(KeyCode.W)) { targetSlotIndex = Mathf.Min(gridManager.slots - 1, targetSlotIndex + 1); }
-
-            if (Input.GetKeyDown(KeyCode.R))
+            bool selectingEnemySide;
+            if(player.selectedAction.targetAllies == false)
             {
-                player.AimAtSlot(targetSlotIndex);
-                player.OnConfirmAction();
-                tileSelectorSpriteRenderer.color = new Color(1, 0, 0, 1);
-                hasSelectedAttackAndTile = true;
-                if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
-                {
-                    searchingForEnemyToHighlight = false;
-                    //currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
-                }
-                else
-                {
-                    Debug.Log("No currently hovered enemy to remove highlight from.");
-                }
-                currentlyHoveredEnemy = null;
-                isSelectingTile = false;
+                selectingEnemySide = true;
+            } else 
+            {
+                selectingEnemySide = false;
             }
-            UpdateTileSelectorPosition();
-            CloseAllPanels();
+
+            if (selectingEnemySide)
+            {
+                // EnemySide Selection
+                if (Input.GetKeyDown(KeyCode.S)) { targetSlotIndex = Mathf.Max(0, targetSlotIndex - 1); }
+                if (Input.GetKeyDown(KeyCode.W)) { targetSlotIndex = Mathf.Min(gridManager.slots - 1, targetSlotIndex + 1); }
+
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    player.AimAtSlot(targetSlotIndex);
+                    player.OnConfirmAction();
+                    tileSelectorSpriteRenderer.color = new Color(1, 0, 0, 1);
+                    hasSelectedAttackAndTile = true;
+                    if (currentlyHoveredEnemy != null && currentlyHoveredEnemy.timelineIcon != null)
+                    {
+                        searchingForEnemyToHighlight = false;
+                        //currentlyHoveredEnemy.timelineIcon.SetHighlight(false);
+                    }
+                    else
+                    {
+                        Debug.Log("No currently hovered enemy to remove highlight from.");
+                    }
+                    currentlyHoveredEnemy = null;
+                    isSelectingTile = false;
+                }
+                UpdateTileSelectorPosition();
+                CloseAllPanels();
+            } else 
+            {
+                // PlayerSide Selection
+                if (Input.GetKeyDown(KeyCode.S)) { targetSlotIndex = Mathf.Max(0, targetSlotIndex - 1); }
+                if (Input.GetKeyDown(KeyCode.W)) { targetSlotIndex = Mathf.Min(gridManager.slots - 1, targetSlotIndex + 1); }
+            }
         }
     }
 
@@ -329,8 +420,8 @@ public class PlayerActionUI : MonoBehaviour
     public void BeginActionPhase()
     {
         hasSelectedAttackAndTile = false;
-        isSelectingAttack = true;
-        currentAttackIndex = 0;
+        isSelectingFirstMenu = true;
+        currentSecondMenuIndex = 0;
         //PopulateAttackList(player);
 
         mainCommandPanel.transform.position = player.transform.position + new Vector3(1.0f, 0, 0);
@@ -383,7 +474,6 @@ public class PlayerActionUI : MonoBehaviour
     void ChangeSelection(int direction)
     {
         currentCategory = (CommandCategory) ((int) currentCategory + direction);
-        HighlightSelection(currentAttackIndex);
     }
 
     void PopulateAttackList(Player player)
@@ -396,19 +486,19 @@ public class PlayerActionUI : MonoBehaviour
         for (int i = 0; i < player.availableAttacks.Count; i++)
         {
             GameObject option = Instantiate(attackOptionPrefab, mainCommandPanel);
-            option.GetComponentInChildren<TextMeshProUGUI>().text = player.availableAttacks[i].attackName;
+            option.GetComponentInChildren<TextMeshProUGUI>().text = player.availableAttacks[i].actionName;
             option.GetComponentInChildren<Image>().sprite = elementIconLibrary.GetIcon(player.availableAttacks[i].elementType);
 
         }
-        HighlightSelection(currentAttackIndex);
+        //TextMeshProUGUI text = player.availableAttacks[currentAttackIndex].GetComponentInChildren<TextMeshProUGUI>();
+        HighlightSelection(mainCommandTexts, (int)currentCategory);
     }
 
-    void HighlightSelection(int index)
+    void HighlightSelection(List<TextMeshProUGUI> texts, int selectedIndex)
     {
-        for (int i = 0; i < mainCommandPanel.childCount; i++)
+        for (int i = 0; i < texts.Count; i++)
         {
-            var text = mainCommandPanel.GetChild(i).GetComponentInChildren<TextMeshProUGUI>();
-            text.color = (i == index) ? Color.yellow : Color.white;
+            texts[i].color = (i == selectedIndex) ? Color.yellow : Color.white;
         }
     }
 
