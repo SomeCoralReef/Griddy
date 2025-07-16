@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4393fc657dd397f48b33290fa253fc36, type: 3}
-  m_Name: Holy
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  attackName: HolyAttack
-  elementType: 4
-  power: 30
-  patternOffsets: 000000000000000000000000
-  hitVFXPrefab: {fileID: 6470360248783433056, guid: b89cad9c78ee24f44ac1ecee9126e659, type: 3}
+  actionName: Spear
+  description: Spear Attack
+  icon: {fileID: 1705044112, guid: 53f39418bcb98dc41bdb348c168c102f, type: 3}
+  useVFX: {fileID: 8523388823611714564, guid: d5f5a7247791e4476825a1f8ed125416, type: 3}
+  powerAmount: 10
+  needsTarget: 1
+  targetAllies: 0
+  elementType: 0
+  patternOffsets: 0000000001000000ffffffff

@@ -1322,6 +1322,7 @@ MonoBehaviour:
   timelineManager: {fileID: 1948441492}
   gridManager: {fileID: 336149468}
   playerCount: 1
+  playerSlotSpacing: 10
 --- !u!1 &1260683828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1379,7 @@ MonoBehaviour:
   subCommandPanel: {fileID: 940503122}
   commandButtonPrefab: {fileID: 8843105902575254172, guid: 6d3d0ba26339a6342a19057844b4c3da, type: 3}
   backButtonPrefab: {fileID: 8843105902575254172, guid: 6d3d0ba26339a6342a19057844b4c3da, type: 3}
+  currentCategory: 0
   elementIconLibrary: {fileID: 11400000, guid: 9d2ce23c2ef554871ac23f5e8cdc8adc, type: 2}
   hasSelectedAttackAndTile: 0
   targetSlotIndex: 0
@@ -2051,6 +2053,7 @@ RectTransform:
   m_Children:
   - {fileID: 1716940948}
   - {fileID: 1260683829}
+  - {fileID: 927813088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2202,6 +2205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4104a5cb5b05260419f7ae6acb83078d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfPlayersInParty: 2
   playerLives: 88
   maxHealth: 88
 --- !u!1660057539 &9223372036854775807

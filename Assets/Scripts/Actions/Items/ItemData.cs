@@ -6,21 +6,53 @@ public class ItemData : ActionData
     public ItemType itemType;
     public bool isConsumable = true;
 
-    public override IEnumerator ExecuteAction(Player player, int targetSlotIndex)
+    public override IEnumerator ExecuteAction(Player user, int targetSlotIndex)
     {
-        // Implement item-specific logic here
-        // For example, healing or buffing allies
-        Enemy enemy = player.EnemyAt(targetSlotIndex);
-        if (enemy != null)
+        Debug.Log($"Using item: {actionName} on slot {targetSlotIndex}");
+
+        // VFX
+        if (useVFX != null)
         {
-            // Apply item effects to the enemy
-            Debug.Log("Used item: " + actionName);
+            GameObject.Instantiate(useVFX, user.transform.position, Quaternion.identity);
+        }
+
+        if (targetAllies)
+        {
+            Player targetPlayer = user.PlayerAt(targetSlotIndex);
+            if (targetPlayer != null)
+            {
+                ApplyItemEffectToPlayer(targetPlayer);
+            }
+        }
+        else
+        {
+            Enemy targetEnemy = user.EnemyAt(targetSlotIndex);
+            if (targetEnemy != null)
+            {
+                ApplyItemEffectToEnemy(targetEnemy);
+            }
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        TimelineManager timelineManager = GameObject.FindObjectOfType<TimelineManager>();
+        timelineManager.isPaused = false;
+    }
+
+    private void ApplyItemEffectToEnemy(Enemy enemy)
+    {
+        // Apply item effect (customize this logic)
+        Debug.Log($"Item {actionName} applied to enemy at slot {enemy.slotIndex}");
+        if (enemy.timelineIcon != null)
+        {
             enemy.timelineIcon.SetHighlight(false);
             enemy.timelineIcon.isPulsing = false;
-            TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
-            timelineManager.isPaused = false;
         }
-        yield break;
+    }
+
+    private void ApplyItemEffectToPlayer(Player player)
+    {
+        // Example logic — you can add healing, buffs, etc. here
+        Debug.Log($"Item {actionName} applied to player at slot {player.slotIndex}");
     }
 }
 

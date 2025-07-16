@@ -14,7 +14,7 @@ public class AttackData : ActionData
         GridManager grid = GameObject.FindObjectOfType<GridManager>();
         foreach(int offset in patternOffsets)
         {
-            int targetSlot = aimedSlotIndex + offset;
+            int targetSlot = targetSlotIndex + offset;
             if(targetSlot<0 || targetSlot >= grid.slots) continue;
 
             Enemy enemy = player.EnemyAt(targetSlot);

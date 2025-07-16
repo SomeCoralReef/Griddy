@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34709cb4a8e647de86322906f4dd3cf, type: 3}
+  m_Name: Yopp spell
+  m_EditorClassIdentifier: 
+  actionName: Yup
+  description: 'Yopp Spell
+
+'
+  icon: {fileID: -689043790, guid: d6045aa26ad8c43e7ab327255ea3b457, type: 3}
+  useVFX: {fileID: 8523388823611714564, guid: d5f5a7247791e4476825a1f8ed125416, type: 3}
+  powerAmount: 40
+  needsTarget: 1
+  targetAllies: 0
+  manaCost: 6
+  spellDescription: 
+  elementType: 0
