@@ -21,7 +21,7 @@ public class PlayerTimelineUnit : TimelineUnit
         PlayerActionUI playerActionUI = FindObjectOfType<PlayerActionUI>(); // Show action UI
         if (playerActionUI != null)
         {
-            playerActionUI.BeginActionPhase();
+            playerActionUI.StartActionSelection();
         }
         else
         {
@@ -37,7 +37,7 @@ public class PlayerTimelineUnit : TimelineUnit
 
     void Update()
     {
-        if (state == TimelineState.Preparing && actionUI != null && actionUI.HasSelectedAttackAndTile())
+        if (state == TimelineState.Preparing && actionUI != null && actionUI.hasConfirmedActionAndTile)
         {
             TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
             timelineManager.isPaused = false;

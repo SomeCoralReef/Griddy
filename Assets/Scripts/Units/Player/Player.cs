@@ -73,7 +73,6 @@ public class Player : MonoBehaviour
         }
 
         StartCoroutine(selectedAction.ExecuteAction(this, aimedSlotIndex));
-        actionUI.StartCoroutine(actionUI.scaleTileSelector(0.2f));
     }
     
 

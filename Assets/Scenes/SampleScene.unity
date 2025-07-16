@@ -1245,7 +1245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 945, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1250119200
@@ -1379,11 +1379,8 @@ MonoBehaviour:
   subCommandPanel: {fileID: 940503122}
   commandButtonPrefab: {fileID: 8843105902575254172, guid: 6d3d0ba26339a6342a19057844b4c3da, type: 3}
   backButtonPrefab: {fileID: 8843105902575254172, guid: 6d3d0ba26339a6342a19057844b4c3da, type: 3}
-  currentCategory: 0
   elementIconLibrary: {fileID: 11400000, guid: 9d2ce23c2ef554871ac23f5e8cdc8adc, type: 2}
-  hasSelectedAttackAndTile: 0
-  targetSlotIndex: 0
-  currentlyHoveredEnemy: {fileID: 0}
+  hasConfirmedActionAndTile: 0
 --- !u!1 &1291586992
 GameObject:
   m_ObjectHideFlags: 0
