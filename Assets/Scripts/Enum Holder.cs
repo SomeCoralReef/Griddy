@@ -2,11 +2,12 @@ using UnityEngine;
 
 public enum ElementType
 {
-    Fire,
-    Water,
-    Thunder,
-    Earth,
-    Light,
+    Red,
+    Blue,
+    Yellow,
+    Green,
+    Purple,
+    Orange,
     None
 }
 

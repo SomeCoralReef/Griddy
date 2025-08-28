@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfb027039ddb8743bad6169ed09ad73, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  itemName: Potion
+  actionName: Potion
   description: 'Heals 50 HP
 
 '
   icon: {fileID: 0}
-  itemType: 0
-  powerAmount: 0
-  isConsumable: 1
-  targetsAllies: 1
-  needsTarget: 1
   useVFX: {fileID: 0}
+  powerAmount: 0
+  needsTarget: 1
+  targetAllies: 1
+  itemType: 0
+  isConsumable: 1

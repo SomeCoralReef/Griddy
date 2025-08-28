@@ -37,6 +37,8 @@ public class TimelineIcon : MonoBehaviour
 
     [SerializeField] private TimelineIconLibrary iconLibrary;
 
+    public bool isFriendly;
+
 
     void Awake()
     {

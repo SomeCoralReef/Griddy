@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbbd39dfc3ff69f40933d6d12bbd56cd, type: 3}
-  m_Name: Enemy_Straight
+  m_Name: Enemy_Bat
   m_EditorClassIdentifier: 
-  enemyName: Straight
+  enemyName: Bat
   speed: 0.5
   damage: 5
   health: 100
   maxHealth: 100
-  weaknesses: 000000000000000000000000
+  weaknesses: 020000000100000004000000
+  layerPrefabs:
+  - {fileID: 2023948454455986185, guid: fdd47e4ef4305a14895f2e3e6a9bf883, type: 3}
+  - {fileID: 3415409417977257896, guid: 70192301d0f8b124099c5163eb956187, type: 3}
+  - {fileID: 4706217547333697223, guid: 84136ef85e3b2d146b6ed211c845c1ef, type: 3}

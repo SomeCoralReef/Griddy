@@ -11,6 +11,7 @@ public class SpellData : ActionData
     public override IEnumerator ExecuteAction(Player user, int targetSlotIndex)
     {
         Debug.Log($"Casting spell: {actionName}");
+        yield return new WaitForSeconds(1.4f); 
 
         if (useVFX != null)
         {
@@ -28,6 +29,7 @@ public class SpellData : ActionData
         else
         {
             Enemy targetEnemy = user.EnemyAt(targetSlotIndex);
+            Debug.Log($"Target slot index: {targetSlotIndex} is called {targetEnemy?.name}");
             if (targetEnemy != null)
             {
                 ApplySpellToEnemy(targetEnemy);

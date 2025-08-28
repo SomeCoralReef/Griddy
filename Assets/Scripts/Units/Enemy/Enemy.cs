@@ -37,21 +37,25 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Weaknesses")]
     [SerializeField] private Transform weaknessPanel;
     [SerializeField] private GameObject weaknessIconPrefab;
-    [SerializeField] private Sprite fireIcon;
-    [SerializeField] private Sprite waterIcon;
-    [SerializeField] private Sprite thunderIcon;
-    [SerializeField] private Sprite earthIcon;
-    [SerializeField] private Sprite lightIcon;
+    [SerializeField] private Sprite redIcon;
+    [SerializeField] private Sprite blueIcon;
+    [SerializeField] private Sprite yellowIcon;
+    [SerializeField] private Sprite greenIcon;
+    [SerializeField] private Sprite orangeIcon;
+    [SerializeField] private Sprite purpleIcon;
 
+
+    [Header("Timeline Icon")]
+    [SerializeField] public Sprite timelineIconSprite; // For orange weakness
     private List<Image> weaknessIcons = new List<Image>();
-    private ElementType[] runtimeWeaknesses;
-
+    protected ElementType[] runtimeWeaknesses;
     public TimelineIcon timelineIcon;
+
 
     [Header("RPG Slot System")]
     public int slotIndex;
-
     [SerializeField] private SpriteRenderer spriteRenderer;
+
 
     [Header("Enemy Attacks")]
     [SerializeField] private EnemyAttackData[] attacks;
@@ -148,11 +152,13 @@ public class Enemy : MonoBehaviour
     {
         switch (type)
         {
-            case ElementType.Fire: return fireIcon;
-            case ElementType.Water: return waterIcon;
-            case ElementType.Thunder: return thunderIcon;
-            case ElementType.Earth: return earthIcon;
-            case ElementType.Light: return lightIcon;
+            //TODO: search all elements and change icon to them.
+            case ElementType.Red: return redIcon;
+            case ElementType.Blue: return blueIcon;
+            case ElementType.Purple: return purpleIcon;
+            case ElementType.Green: return greenIcon;
+            case ElementType.Yellow: return yellowIcon;
+            case ElementType.Orange: return orangeIcon; // Orange uses light icon
             default: return null;
         }
     }
@@ -242,6 +248,10 @@ public class Enemy : MonoBehaviour
         spriteRenderer.color = normalColor;
         blinkCoroutine = null;
     }
+    public virtual void CheckLayers(ElementType type)
+    {
+        // Default implementation does nothing, can be overridden by subclasses
+    }
 
     public bool TakeDamage(ElementType type, float amount)
     {
@@ -261,10 +271,11 @@ public class Enemy : MonoBehaviour
         // Check weaknesses if needed
         for (int i = 0; i < data.weaknesses.Length; i++)
         {
+            CheckLayers(type);
             if (runtimeWeaknesses[i] == type)
             {
-                runtimeWeaknesses[i] = ElementType.None;
 
+                runtimeWeaknesses[i] = ElementType.None;
                 if (i < weaknessIcons.Count)
                 {
                     StartCoroutine(WeaknessIconJuiceWhenDestroyed(weaknessIcons[i]));
@@ -286,6 +297,8 @@ public class Enemy : MonoBehaviour
         }
         return isBrokenNow;
     }
+
+
 
     private IEnumerator PlayBrokenEffect()
     {

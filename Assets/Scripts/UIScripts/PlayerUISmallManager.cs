@@ -6,7 +6,7 @@ public class PlayerUISmallManager : MonoBehaviour
 {
     public static PlayerUISmallManager Instance { get; private set; }
     public GameObject playerUISmallPrefab;
-    private float playerUISpacingBetween = -125f;
+    private float playerUISpacingBetween = -250f;
     public GameManager gameManager;
     public GameObject CanvasParent;
 

@@ -43,8 +43,8 @@ public class GridManager : MonoBehaviour
     public Vector3 GetWorldPositionForSlot(int slotIndex)
     {
         float enemySideX = 8f; // right side
-        float baseY = -1f;
-        float verticalSpacing = 1.5f;
+        float baseY = -2.3f;
+        float verticalSpacing = 1.7f;
         float y = baseY + slotIndex * verticalSpacing;
         return new Vector3(enemySideX, y, 0);
     }
@@ -52,7 +52,7 @@ public class GridManager : MonoBehaviour
     public Vector3 GetPlayerSpawnPosition(int playerIndex)
     {
         float playerSideX = -2f; // left side of screen
-        float baseY = -6f;
+        float baseY = -6.6f;
         float verticalSpacing = 2f;
         float y = baseY + playerIndex * verticalSpacing;
         return new Vector3(playerSideX, y, 0);

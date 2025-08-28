@@ -22,25 +22,18 @@ public class TimelineManager : MonoBehaviour
 
         units.Add(unit);
 
+        //TO DO: Replace with with it's own icon prefab based on enemy type
         GameObject icon = Instantiate(timelineIconPrefab, timelineBar);
         TimelineIcon iconScript = icon.GetComponent<TimelineIcon>();
         enemy.timelineIcon = iconScript; // Link the icon to the enemy
         iconScript.linkedUnit = unit;
         iconScript.barRect = timelineBar;
+        iconScript.isFriendly = false;
 
         Image iconSprite = icon.GetComponent<Image>();
-        if (unit is PlayerTimelineUnit)
-        {
-        }
-        //iconSprite.color = Color.blue;
-        else if (unit is EnemyTimelineUnit)
-        {
-        }
-            //iconSprite.color = Color.red;
+        iconSprite.sprite = enemy.timelineIconSprite;
 
-            timelineIcons.Add(iconScript);    
-
-        //Debug.Log($"Manually registered unit {unit.name} on timeline.");
+        timelineIcons.Add(iconScript);
     }
 
     public void RegisterPlayerUnit(TimelineUnit unit)
@@ -57,8 +50,11 @@ public class TimelineManager : MonoBehaviour
         TimelineIcon iconScript = icon.GetComponent<TimelineIcon>();
         iconScript.linkedUnit = unit;
         iconScript.barRect = timelineBar;
+        iconScript.isFriendly = true;
 
         Image iconSpriteRenderer = icon.GetComponent<Image>();
+
+        
 
         timelineIcons.Add(iconScript);
     }
@@ -66,14 +62,78 @@ public class TimelineManager : MonoBehaviour
 
     void Update()
     {
-        foreach (TimelineUnit unit in new List<TimelineUnit>(units))
+        float playerSpeedMultiplier = 1f;
+
+        if (Input.GetKey(KeyCode.E))
         {
-            if (unit != null)
+            playerSpeedMultiplier = 1.2f;
+            TimelineIcon[] timelineIcons = FindObjectsOfType<TimelineIcon>();
+            foreach (var timelineIcon in timelineIcons)
             {
-                unit.UpdateTimeline();
-                UpdateTimelineIconPositions();
+                if (timelineIcon.isFriendly)
+                {
+                    GlowVFXTimeline glowVFX = timelineIcon.GetComponent<GlowVFXTimeline>();
+                    if (glowVFX != null)
+                    {
+                        glowVFX.ShowFastGlow();
+                    }
+                    else
+                    {
+                        Debug.Log("GlowVFXTimeline not found on friendly icon!");
+                    }
+                }
             }
         }
+
+        else if (Input.GetKey(KeyCode.Q))
+        {
+            playerSpeedMultiplier = 0.8f;
+            TimelineIcon[] timelineIcons = FindObjectsOfType<TimelineIcon>();
+            foreach (var timelineIcon in timelineIcons)
+            {
+                if (timelineIcon.isFriendly)
+                {
+                    GlowVFXTimeline glowVFX = timelineIcon.GetComponent<GlowVFXTimeline>();
+                    if (glowVFX != null)
+                    {
+                        glowVFX.ShowSlowGlow();
+                    }
+                    else
+                    {
+                        Debug.Log("GlowVFXTimeline not found on friendly icon!");
+                    }
+                }
+            }
+        }
+        else
+        {
+            playerSpeedMultiplier = 1f; // Reset to normal speed
+            TimelineIcon[] timelineIcons = FindObjectsOfType<TimelineIcon>();
+            foreach (var timelineIcon in timelineIcons)
+            {
+                if (timelineIcon.isFriendly)
+                {
+                    GlowVFXTimeline glowVFX = timelineIcon.GetComponent<GlowVFXTimeline>();
+                    if (glowVFX != null)
+                    {
+                        glowVFX.ShowNormalGlow();
+                    }
+                }
+            }
+        }
+
+        foreach (TimelineUnit unit in new List<TimelineUnit>(units))
+            {
+                if (unit == null) continue;
+
+                // Apply modifier for Player units
+                if (unit is PlayerTimelineUnit)
+                    unit.UpdateTimeline(playerSpeedMultiplier);
+                else
+                    unit.UpdateTimeline(); // Normal speed for enemies
+
+                UpdateTimelineIconPositions();
+            }
     }
 
     public void UpdateTimelineIconPositions()

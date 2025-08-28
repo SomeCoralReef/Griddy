@@ -339,7 +339,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -690018111, guid: cc5bc50ec7bc944b783c5bd52ca3fad8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1486640971ac1104a81dc538f174c636, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -360,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7331380055757040173}
   - component: {fileID: 3237311076170742084}
-  - component: {fileID: 8290272808543261876}
+  - component: {fileID: -5023264664492439899}
   m_Layer: 0
   m_Name: GolemEnemy
   m_TagString: Untagged
@@ -404,7 +404,7 @@ MonoBehaviour:
   hasTriggeredPrepare: 0
   prepareThreshold: 0.65
   isBeingBroken: 0
---- !u!114 &8290272808543261876
+--- !u!114 &-5023264664492439899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2120478495260911483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55203bc4a6695fe4389cccbc5bd1627d, type: 3}
+  m_Script: {fileID: 11500000, guid: ddb105f06de7d6142a38c9bab3576fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5e1a000bb8bc5e742868ea35b280d6ea, type: 2}
@@ -428,17 +428,20 @@ MonoBehaviour:
   healthBar: {fileID: 7485122244089043657}
   weaknessPanel: {fileID: 4301596971917404829}
   weaknessIconPrefab: {fileID: 7071023724176460129, guid: f099096b19729d141ba89f55a99fec28, type: 3}
-  fireIcon: {fileID: 21300000, guid: 3e814d365c95cc249a5915f8ca438244, type: 3}
-  waterIcon: {fileID: 21300000, guid: 6cedc68b29644774eab072131ce8c966, type: 3}
-  thunderIcon: {fileID: 21300000, guid: 9ef3f381d015c4d0993016f7d0fe490e, type: 3}
-  earthIcon: {fileID: 21300000, guid: 96593033d3a11054eb144e9df0244ec8, type: 3}
-  lightIcon: {fileID: 21300000, guid: 6486917c289444230b914a224d5ed228, type: 3}
+  redIcon: {fileID: 21300000, guid: a4c763cd136f66746874c8d8eb253dec, type: 3}
+  blueIcon: {fileID: 21300000, guid: 17be94a3558e8d4498cf33c50169c286, type: 3}
+  yellowIcon: {fileID: 21300000, guid: 6ce356e12471e9540abfbece4147c07f, type: 3}
+  greenIcon: {fileID: 21300000, guid: fb6f628a0a30feb41930a92054050e05, type: 3}
+  orangeIcon: {fileID: 21300000, guid: 082dd72035479ac419e999fdef472256, type: 3}
+  purpleIcon: {fileID: 21300000, guid: 602452808553a7046a35f61f42cfae14, type: 3}
+  timelineIconSprite: {fileID: 0}
   timelineIcon: {fileID: 0}
   slotIndex: 0
   spriteRenderer: {fileID: 7104376173023970531}
   attacks:
-  - {fileID: 11400000, guid: 4e966b931570f32419faf8540c92722c, type: 2}
   - {fileID: 11400000, guid: c1de58375ede16145901317a6ae9c84e, type: 2}
+  numberOfLayers: 3
+  layerObjects: []
 --- !u!1 &2448158398007237371
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,8 +726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 909.9, y: 125.3}
+  m_AnchoredPosition: {x: 0, y: -850}
+  m_SizeDelta: {x: 909.9, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7485122244089043657
 MonoBehaviour:

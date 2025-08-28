@@ -169,11 +169,12 @@ MonoBehaviour:
   healthBar: {fileID: 5112943257520298979}
   weaknessPanel: {fileID: 409146801784154654}
   weaknessIconPrefab: {fileID: 7071023724176460129, guid: f099096b19729d141ba89f55a99fec28, type: 3}
-  fireIcon: {fileID: 21300000, guid: 3e814d365c95cc249a5915f8ca438244, type: 3}
-  waterIcon: {fileID: 21300000, guid: 6cedc68b29644774eab072131ce8c966, type: 3}
-  thunderIcon: {fileID: 21300000, guid: 831f37d39246970429155b2e6c0c0e04, type: 3}
-  earthIcon: {fileID: 21300000, guid: 96593033d3a11054eb144e9df0244ec8, type: 3}
-  lightIcon: {fileID: 21300000, guid: 55abac23d7912e749a0e436f3cf329f6, type: 3}
+  redIcon: {fileID: 21300000, guid: a4c763cd136f66746874c8d8eb253dec, type: 3}
+  blueIcon: {fileID: 21300000, guid: 17be94a3558e8d4498cf33c50169c286, type: 3}
+  yellowIcon: {fileID: 21300000, guid: 6ce356e12471e9540abfbece4147c07f, type: 3}
+  greenIcon: {fileID: 21300000, guid: fb6f628a0a30feb41930a92054050e05, type: 3}
+  orangeIcon: {fileID: 21300000, guid: eb395ae688d28ef4a87dc70c57c01ce6, type: 3}
+  purpleIcon: {fileID: 21300000, guid: 602452808553a7046a35f61f42cfae14, type: 3}
   timelineIcon: {fileID: 0}
   slotIndex: 0
   spriteRenderer: {fileID: 0}
@@ -659,7 +660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -960}
   m_SizeDelta: {x: 909.9, y: 125.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5112943257520298979

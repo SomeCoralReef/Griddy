@@ -14,15 +14,17 @@ public class TimelineUnit : MonoBehaviour
 
     public bool isBeingBroken = false;
 
-
-
-    public virtual void UpdateTimeline()
+    // ✅ Modified version accepts an optional speed multiplier
+    public virtual void UpdateTimeline(float speedMultiplier = 1f)
     {
         if (TimelineManagerIsPaused() || isBeingBroken) return;
+
+        float actualSpeed = speed * speedMultiplier;
+
         switch (state)
         {
             case TimelineState.Idle:
-                timelineProgress += speed * Time.deltaTime;
+                timelineProgress += actualSpeed * Time.deltaTime;
                 if (timelineProgress >= PrepareThreshold)
                 {
                     timelineProgress = PrepareThreshold;
@@ -40,7 +42,7 @@ public class TimelineUnit : MonoBehaviour
                 break;
 
             case TimelineState.Executing:
-                timelineProgress += speed * Time.deltaTime;
+                timelineProgress += actualSpeed * Time.deltaTime;
                 if (timelineProgress >= 1.0f)
                 {
                     OnExecute();
@@ -50,15 +52,14 @@ public class TimelineUnit : MonoBehaviour
         }
     }
 
-
     private bool TimelineManagerIsPaused()
     {
         return FindObjectOfType<TimelineManager>().isPaused;
     }
+
     protected virtual void OnPrepare()
     {
         Debug.Log("Virtual Prepare called");
-
     }
 
     protected virtual void OnExecute()
@@ -74,7 +75,8 @@ public class TimelineUnit : MonoBehaviour
         hasTriggeredPrepare = false;
 
         TimelineIcon icon = FindObjectOfType<TimelineManager>().GetIconForUnit(this);
-        icon.SnapToTarget();
+        if (icon != null)
+            icon.SnapToTarget();
     }
 
     public void BeginExecution()

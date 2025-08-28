@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4271342368633638359}
   - component: {fileID: 9002057016408200214}
   - component: {fileID: 9009531707184466286}
+  - component: {fileID: 9102720269622041970}
   m_Layer: 5
   m_Name: UnitIcon
   m_TagString: Untagged
@@ -83,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: d32b63e0cd82d28448307585bc5c0fb5, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -101,6 +102,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9102720269622041970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59708537637311372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a90f1afdb0f5d47a31feebd7b264b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconImage: {fileID: 9009531707184466286}
+  slowColor: {r: 0.2, g: 0.6, b: 1, a: 1}
+  fastColor: {r: 1, g: 0.25, b: 0.25, a: 1}
+  glowSize: 4
+  glowIntensity: 1.5
 --- !u!1 &7053293304877850082
 GameObject:
   m_ObjectHideFlags: 0

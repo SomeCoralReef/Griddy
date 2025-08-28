@@ -73,6 +73,8 @@ public class Player : MonoBehaviour
         }
 
         StartCoroutine(selectedAction.ExecuteAction(this, aimedSlotIndex));
+        actionUI.CloseAllPanels();
+        
     }
     
 
@@ -85,25 +87,29 @@ public class Player : MonoBehaviour
     private IEnumerator HitFlashRoutine(ElementType attackData)
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if (attackData.Equals(ElementType.Fire))
+        if (attackData.Equals(ElementType.Red))
         {
-            spriteRenderer.color = Color.red; // Flash red for fire attacks
+            spriteRenderer.color = Color.red; // Flash red for red attacks
         }
-        else if (attackData.Equals(ElementType.Water))
+        else if (attackData.Equals(ElementType.Blue))
         {
-            spriteRenderer.color = Color.blue; // Flash blue for water attacks
+            spriteRenderer.color = Color.blue; // Flash blue for blue attacks
         }
-        else if (attackData.Equals(ElementType.Thunder))
+        else if (attackData.Equals(ElementType.Yellow))
         {
-            spriteRenderer.color = Color.yellow; // Flash yellow for thunder attacks
+            spriteRenderer.color = Color.yellow; // Flash yellow for yellow attacks
         }
-        else if (attackData.Equals(ElementType.Earth))
+        else if (attackData.Equals(ElementType.Green))
         {
-            spriteRenderer.color = Color.green; // Flash green for earth attacks
+            spriteRenderer.color = Color.green; // Flash green for green attacks
         }
-        else if (attackData.Equals(ElementType.Light))
+        else if (attackData.Equals(ElementType.Purple))
         {
-            spriteRenderer.color = Color.white; // Flash white for light attacks
+            spriteRenderer.color = Color.white; // Flash white for purple attacks
+        }
+        else if (attackData.Equals(ElementType.Orange))
+        {
+            spriteRenderer.color = Color.cyan; // Flash cyan for orange attacks
         }
 
         yield return new WaitForSeconds(0.4f);

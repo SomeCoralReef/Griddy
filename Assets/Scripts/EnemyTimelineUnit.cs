@@ -24,8 +24,8 @@ public class EnemyTimelineUnit : TimelineUnit
         enemyScript.OnExecute();
     }
 
-    public override void UpdateTimeline()
-    {
-        base.UpdateTimeline();
-    }
+public override void UpdateTimeline(float speedMultiplier = 1f)
+{
+    base.UpdateTimeline(speedMultiplier);
+}
 }

@@ -15,11 +15,12 @@ public class ElementIconLibrary : ScriptableObject
     {
         return element switch
         {
-            ElementType.Fire => fireIcon,
-            ElementType.Water => waterIcon,
-            ElementType.Earth => earthIcon,
-            ElementType.Thunder => thunderIcon,
-            ElementType.Light => lightIcon,
+            ElementType.Red => fireIcon,
+            ElementType.Blue => waterIcon,
+            ElementType.Green => earthIcon,
+            ElementType.Yellow => lightIcon,
+            ElementType.Purple => thunderIcon,
+            ElementType.Orange => lightIcon,
             _ => null
         };
     }
