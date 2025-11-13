@@ -39,10 +39,10 @@ public class GlowVFXTimeline : MonoBehaviour
     
 
     // Call these from your timeline speed logic:
-    public void ShowFastGlow() { SetGlowColor(fastColor); Debug.Log("Going Fast"); SetGlowEnabled(true); }
-    public void ShowSlowGlow()  { SetGlowColor(slowColor);  Debug.Log("Going Slow"); SetGlowEnabled(true); }
+    public void ShowFastGlow() { SetGlowColor(fastColor); SetGlowEnabled(true); }
+    public void ShowSlowGlow()  { SetGlowColor(slowColor);  SetGlowEnabled(true); }
 
-    public void ShowNormalGlow() { SetGlowColor(normalColor); Debug.Log("Going Normal"); SetGlowEnabled(false); }
-    public void ShowPrepGlow() { SetGlowColor(prepColor); Debug.Log("Preparing"); SetGlowEnabled(true); }
+    public void ShowNormalGlow() { SetGlowColor(normalColor); SetGlowEnabled(false); }
+    public void ShowPrepGlow() { SetGlowColor(prepColor); SetGlowEnabled(true); }
     public void ClearGlow() { SetGlowEnabled(false); }
 }

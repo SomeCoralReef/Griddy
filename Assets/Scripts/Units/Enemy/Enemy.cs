@@ -87,6 +87,16 @@ public class Enemy : MonoBehaviour
         runtimeWeaknesses = (ElementType[])data.weaknesses.Clone();
     }
 
+    private void Awake()
+    {
+        // Make sure we have a valid renderer even if not wired in the Inspector
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>(true);
+    }
+
     protected virtual void Update()
     {
         if (isBroken) return;
@@ -165,37 +175,23 @@ public class Enemy : MonoBehaviour
 
     public void BreakGuard()
     {
-        if (isBroken) return; // prevent repeat Broken triggering
+        if (isBroken) return;
         isBroken = true;
-        
-        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
-        TimelineUnit timeline = GetComponent<TimelineUnit>();
-        TimelineIcon icon = timelineManager.GetIconForUnit(timeline);
-        float targetProgress;
 
-        if (timeline.timelineProgress >= timeline.PrepareThreshold)
-        {
-            targetProgress = 0.0f;
-            //timeline.timelineProgress = 0f;
-        }
-        else
-        {
-            targetProgress = timeline.timelineProgress - 0.3f;
-            //timeline.timelineProgress = Mathf.Max(0f, timeline.timelineProgress - 0.4f);
-        }
+        var timelineManager = FindObjectOfType<TimelineManager>();
+        var timeline = GetComponent<TimelineUnit>();
+        var icon = timelineManager != null ? timelineManager.GetIconForUnit(timeline) : null;
+
+        float targetProgress = (timeline.timelineProgress >= timeline.PrepareThreshold)
+            ? 0.0f
+            : timeline.timelineProgress - 0.3f;
 
         if (icon != null)
-        {
             StartCoroutine(icon.PlayBreakEffect(targetProgress));
-        }
 
-        
-        // ✅ Reset their state so they keep moving forward
-
-        if (blinkCoroutine == null)
-        {
+        // Only start blink if we have a valid spriteRenderer
+        if (blinkCoroutine == null && spriteRenderer != null)
             blinkCoroutine = StartCoroutine(BlinkWhileBroken());
-        }
     }
 
     public void EndBreak()
@@ -234,20 +230,33 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator BlinkWhileBroken()
     {
-        Color normalColor = spriteRenderer.color;
-        Color blinkColor = new Color(1f, 0f, 0f, 1f); // Red color
+        // If there's still no renderer, just bail out
+        if (spriteRenderer == null)
+            yield break;
+
+        // Cache initial color safely
+        Color normalColor = spriteRenderer != null ? spriteRenderer.color : Color.white;
+        Color blinkColor  = new Color(1f, 0f, 0f, 1f);
 
         while (isBroken)
         {
+            if (spriteRenderer == null) yield break;
+
             spriteRenderer.color = blinkColor;
             yield return new WaitForSeconds(0.1f);
+
+            if (spriteRenderer == null) yield break;
 
             spriteRenderer.color = normalColor;
             yield return new WaitForSeconds(0.1f);
         }
-        spriteRenderer.color = normalColor;
+
+        if (spriteRenderer != null)
+            spriteRenderer.color = normalColor;
+
         blinkCoroutine = null;
     }
+
     public virtual void CheckLayers(ElementType type)
     {
         // Default implementation does nothing, can be overridden by subclasses
@@ -256,46 +265,39 @@ public class Enemy : MonoBehaviour
     public bool TakeDamage(ElementType type, float amount)
     {
         bool isCrit = isBroken;
-        bool isBrokenNow = false;
+        if (isCrit) amount *= 2f;
 
-        if (isCrit)
-        {
-            amount *= 2.0f;
-        }
         health -= Mathf.RoundToInt(amount);
         healthBar.value = health;
 
+        ShowFloatingDamage(amount, isCrit);
 
-        ShowFloatingDamage(amount);
+        if (health <= 0)
+        {
+            Die();
+            return false; // don't start break stuff if dead
+        }
 
-        // Check weaknesses if needed
+        // Weakness logic after we know it survived
         for (int i = 0; i < data.weaknesses.Length; i++)
         {
             CheckLayers(type);
             if (runtimeWeaknesses[i] == type)
             {
-
                 runtimeWeaknesses[i] = ElementType.None;
                 if (i < weaknessIcons.Count)
-                {
                     StartCoroutine(WeaknessIconJuiceWhenDestroyed(weaknessIcons[i]));
-                }
 
                 if (AllWeaknessesBroken())
                 {
-                    BreakGuard(); // ✅ Broken enemy
-                    isBrokenNow = true;
-                    StartCoroutine(PlayBrokenEffect()); // ✅ visual Broken feedback
+                    BreakGuard();
+                    StartCoroutine(PlayBrokenEffect());
+                    return true;
                 }
-
             }
         }
 
-        if (health <= 0)
-        {
-            Die();
-        }
-        return isBrokenNow;
+        return isBroken; // or false if you prefer “just broke this hit” strictly
     }
 
 
@@ -356,12 +358,23 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log($"{data.enemyName} died!");
+            Debug.Log($"{data.enemyName} died!");
 
-        TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+    // Stop blinking safely and restore color if possible
+    if (blinkCoroutine != null)
+    {
+        StopCoroutine(blinkCoroutine);
+        blinkCoroutine = null;
+    }
+    if (spriteRenderer != null)
+        spriteRenderer.color = Color.white;
+
+    // Unregister from timeline before destroy
+    TimelineManager timelineManager = FindObjectOfType<TimelineManager>();
+    if (timelineManager != null)
         timelineManager.UnregisterUnit(GetComponent<TimelineUnit>());
 
-        Destroy(gameObject);
+    Destroy(gameObject);
     }
 
 
